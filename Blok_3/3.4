@@ -1,0 +1,11 @@
+# Ввод количества яблок и школьников
+apples = int(input("Введите количество яблок: "))
+students = int(input("Введите количество школьников: "))
+
+# Расчет количества яблок на каждого школьника и остатка в корзине
+apples_per_student = apples // students
+apples_left = apples % students
+
+# Вывод результатов
+print("Каждому школьнику достанется", apples_per_student, "яблок")
+print("В корзине останется", apples_left, "яблок")
