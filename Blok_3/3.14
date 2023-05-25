@@ -1,0 +1,16 @@
+# Ввод номера квартиры
+flat_number = int(input("Введите номер квартиры: "))
+
+# Вычисление номера подъезда
+entrance_number = (flat_number - 1) // 24 + 1
+
+# Вычисление номера этажа
+floor_number = ((flat_number - 1) % 24) // 4 + 1
+
+# Вычисление порядкового номера квартиры на этаже
+flat_order = (flat_number - 1) % 4 + 1
+
+# Вывод результатов
+print("Квартира с номером", flat_number, "находится в подъезде", entrance_number)
+print("На этаже номер", floor_number)
+print("Порядковый номер квартиры на этаже:", flat_order)
