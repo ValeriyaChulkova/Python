@@ -1,0 +1,15 @@
+#Define variables
+volume1 = 10 #volume of body 1
+volume2 = 20 #volume of body 2
+mass1 = 50 #mass of body 1
+mass2 = 40 #mass of body 2
+
+#Calculate densities
+density1 = mass1/volume1 
+density2 = mass2/volume2
+
+#Compare densities
+if density1 > density2:
+    print("Body 1 has a higher density")
+else:
+    print("Body 2 has a higher density")
