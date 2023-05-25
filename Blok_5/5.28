@@ -1,0 +1,24 @@
+# а)
+prod = 1
+for i in range(7, 15):
+    prod *= i
+print("Произведение всех целых чисел от 7 до 14:", prod)
+# б)
+a = int(input("Введите значение для а: "))
+prod = 1
+for i in range(a, 16):
+    prod *= i
+print("Произведение всех целых чисел от а до 15:", prod)
+# в)
+b = int(input("Введите значение для b: "))
+prod = 1
+for i in range(1, b+1):
+    prod *= i
+print("Произведение всех целых чисел от 1 до b:", prod)
+# г)
+a = int(input("Введите значение для а: "))
+b = int(input("Введите значение для b: "))
+prod = 1
+for i in range(a, b+1):
+    prod *= i
+print("Произведение всех целых чисел от а до b:", prod)
