@@ -1,0 +1,10 @@
+def find_minimal_rect(rect1, rect2):
+    x1 = min(rect1[0], rect2[0])
+    y1 = min(rect1[1], rect2[1])
+    x2 = max(rect1[0]+rect1[2], rect2[0]+rect2[2])
+    y2 = max(rect1[1]+rect1[3], rect2[1]+rect2[3])
+    return (x1, y1, x2-x1, y2-y1)
+rect1 = (2, 3, 4, 5)
+rect2 = (1, 4, 7, 3)
+minimal_rect = find_minimal_rect(rect1, rect2)
+print("The minimal rectangle containing rect1 and rect2 is:", minimal_rect)
