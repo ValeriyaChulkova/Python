@@ -1,0 +1,10 @@
+
+# Calculate the speed in meters per second
+speed_km_per_hr = 25
+speed_m_per_sec = speed_km_per_hr * (1000/3600)
+
+# Compare the two speeds
+if speed_km_per_hr > speed_m_per_sec:
+  print("The speed in kilometers per hour is higher.")
+else:
+  print("The speed in meters per second is higher.")
