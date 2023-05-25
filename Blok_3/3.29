@@ -1,0 +1,7 @@
+n = int(input("Enter a natural number n (n > 9): "))
+
+units = n%10
+tens = (n - units) // 10
+
+print("The number of units in it:", units)
+print("The number of tens in it:", tens)
