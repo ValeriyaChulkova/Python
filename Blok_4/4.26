@@ -1,0 +1,9 @@
+num = int(input("Enter a two-digit number: "))
+first_digit = num // 10
+second_digit = num % 10
+if first_digit > second_digit:
+  print("The first digit is greater than the second digit.")
+elif second_digit > first_digit:
+  print("The second digit is greater than the first digit.")
+else:
+  print("Both digits are the same.")
