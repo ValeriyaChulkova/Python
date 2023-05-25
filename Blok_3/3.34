@@ -1,0 +1,6 @@
+# Code
+x = (237 + 7) % 10
+print(x)
+
+# Output
+7
