@@ -1,0 +1,10 @@
+distance_in_km = float(input('Distance in kilometers: '))
+distance_in_ft = float(input('Distance in feet: '))
+
+distance_in_meters_km = distance_in_km * 1000
+distance_in_meters_ft = distance_in_ft * 0.3048
+
+if distance_in_meters_km < distance_in_meters_ft:
+    print('The distance in kilometers is smaller.')
+else:
+    print('The distance in feet is smaller.')
