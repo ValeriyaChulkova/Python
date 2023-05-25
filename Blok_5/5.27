@@ -1,0 +1,19 @@
+#а) 
+sum(range(200, 601))
+print (sum)
+
+#б)
+a = int(input("Введите значение а: "))
+sum(range(a, 401))
+print (sum)
+
+#в)
+b = int(input("Введите значение b: "))
+sum(range(-15, b+1))
+print (sum)
+
+#г)
+a = int(input("Введите значение а: "))
+b = int(input("Введите значение b: "))
+sum(range(a, b+1))
+print (sum)
