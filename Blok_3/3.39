@@ -1,0 +1,12 @@
+n = int(input("Enter a three-digit number n: "))
+
+# form the number p by taking the last two digits from n
+p = n % 100
+
+# take the first digit from n
+first_digit = n // 100
+
+# add first digit and p to get x
+x = first_digit + p
+
+print("The three-digit number x is:", x)
