@@ -1,0 +1,7 @@
+a = int(input("Введите значение а: "))
+b = int(input("Введите значение b: "))
+sum_numbers = 0
+for i in range(a, b+1):
+    sum_numbers += i
+average = sum_numbers / (b-a+1)
+print(average)
