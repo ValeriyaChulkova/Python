@@ -1,0 +1,9 @@
+# a) Coincide
+t = int(input())
+h = int(input())
+time_diff = (60 - t) + (60 - h) * 60
+print (time_diff)
+
+# b) Perpendicular
+time_difff = (30 - t) + (30 - h) * 60
+print (time_difff)
