@@ -1,0 +1,7 @@
+seat_number = int(input("Введите номер места: "))
+
+if seat_number < 1 or seat_number > 36:
+print("Некорректный номер места")
+else:
+coupe_number = (seat_number - 1) // 4 + 1
+print("Место №", seat_number, "находится в купе №", coupe_number)
