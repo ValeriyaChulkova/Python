@@ -1,0 +1,5 @@
+sum_numbers = 0
+for i in range(1, 751):
+    sum_numbers += i
+average = sum_numbers / 750
+print(average)
