@@ -1,0 +1,16 @@
+n = int(input('Enter the number n: '))
+
+#Check if the number is between 10 and 999
+if n >= 10 and n <= 999:
+    #Check if the number of tens in n is not zero
+    if not n // 10 == 0:
+        #Find the number x
+        x = 10 * (n % 10) + (n // 10)
+        #Print the result
+        print('The number x is:', x)
+    #Print error message if the number of tens is zero
+    else:
+        print('Error: The number of tens in n is 0.')
+#Print error message if the number is not between 10 and 999
+else:
+    print('Error: The number n must be between 10 and 999.')
