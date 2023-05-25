@@ -1,0 +1,16 @@
+
+a = int(input("Input the coefficient a: "))
+b = int(input("Input the coefficient b: "))
+c = int(input("Input the coefficient c: "))
+
+discriminant = (b ** 2) - (4 * a * c)
+
+if discriminant > 0:
+    root1 = (-b + sqrt(discriminant)) / (2 * a)
+    root2 = (-b - sqrt(discriminant)) / (2 * a)
+    print("The roots are", root1, "and", root2)
+elif discriminant == 0:
+    root1 = root2 = -b / (2 * a)
+    print("The root is", root1)
+else:
+    print("The equation has no real roots")
