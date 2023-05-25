@@ -1,0 +1,17 @@
+#a)
+circle_area = 3.14 * (2**2)
+square_area = 4 * 4
+
+if circle_area <= square_area:
+    print("Yes, a circle will fit in a square.")
+else:
+    print("No, a circle will not fit in a square.")
+
+#b)
+circle_area = 3.14 * (2**2)
+square_area = 4 * 4
+
+if square_area <= circle_area:
+    print("Yes, a square will fit in a circle.")
+else:
+    print("No, a square will not fit in a circle.")
