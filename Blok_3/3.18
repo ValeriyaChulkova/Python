@@ -1,0 +1,5 @@
+number = int(input("Введите двузначное число: "))
+tens = number // 10 # получаем первую цифру
+units = number % 10 # получаем вторую цифру
+new_number = units * 10 + tens # формируем новое число
+print("Новое число:", new_number)
