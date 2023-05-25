@@ -1,0 +1,6 @@
+P = int(input("Enter the number P: ")) #taking the input from the user of the number P
+n = int(input("Enter the number n: ")) #taking the input from the user of the number n
+if P % n == 0: #checking if the remainder of P/n is equal to 0
+    print(n, "is a divisor of", P)
+else:
+    print(n, "is not a divisor of", P)
