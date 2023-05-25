@@ -1,0 +1,6 @@
+number = int(input("Input a three-digit number: "))
+last_digit = number % 10
+result = (number - last_digit) / 10
+p = (result * 10) + last_digit
+
+print("The number of p is", int(p))
