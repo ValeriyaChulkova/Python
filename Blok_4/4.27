@@ -1,0 +1,7 @@
+num = int(input("Enter a two-digit number: "))
+digit_1 = num // 10
+digit_2 = num % 10
+if num == (digit_1**2 + digit_2**2):
+    print("The square of the number is equal to the sum of the squares of its digits.")
+else:
+    print("The square of the number is not equal to the sum of the squares of its digits.")
