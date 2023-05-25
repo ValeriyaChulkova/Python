@@ -1,0 +1,5 @@
+p = int(input("Введите количество секунд: "))
+hours = p // 3600
+minutes = (p % 3600) // 60
+seconds = p % 60
+print("Прошло", seconds, "секунд")
