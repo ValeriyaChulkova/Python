@@ -1,0 +1,5 @@
+import math
+for i in range(0, 16):
+    angle = i / 10.0
+    sin_value = math.sin(angle)
+    print("{:.1f} - {:.4f}".format(angle, sin_value
