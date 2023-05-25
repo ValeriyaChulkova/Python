@@ -1,0 +1,11 @@
+num = int(input("Enter a natural number: "))
+# check if number is even or odd
+if num % 2 == 0:
+    print(num, "is even")
+else:
+    print(num, "is odd")
+# check if number ends with 7
+if num % 10 == 7:
+    print(num, "ends with 7")
+else:
+    print(num, "does not end with 7")
