@@ -1,0 +1,5 @@
+fullHours = 90//30
+fullMinutes = (90/30)*60
+
+print('Number of full hours passed since the beginning of the day =', fullHours)
+print('Number of full minutes passed since the beginning of the day =', fullMinutes)
