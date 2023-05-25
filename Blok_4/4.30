@@ -1,0 +1,15 @@
+num = int(input("Enter a three-digit number: "))
+# check if it is a three-digit number
+if num < 100 or num > 999:
+  print("Please enter a three-digit number.")
+else:
+  # separate the digits
+  ones = num % 10
+  tens = (num // 10) % 10
+  hundreds = num // 100
+  
+  # check if it is a palindrome
+  if ones == hundreds:
+    print(num, "is a palindrome!")
+  else:
+    print(num, "is not a palindrome.")
