@@ -1,0 +1,9 @@
+# a)
+n = int(input("Input a natural number (n > 999): "))
+
+num_hundreds = n // 100
+print("The number of hundreds in it:", num_hundreds)
+
+# b)
+num_thousands = n // 1000
+print("The number of thousands in it:", num_thousands)
