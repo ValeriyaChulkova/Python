@@ -1,0 +1,15 @@
+
+# Based on Ohm's Law
+# V = I*R
+
+# Calculate current in each section
+section1_current = section1_voltage / section1_resistance
+section2_current = section2_voltage / section2_resistance
+
+# Compare the current values
+if section1_current < section2_current:
+    smaller_current_section = 'section1'
+else:
+    smaller_current_section = 'section2'
+
+print('The smaller current flows in %s' % smaller_current_section)
