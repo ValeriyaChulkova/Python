@@ -1,0 +1,7 @@
+# Calculate the number of seconds passed since the beginning of the day
+seconds = h * 3600 + t * 60 + s
+
+# Calculate the angle between the starting point and the current position
+angle = seconds * (360 / (24 * 60 * 60))
+
+print(angle)
