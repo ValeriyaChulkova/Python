@@ -1,0 +1,10 @@
+num = input("Введите натуральное число: ")
+p = int(input("Введите количество последних цифр: "))
+last_p_digits = num[-p:]
+sum_of_last_p_digits = sum(int(digit) for digit in last_p_digits)
+product_of_last_p_digits = 1
+for digit in last_p_digits:
+    product_of_last_p_digits *= int(digit)
+print(f"Последние {p} цифры числа: {last_p_digits}")
+print(f"Сумма последних {p} цифр числа: {sum_of_last_p_digits}")
+print(f"Произведение последних {p} цифр числа: {product_of_last_p_digits}")
