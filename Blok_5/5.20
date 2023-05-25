@@ -1,0 +1,4 @@
+import math
+for i in range(1,10):
+    x = math.sqrt(i/10)
+    print("{:.2f}".format(x))
