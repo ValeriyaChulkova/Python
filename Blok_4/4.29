@@ -1,0 +1,13 @@
+#Taking Input of a two-digit number
+n = int(input("Enter a two-digit number: "))
+#Finding if the sum of its digits is a multiple of three
+sum_of_digits = (n//10) + (n%10)
+if sum_of_digits%3 == 0:
+    print("Sum of digits is a multiple of three")
+else:
+    print("Sum of digits is not a multiple of three")
+#Finding if the sum of its digits is a multiple of the number itself
+if sum_of_digits%n == 0:
+    print("Sum of digits is a multiple of the number itself")
+else:
+    print("Sum of digits is not a multiple of the number itself")
