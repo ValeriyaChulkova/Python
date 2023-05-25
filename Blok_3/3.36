@@ -1,0 +1,10 @@
+x = int(input("Enter a three-digit number: "))
+
+#convert given three digit number to two digit numbers by removing second digit
+second_digit = x % 10
+new_number = (x // 10)*10 + 5
+
+#add the second digit
+x = new_number + second_digit
+
+print("The original three digit number is", x)
