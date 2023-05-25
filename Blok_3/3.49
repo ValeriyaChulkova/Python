@@ -1,0 +1,12 @@
+hour_angle = y
+
+minute_angle = (hour_angle * 60) % 360
+
+full_hours = hour_angle // 30
+
+full_minutes = minute_angle // 6
+
+print("Angle of hour hand =", hour_angle)
+print("Angle of minute hand =", minute_angle)
+print("Number of full hours =", full_hours)
+print("Number of full minutes =", full_minutes)
