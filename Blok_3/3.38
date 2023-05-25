@@ -1,0 +1,4 @@
+number = 456
+x = str(number) 
+x = x[0] + '*' + x[2]
+print(x) # prints 4*6
