@@ -1,0 +1,21 @@
+k = int(input("Введите k: "))
+if k == 1:
+    pair_number = 1
+    two_digit_number = 10
+elif k == 2:
+    pair_number = 2
+    two_digit_number = 11
+elif k % 2 == 0:
+    pair_number = (k // 2)
+    digit_sequence = ''.join([str(i) for i in range(10, 100)])
+    kth_digit = digit_sequence[pair_number-1]
+    two_digit_number = int(digit_sequence[2*(pair_number-1) : 2*(pair_number-1) + 2])
+else:
+    pair_number = (k // 2) + 1
+    digit_sequence = ''.join([str(i) for i in range(11, 100)])
+    kth_digit = digit_sequence[pair_number-1]
+    two_digit_number = int(digit_sequence[2*(pair_number-1) : 2*(pair_number-1) + 2])
+    
+print("Номер пары цифр: ", pair_number)
+print("Двузначное число: ", two_digit_number)
+print("K-ой цифре соответствует цифра: ", kth_digit)
