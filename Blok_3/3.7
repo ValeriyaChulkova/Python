@@ -1,0 +1,13 @@
+# Задаем константы
+FLOORS_COUNT = 5
+APARTMENTS_COUNT = 15
+
+# Получаем номер квартиры от пользователя
+apartment_number = int(input("Введите номер квартиры: "))
+
+# Вычисляем номер этажа и номер квартиры на этаже
+floor_number = (apartment_number - 1) // APARTMENTS_COUNT + 1
+apartment_on_floor = (apartment_number - 1) % APARTMENTS_COUNT + 1
+
+# Выводим результат
+print(f"Квартира №{apartment_number} находится на {floor_number} этаже, {apartment_on_floor} квартира на этаже.")
