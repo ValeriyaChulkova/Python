@@ -1,0 +1,11 @@
+x = int(input("Enter the three digit number: "))
+
+last_digit = x%10
+
+second_digit = (x//10)%10
+
+first_digit = x//100
+
+x = (last_digit*100 + second_digit*10 + first_digit)
+
+print("The number x is:", x)
