@@ -1,0 +1,10 @@
+num = input("Enter a two-digit number: ")
+sum_of_digits = int(num[0]) + int(num[1])
+if sum_of_digits >= 10:
+    print("The sum of digits is a two-digit number")
+else:
+    print("The sum of digits is not a two-digit number")
+if int(num) > sum_of_digits:
+    print("The number is greater than the sum of its digits")
+else:
+    print("The number is not greater than the sum of its digits")
