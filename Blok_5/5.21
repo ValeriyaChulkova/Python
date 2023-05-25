@@ -1,0 +1,6 @@
+cost_per_kg = float(input("Введите стоимость 1 кг сыра: "))
+weights = range(50, 1050, 50)
+print("Вес (г)\tСтоимость (руб)")
+for weight in weights:
+    cost = round(cost_per_kg * weight / 1000, 2)
+    print(f"{weight}\t{cost}")
