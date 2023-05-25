@@ -1,0 +1,17 @@
+# Get the number x
+x = int(input("Enter the three-digit number x: "))
+
+# Calculate the product of the remaining number when multiplied by 10
+product = (x // 10) * 10
+
+# Calculate the first digit of x
+first_digit = x // 100
+
+# Calculate the sum of the product and first digit of x
+sum = product + first_digit
+
+# Check if the sum is equal to 564
+if (sum == 564):
+  print("The number x is", x)
+else:
+  print("The number x is invalid.")
