@@ -1,0 +1,17 @@
+#a)
+circle_area = 8
+triangle_area = 6
+
+if (circle_area > triangle_area):
+    print("The circle will fit in the triangle")
+else:
+    print("The circle will not fit in the triangle")
+
+#b)
+circle_area = 8
+triangle_area = 6
+
+if (circle_area < triangle_area):
+    print("The triangle will not fit in the circle")
+else:
+    print("The triangle will fit in the circle")
