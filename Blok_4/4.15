@@ -1,0 +1,16 @@
+# Solving a quadratic equation to find existence of roots 
+
+a = float(input('Enter a: '))
+b = float(input('Enter b: '))
+c = float(input('Enter c: '))
+
+# calculate the discriminant
+d = (b**2) - (4*a*c)
+
+# find the nature of roots
+if d > 0:
+   print("The equation has two distinct real roots")
+elif d == 0:
+   print("The equation has two equal and real roots")
+else:
+   print("The equation has no real roots")
