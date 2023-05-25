@@ -1,0 +1,26 @@
+month = int(input("Введите номер месяца: "))
+if month == 1:
+    x = 2
+elif month == 2:
+    x = 3
+elif month == 3:
+    x = 4
+elif month == 4:
+    x = 5
+elif month == 5:
+    x = 6
+elif month == 6:
+    x = 7
+elif month == 7:
+    x = 8
+elif month == 8:
+    x = 9
+elif month == 9:
+    x = 10
+elif month == 10:
+    x = 11
+elif month == 11:
+    x = 12
+else:
+    x = 1
+print("Значение х равно", x)
