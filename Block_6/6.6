@@ -1,0 +1,12 @@
+import math
+
+factorial = 720 # пример факториала числа
+
+n = math.floor(math.log(factorial, 2)) + 1 # находим количество множителей в разложении на простые множители
+result = 1
+for i in range(1, n+1):
+    result *= i # вычисляем произведение чисел от 1 до n
+if result == factorial:
+    print(n)
+else:
+    print("Факториал не соответствует натуральному числу")
