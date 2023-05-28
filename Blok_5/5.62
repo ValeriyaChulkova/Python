@@ -1,0 +1,16 @@
+def power(a,n):
+    if n == 0:
+        return 1
+    elif n > 0:
+        if n % 2 == 0:
+            temp = power(a, n/2)
+            return temp * temp
+        else:
+            return a * power(a, n-1)
+    else:
+        return 1 / power(a, -n)
+
+a = 2.5
+n = -3
+
+print(f'{a} в степени {n} равно:', power(a, n))
