@@ -1,0 +1,10 @@
+# Оценки учеников
+grades = {
+'Ученик 1': [4, 5, 3, 4],
+'Ученик 2': [3, 4, 5, 4]
+}
+
+# Сумма оценок каждого ученика
+for student, grade_list in grades.items():
+total_grade = sum(grade_list)
+print(f'Сумма оценок {student}: {total_grade}')
