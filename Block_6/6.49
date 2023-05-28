@@ -1,0 +1,36 @@
+
+number = int(input("Введите натуральное число: "))
+sum_of_digits = 0
+multiplication_of_digits = 1
+count_of_digits = 0
+first_digit = int(str(number)[0])
+last_digit = int(str(number)[-1])
+
+# Считаем сумму, произведение, количество цифр и проверяем четность
+while number > 0:
+    digit = number % 10
+    sum_of_digits += digit
+    multiplication_of_digits *= digit
+    count_of_digits += 1
+    number //= 10
+
+# Проверяем условия
+if sum_of_digits > 10:
+    print("Сумма цифр больше 10")
+if multiplication_of_digits < 50:
+    print("Произведение цифр меньше 50")
+if count_of_digits % 2 == 0:
+    print("Количество цифр четное")
+if 1000 <= number <= 9999:
+    print("Число четырехзначное")
+if first_digit <= 6:
+    print("Первая цифра не превышает 6")
+if str(number)[0] == str(number)[-1]:
+    print("Число начинается и заканчивается одной и той же цифрой")
+
+if first_digit > last_digit:
+    print("Первая цифра больше последней")
+elif last_digit > first_digit:
+    print("Последняя цифра больше первой")
+else:
+    print("Первая и последняя цифры равны")
