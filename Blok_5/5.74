@@ -1,0 +1,8 @@
+# Вариант 1
+for i in range(10, 101):
+    if i % 2 != 0:
+        print(i)
+        
+# Вариант 2
+for i in range(11, 100, 2):
+    print(i)
