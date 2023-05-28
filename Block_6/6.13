@@ -1,0 +1,13 @@
+а) Оператор цикла с предусловием:
+num = 10
+while num <= 30:
+    print(num)
+    num += 1
+
+б) Оператор цикла с постусловием:
+num = 10
+while True:
+    print(num)
+    num += 1
+    if num > 30:
+        break
