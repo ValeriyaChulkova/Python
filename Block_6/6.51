@@ -1,0 +1,36 @@
+number = int(input("Введите натуральное число: "))
+k = int(input("Введите число k: "))
+b = int(input("Введите число b: "))
+x = int(input("Введите число x: "))
+y = int(input("Введите число y: "))
+a = int(input("Введите число a: "))
+m = int(input("Введите число m: "))
+n = int(input("Введите число n: "))
+
+sum_of_digits = 0
+multiplication_of_digits = 1
+count_of_digits = 0
+
+# Считаем сумму, произведение, количество цифр и проверяем начальную и конечную цифры
+while number > 0:
+    digit = number % 10
+    sum_of_digits += digit
+    multiplication_of_digits *= digit
+    count_of_digits += 1
+    if count_of_digits == 1 and digit != y:
+        break
+    elif count_of_digits == len(str(number)) and digit != x:
+        break
+    number //= 10
+
+# Проверяем условия
+if sum_of_digits > k and number % 2 == 0:
+    print("Сумма цифр больше k, число четное")
+if count_of_digits % 2 == 0 and number <= b:
+    print("Количество цифр четное, число не превышает b")
+if str(number)[0] == str(x) and str(number)[-1] == str(y):
+    print(f"Число начинается цифрой {x} и заканчивается цифрой {y}")
+if multiplication_of_digits < a and number % b == 0:
+    print("Произведение цифр меньше a, число делится на b")
+if sum_of_digits > m and number % n == 0:
+    print("Сумма цифр больше m, число делится на n")
