@@ -1,0 +1,8 @@
+i = 107
+count = 0
+
+while count < 10:
+    if i % 9 == 0:
+        print(i)
+        count += 1
+    i += 10
