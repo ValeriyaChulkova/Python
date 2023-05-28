@@ -1,0 +1,24 @@
+Первый вариант:
+
+n = int(input("Введите значение n: "))
+i = 1
+while i*i <= n:
+    i += 1
+print(i)
+
+Второй вариант:
+
+n = int(input("Введите значение n: "))
+for i in range(1, 101):
+    if i*i > n:
+        print(i)
+        break
+
+Третий вариант:
+
+import math
+n = int(input("Введите значение n: "))
+i = math.ceil(math.sqrt(n))
+if i > 100:
+    i = 100
+print(i)
