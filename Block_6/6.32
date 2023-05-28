@@ -1,0 +1,19 @@
+distance = 10
+day = 1
+
+while distance <= 20:
+    day += 1
+    distance += distance * 0.1
+
+print("Лыжник пробежит больше 20 км в", day, "день")
+
+distance = 10
+day = 1
+total_distance = 0
+
+while total_distance <= 100:
+    total_distance += distance
+    distance += distance * 0.1
+    day += 1
+
+print("Суммарный пробег за все дни превысит 100 км в", day, "день")
