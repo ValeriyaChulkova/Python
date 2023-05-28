@@ -1,0 +1,7 @@
+n = int(input("Введите натуральное число n: "))
+b = [int(input("Введите целое число b{}: ".format(i))) for i in range(1, 11)]
+sum_b = sum(b)
+if sum_b < n:
+print("Сумма чисел b меньше n")
+else:
+print("Сумма чисел b больше или равна n")
