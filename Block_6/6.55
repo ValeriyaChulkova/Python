@@ -1,0 +1,23 @@
+number = int(input("Введите натуральное число: "))
+a = int(input("Введите число a: "))
+b = int(input("Введите число b: "))
+
+count_of_a = 0
+count_of_b = 0
+
+# Считаем количество цифр a и b в числе
+while number > 0:
+    digit = number % 10
+    if digit == a:
+        count_of_a += 1
+    elif digit == b:
+        count_of_b += 1
+    number //= 10
+
+# Сравниваем количество цифр a и b и выводим результаты
+if count_of_a < count_of_b:
+    print(f"Цифра {a} встречается в числе реже, чем цифра {b}")
+elif count_of_b < count_of_a:
+    print(f"Цифра {b} встречается в числе реже, чем цифра {a}")
+else:
+    print(f"Цифры {a} и {b} встречаются в числе одинаковое количество раз")
