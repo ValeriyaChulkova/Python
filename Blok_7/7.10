@@ -1,0 +1,15 @@
+# Определяем результаты спортсменов в каждом виде спорта
+results = [
+[8, 7, 6, 9, 8],
+[7, 8, 9, 6, 7]
+]
+
+# Считаем сумму баллов для каждого спортсмена
+total_scores = []
+for i in range(len(results)):
+total_score = sum(results[i])
+total_scores.append(total_score)
+
+# Выводим результаты
+print("Сумма баллов для первого спортсмена:", total_scores[0])
+print("Сумма баллов для второго спортсмена:", total_scores[1])
