@@ -1,0 +1,38 @@
+#(a)
+number = int(input("Введите натуральное число: "))
+max_digit = 0
+digit_count = 0
+
+# Находим максимальную цифру в числе
+while number > 0:
+    digit = number % 10
+    if digit > max_digit:
+        max_digit = digit
+    number //= 10
+
+# Считаем количество максимальных цифр в числе
+number = int(input("Введите натуральное число: "))
+while number > 0:
+    digit = number % 10
+    if digit == max_digit:
+        digit_count += 1
+    number //= 10
+
+print(f"Максимальная цифра в числе: {max_digit}, количество ее вхождений: {digit_count}")
+
+#(b)
+number = int(input("Введите натуральное число: "))
+max_digit = 0
+digit_count = 0
+
+# Находим максимальную цифру в числе и считаем ее вхождения
+while number > 0:
+    digit = number % 10
+    if digit > max_digit:
+        max_digit = digit
+        digit_count = 1  # Начинаем счет заново если найдена бОльшая цифра
+    elif digit == max_digit:
+        digit_count += 1
+    number //= 10
+
+print(f"Максимальная цифра в числе: {max_digit}, количество ее вхождений: {digit_count}")
