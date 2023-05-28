@@ -1,0 +1,30 @@
+num = int(input("Введите натуральное число: "))
+sum_digits = 0
+count_digits = 0
+prod_digits = 1
+sum_squares = 0
+sum_cubes = 0
+first_digit = num % 10
+last_digit = num % 10
+
+while num > 0:
+    digit = num % 10
+    sum_digits += digit
+    count_digits += 1
+    prod_digits *= digit
+    sum_squares += digit ** 2
+    sum_cubes += digit ** 3
+    last_digit = digit
+    num //= 10
+
+avg_digits = sum_digits / count_digits
+sum_first_last = first_digit + last_digit
+
+print("Сумма цифр:", sum_digits)
+print("Количество цифр:", count_digits)
+print("Произведение цифр:", prod_digits)
+print("Среднее арифметическое цифр:", avg_digits)
+print("Сумма квадратов цифр:", sum_squares)
+print("Сумма кубов цифр:", sum_cubes)
+print("Первая цифра:", first_digit)
+print("Сумма первой и последней цифры:", sum_first_last)
