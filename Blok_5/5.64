@@ -1,0 +1,12 @@
+# вводим число
+number = 1234567
+
+# преобразуем число в строку и затем развернем его
+string_number = str(number)
+reversed_number = string_number[::-1]
+
+# преобразуем развернутое число обратно в целое
+result = int(reversed_number)
+
+# выводим результат
+print(result)
