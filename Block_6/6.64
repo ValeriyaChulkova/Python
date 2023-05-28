@@ -1,0 +1,12 @@
+n = int(input("Введите сумму для выплаты: "))
+bills = [64, 32, 16, 8, 4, 2, 1]
+num_bills = [0, 0, 0, 0, 0, 0, 0]
+
+for i in range(len(bills)):
+    num_bills[i] = n // bills[i]
+    n %= bills[i]
+
+print("Для выплаты суммы", str(n), "необходимо:")
+for i in range(len(bills)):
+    if num_bills[i] != 0:
+        print(str(num_bills[i]), "купюр номиналом", str(bills[i]))
