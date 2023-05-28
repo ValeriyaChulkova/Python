@@ -1,0 +1,25 @@
+number = int(input("Введите число: "))
+
+# задача (а)
+while number > 1:
+    if number % 3 == 0:
+        number //= 3
+    else:
+        break
+
+if number == 1:
+    print("Число является степенью числа 3")
+else:
+    print("Число не является степенью числа 3")
+
+# задача (б)
+while number > 1:
+    if number % 5 == 0:
+        number //= 5
+    else:
+        break
+
+if number == 1:
+    print("Число является степенью числа 5")
+else:
+    print("Число не является степенью числа 5")
