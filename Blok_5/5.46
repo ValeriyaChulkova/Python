@@ -1,0 +1,11 @@
+k = int(input("Введите число k: "))
+fractions = [(1,1), (2,1)] # создаем список с первыми двумя членами последовательности
+for i in range(2, k):
+  numerator = fractions[i-1][0] + fractions[i-2][0] # числитель k-й дроби равен сумме числителей (k-1)-й и (k-2)-й дробей
+  denominator = fractions[i-1][1] + fractions[i-2][1] # знаменатель k-й дроби равен сумме знаменателей (k-1)-й и (k-2)-й дробей
+  fractions.append((numerator, denominator)) # добавляем k-ю дробь в список
+
+print("k-я дробь: ", fractions[k-1])
+n = int(input("Введите число n: ")) # получаем число первых членов последовательности, которые нужно вывести
+for i in range(n):
+  print(fractions[i], end=" ")
