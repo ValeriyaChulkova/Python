@@ -1,0 +1,20 @@
+number = int(input("Введите натуральное число: ")) # вводим число с клавиатуры
+a = int(input("Введите число a: ")) # вводим число a с клавиатуры
+
+# находим максимальную и минимальную цифры в числе
+max_digit = 0
+min_digit = 9
+for digit in str(number):
+    if int(digit) > max_digit:
+        max_digit = int(digit)
+    if int(digit) < min_digit:
+        min_digit = int(digit)
+
+# находим сумму максимальной и минимальной цифр
+sum_digits = max_digit + min_digit
+
+# проверяем, является ли сумма кратной числу a
+if sum_digits % a == 0:
+    print("Сумма максимальной и минимальной цифр числа", number, "кратна числу", a)
+else:
+    print("Сумма максимальной и минимальной цифр числа", number, "не кратна числу", a)
