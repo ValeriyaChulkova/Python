@@ -1,0 +1,26 @@
+
+num = int(input("Введите натуральное число: "))
+
+# а) максимальная нечетная цифра числа
+max_odd_digit = 0
+while num > 0:
+    digit = num % 10
+    if digit % 2 != 0 and digit > max_odd_digit:
+        max_odd_digit = digit
+    num //= 10
+
+print("Максимальная нечетная цифра числа: ", max_odd_digit)
+
+# б) номер минимальной цифры числа при счете слева направо
+min_digit = 9
+position = 0
+i = 1
+while num > 0:
+    digit = num % 10
+    if digit < min_digit:
+        min_digit = digit
+        position = i
+    num //= 10
+    i += 1
+
+print("Номер минимальной цифры числа при счете слева направо: ", position)
