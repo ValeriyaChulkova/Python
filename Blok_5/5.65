@@ -1,0 +1,9 @@
+def square(n):
+    total = 0
+    for i in range(n):
+        total += (2*i + 1)
+    return total
+
+n = int(input("Введите натуральное число: "))
+result = square(n)
+print(f"{n}^2 = {result}")
