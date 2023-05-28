@@ -1,0 +1,6 @@
+def total_resistance(*resistances):
+Функция для расчета общего сопротивления параллельно соединенных элементов.
+:param resistances: сопротивления элементов
+:return: общее сопротивление цепи
+total_inv_resistance = sum(1 / r for r in resistances)
+return 1 / total_inv_resistance
