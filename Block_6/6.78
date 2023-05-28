@@ -1,0 +1,16 @@
+num = int(input("Введите натуральное число: "))
+
+is_up = True
+previous_digit = num % 10
+
+while is_up and num != 0:
+    num //= 10
+    current_digit = num % 10
+    if previous_digit < current_digit:
+        is_up = False
+    previous_digit = current_digit
+
+if is_up:
+    print("Число удовлетворяет условию")
+else:
+    print("Число не удовлетворяет условию")
