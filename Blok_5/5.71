@@ -1,0 +1,10 @@
+import math
+
+def nested_sqrt(n):
+    result = math.sqrt(n)
+    for i in range(n-1, 0, -1):
+        result = math.sqrt(i+result)
+    return result
+
+total = nested_sqrt(50)
+print(f"Сумма: {total}")
