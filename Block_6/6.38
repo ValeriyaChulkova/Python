@@ -1,0 +1,12 @@
+num = int(input("Введите натуральное число: "))
+count = 0
+position = 0
+while num > 0:
+    count += 1
+    if num % 10 == 3:
+        position = count
+    num //= 10
+if position > 0:
+    print(count - position + 1)
+else:
+    print(0)
