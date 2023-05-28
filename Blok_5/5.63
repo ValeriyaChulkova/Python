@@ -1,0 +1,12 @@
+def compute_expression(base, n):
+    if n == 0:
+        return base
+    else:
+        return compute_expression(base - n**2, n-1)**2
+
+base = 20**2
+n = 19
+
+result = compute_expression(base, n)
+
+print(f'Результат выражения равен: {result}')
