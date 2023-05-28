@@ -1,0 +1,10 @@
+w = 425
+h = 131
+count = 0
+
+while w >= h:
+    n = w // h
+    count += n
+    w, h = h, w - h*n
+
+print("Прямоугольник разрезан на", count, "квадратов")
