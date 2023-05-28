@@ -1,0 +1,29 @@
+num = input("Введите натуральное число: ")
+max1 = max2 = min1 = min2 = -1
+
+for i in range(len(num)):
+    digit = int(num[i])
+    if digit > max1:
+        max2 = max1
+        max1 = digit
+        idx_max1 = i
+    elif digit > max2:
+        max2 = digit
+    if digit < min1 or min1 == -1:
+        min2 = min1
+        min1 = digit
+        idx_min1 = i
+    elif digit < min2 or min2 == -1:
+        min2 = digit
+
+idx_max2 = len(num) - num[::-1].index(str(max2)) - 1
+idx_min2 = len(num) - num[::-1].index(str(min2)) - 1
+
+print(f"Порядковый номер первой максимальной цифры с конца: {len(num) - idx_max1}")
+print(f"Порядковый номер второй максимальной цифры с конца: {len(num) - idx_max2}")
+print(f"Порядковый номер первой максимальной цифры с начала: {idx_max1 + 1}")
+print(f"Порядковый номер второй максимальной цифры с начала: {idx_max2 + 1}")
+print(f"Порядковый номер первой минимальной цифры с конца: {len(num) - idx_min1}")
+print(f"Порядковый номер второй минимальной цифры с конца: {len(num) - idx_min2}")
+print(f"Порядковый номер первой минимальной цифры с начала: {idx_min1 + 1}")
+print(f"Порядковый номер второй минимальной цифры с начала: {idx_min2 + 1}")
