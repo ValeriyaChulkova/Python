@@ -1,0 +1,17 @@
+number = int(input("Введите натуральное число: ")) # вводим число с клавиатуры
+
+# определяем максимальную цифру в числе
+max_digit = 0
+for digit in str(number):
+    if int(digit) > max_digit:
+        max_digit = int(digit)
+        
+# определяем минимальную цифру в числе
+min_digit = 9
+for digit in str(number):
+    if int(digit) < min_digit:
+        min_digit = int(digit)
+        
+# выводим результат на экран
+print("Максимальная цифра в числе:", max_digit)
+print("Минимальная цифра в числе:", min_digit)
