@@ -1,0 +1,19 @@
+x = 5
+y = 7
+product = 0
+
+for i in range(y):
+    product += x
+
+print(product)
+
+#2 способ
+def multiply(x, y):
+    if y == 0:
+        return 0
+    else:
+        return x + multiply(x, y-1)
+
+x = 5
+y = 7
+print(multiply(x, y))
