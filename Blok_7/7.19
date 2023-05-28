@@ -1,0 +1,10 @@
+precipitation_current = [10, 5, 15, 20, 8, 12, 7, 18, 9, 11, 13, 16, 14, 6, 17, 19, 22, 25, 21, 23, 24, 26, 27, 28]
+precipitation_previous = [8, 6, 12, 18, 7, 10, 5, 16, 9, 11, 14, 15, 13, 4, 15, 17, 20, 23, 19, 22, 21, 24, 25, 26]
+
+total_current = sum(precipitation_current)
+total_previous = sum(precipitation_previous)
+
+if total_current > total_previous:
+print("Общее количество осадков за текущий февраль превысило прошлогоднее.")
+else:
+print("Общее количество осадков за текущий февраль не превысило прошлогоднее.")
