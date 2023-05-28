@@ -1,0 +1,11 @@
+def multiply(n, a):
+    if n == 0:
+        return 0
+    elif n > 0:
+        return a + multiply(n-1, a)
+    else:
+        return -a + multiply(n+1, a)
+
+n = 4
+a = 3.5
+print(f'Произведение {n} и {a} равно:', multiply(n, a))
