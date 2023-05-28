@@ -1,0 +1,32 @@
+number = int(input("Введите натуральное число: "))
+
+# Флаги для определения наличия цифр 2 и 5 и их порядкового номера
+is_2 = False
+is_5 = False
+index_2 = -1
+index_5 = -1
+
+# Проходимся по каждой цифре числа
+while number > 0:
+    digit = number % 10
+    if digit == 2:
+        is_2 = True
+        if index_2 == -1:
+            index_2 = digits_count
+    elif digit == 5:
+        is_5 = True
+        if index_5 == -1:
+            index_5 = digits_count
+    digits_count += 1
+    number //= 10
+
+# Вывод сообщения о порядке расположения цифр
+if is_2 and is_5:
+    if index_2 < index_5:
+        print("Цифра 2 расположена левее цифры 5.")
+    elif index_5 < index_2:
+        print("Цифра 5 расположена левее цифры 2.")
+    else:
+        print("Цифры 2 и 5 расположены на одном и том же месте.")
+else:
+    print("Число не содержит обеих цифр 2 и 5.")
