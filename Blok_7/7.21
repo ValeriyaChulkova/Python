@@ -1,0 +1,23 @@
+# баллы первого спортсмена
+athlete1_scores = [10, 8, 6, 9, 7, 10, 8, 9, 6, 8]
+# баллы второго спортсмена
+athlete2_scores = [9, 7, 8, 10, 6, 9, 7, 8, 7, 9]
+
+# счетчик побед каждого спортсмена
+athlete1_wins = 0
+athlete2_wins = 0
+
+# сравнение баллов каждого спортсмена в каждом виде спорта
+for i in range(len(athlete1_scores)):
+if athlete1_scores[i] > athlete2_scores[i]:
+athlete1_wins += 1
+elif athlete1_scores[i] < athlete2_scores[i]:
+athlete2_wins += 1
+
+# сравнение количества побед
+if athlete1_wins > athlete2_wins:
+print("Первый спортсмен показал лучший результат")
+elif athlete1_wins < athlete2_wins:
+print("Второй спортсмен показал лучший результат")
+else:
+print("Оба спортсмена показали одинаковый результат")
