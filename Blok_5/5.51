@@ -1,0 +1,25 @@
+square = 100  # начальная площадь
+yield_rate = 20  # начальная урожайность
+total_yield = 0  # инициализация общего урожая
+
+# a) урожайность за 2-8 год:
+for i in range(2, 9):
+    square *= 1.05  # увеличение площади на 5%
+    yield_rate *= 1.02  # увеличение урожайности на 2%
+    yield_year = square * yield_rate
+    total_yield += yield_year
+    print("Урожай за", i, "год:", round(yield_year), "ц/га")
+
+# б) площадь участка в 4-7 год:
+for i in range(4, 8):
+    square *= 1.05  # увеличение площади на 5%
+    print("Площадь участка в", i, "год:", round(square), "га")
+
+# в) урожай за первые 6 лет:
+for i in range(1, 7):
+    square *= 1.05  # увеличение площади на 5%
+    yield_rate *= 1.02  # увеличение урожайности на 2%
+    yield_year = square * yield_rate
+    total_yield += yield_year
+
+print("Общий урожай за 6 лет:", round(total_yield), "ц")
