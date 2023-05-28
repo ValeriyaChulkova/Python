@@ -1,0 +1,30 @@
+num = int(input("Введите натуральное число: "))
+
+# инициализация максимальной и минимальной цифр, их порядковых номеров
+max_digit = -1
+max_digit_index_from_end = -1
+max_digit_index_from_start = -1
+
+min_digit = 10
+min_digit_index_from_end = -1
+min_digit_index_from_start = -1
+
+# перебор цифр числа в цикле
+for i, digit in enumerate(str(num)):
+    # определение максимальной цифры
+    if int(digit) > max_digit:
+        max_digit = int(digit)
+        max_digit_index_from_end = i
+        max_digit_index_from_start = len(str(num)) - max_digit_index_from_end - 1
+
+    # определение минимальной цифры
+    if int(digit) < min_digit:
+        min_digit = int(digit)
+        min_digit_index_from_end = i
+        min_digit_index_from_start = len(str(num)) - min_digit_index_from_end - 1
+
+# вывод результатов
+print(f"Порядковый номер максимальной цифры {max_digit} с конца числа: {max_digit_index_from_end}")
+print(f"Порядковый номер максимальной цифры {max_digit} с начала числа: {max_digit_index_from_start}")
+print(f"Порядковый номер минимальной цифры {min_digit} с конца числа: {min_digit_index_from_end}")
+print(f"Порядковый номер минимальной цифры {min_digit} с начала числа: {min_digit_index_from_start}")
