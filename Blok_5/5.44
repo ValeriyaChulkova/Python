@@ -1,0 +1,18 @@
+n = int(input("Введите натуральное число n (n >= 3): "))
+
+# Находим n-й член последовательности Фибоначчи
+a = 1
+b = 1
+for i in range(3, n+1):
+    c = a + b
+    a = b
+    b = c
+    
+print("n-й член последовательности Фибоначчи:", b)
+
+# Находим первые n членов последовательности Фибоначчи
+fibonacci_sequence = [1, 1]
+for i in range(2, n):
+    fibonacci_sequence.append(fibonacci_sequence[i-1] + fibonacci_sequence[i-2])
+
+print("Первые", n, "членов последовательности Фибоначчи:", fibonacci_sequence)
