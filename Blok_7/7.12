@@ -1,0 +1,13 @@
+sequence = []
+while True:
+num = int(input("Введите число: "))
+if num == 0:
+break
+sequence.append(num)
+
+result = 1
+for num in sequence:
+result *= num
+print(result)
+
+print(0)
