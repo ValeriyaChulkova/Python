@@ -1,0 +1,13 @@
+num = int(input("Введите натуральное число: "))
+cur_min = 10
+
+while num > 0:
+    digit = num % 10
+    if digit < cur_min:
+        cur_min = digit
+    else:
+        print("Число не удовлетворяет условию")
+        break
+    num //= 10
+else:
+    print("Число удовлетворяет условию")
