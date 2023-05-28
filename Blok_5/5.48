@@ -1,0 +1,15 @@
+def calculate_cells(hours):
+    # Инициализация начальных значений
+    cells = 1
+    divisions = hours // 3
+    # Вычисляем количество клеток, используя формулу 2 в степени кол-ва делений
+    for i in range(divisions):
+        cells *= 2
+    # Возвращаем результат
+    return cells
+
+# Пример использования функции
+hours_list = [3, 6, 9, 12, 15, 18, 21, 24]
+for hours in hours_list:
+    cells = calculate_cells(hours)
+    print(f"Через {hours} часов будет {cells} клеток.")
