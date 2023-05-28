@@ -1,0 +1,37 @@
+а)
+def f(x):
+    return x**4 + 2*x**3 - x - 1
+
+a = 0
+b = 1
+tolerance = 0.001
+
+while abs(b - a) > tolerance:
+    c = (a + b) / 2
+    if f(c) == 0:
+        break
+    elif f(c)*f(a) < 0:
+        b = c
+    else:
+        a = c
+
+print("Приближенное значение корня уравнения: ", c)
+
+б)
+def f(x):
+    return x**3 - 0.2*x**2 - 0.2*x - 1.2
+
+a = 1
+b = 1.5
+tolerance = 0.001
+
+while abs(b - a) > tolerance:
+    c = (a + b) / 2
+    if f(c) == 0:
+        break
+    elif f(c)*f(a) < 0:
+        b = c
+    else:
+        a = c
+
+print("Приближенное значение корня уравнения: ", c)
