@@ -1,0 +1,37 @@
+year = 1
+area = 100
+yield_per_ha = 20
+total_yield = area * yield_per_ha
+
+while yield_per_ha <= 22:
+    year += 1
+    area *= 1.05
+    yield_per_ha *= 1.02
+
+print("Урожайность превысит 22 ц/га в", year, "году")
+
+year = 1
+area = 100
+yield_per_ha = 20
+total_yield = area * yield_per_ha
+
+while area <= 120:
+    year += 1
+    area *= 1.05
+    yield_per_ha *= 1.02
+    total_yield += area * yield_per_ha
+
+print("Площадь участка станет больше 120 га в", year, "году")
+
+year = 1
+area = 100
+yield_per_ha = 20
+total_yield = area * yield_per_ha
+
+while total_yield <= 800:
+    year += 1
+    area *= 1.05
+    yield_per_ha *= 1.02
+    total_yield += area * yield_per_ha
+
+print("Общий урожай превысит 800 ц в", year, "году")
