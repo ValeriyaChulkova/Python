@@ -1,0 +1,28 @@
+number = int(input("Введите натуральное число: "))
+a = int(input("Введите число a: "))
+b = int(input("Введите число b: "))
+k = int(input("Введите число k: "))
+
+has_a = False
+has_b = True
+count_of_a = 0
+
+# Проверяем каждую цифру числа
+while number > 0:
+    digit = number % 10
+    if digit == a:
+        has_a = True
+        count_of_a += 1
+    if digit == b:
+        has_b = False
+    number //= 10
+
+# Выводим результаты
+if has_a:
+    print("В числе есть цифра", a)
+if has_b:
+    print("В числе нет цифры", b)
+if count_of_a > k:
+    print(f"В числе цифра {a} встречается более {k} раз")
+if has_a and not has_b:
+    print(f"В числе есть цифры {a} и {b}")
