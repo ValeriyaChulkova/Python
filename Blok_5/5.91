@@ -1,0 +1,37 @@
+# Пользовательский ввод
+n = int(input("Введите натуральное число: "))
+
+# Создаем переменную для хранения делителей числа n
+divisors = []
+
+# Используем цикл for для перебора всех чисел от 1 до n
+for i in range(1, n+1):
+  # Проверяем, является ли число делителем n
+  if n % i == 0:
+    divisors.append(i)
+
+# а) Выводим все делители числа n
+print("Все делители числа", n, ": ", divisors)
+
+# б) Находим сумму всех делителей числа n
+sum_divisors = sum(divisors)
+print("Сумма всех делителей числа", n, ": ", sum_divisors)
+
+# в) Находим сумму всех четных делителей числа n
+sum_even_divisors = sum([i for i in divisors if i % 2 == 0])
+print("Сумма всех четных делителей числа", n, ": ", sum_even_divisors)
+
+# г) Определяем количество делителей числа n
+count_divisors = len(divisors)
+print("Количество делителей числа", n, ": ", count_divisors)
+
+# д) Определяем количество нечетных делителей числа n
+count_odd_divisors = len([i for i in divisors if i % 2 != 0])
+print("Количество нечетных делителей числа", n, ": ", count_odd_divisors)
+
+# е) Определяем все делители числа n и количество их четных
+all_divisors = divisors
+even_divisors = [i for i in divisors if i % 2 == 0]
+count_even_divisors = len(even_divisors)
+print("Общее количество делителей числа", n, ": ", count_divisors)
+print("Количество четных делителей числа", n, ": ", count_even_divisors)
