@@ -1,0 +1,15 @@
+num = input("Введите натуральное число: ")
+is_monotonic = True
+prev_digit = int(num[0])
+
+# Проверка на монотонность
+for digit in num[1:]:
+    if int(digit) != prev_digit + 1 and int(digit) != prev_digit - 1:
+        is_monotonic = False
+        break
+    prev_digit = int(digit)
+
+if is_monotonic:
+    print("Число удовлетворяет условию")
+else:
+    print("Число не удовлетворяет условию")
