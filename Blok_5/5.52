@@ -1,0 +1,10 @@
+inner_diameter = 10  # внутренний диаметр внутреннего шара в см
+wall_thickness = 0.5  # толщина стенок в см
+volume = 0  # инициализация суммарного объема
+
+for i in range(1, 13):
+    radius = (inner_diameter + 2 * wall_thickness) / 2  # радиус текущего шара
+    volume += (4 / 3) * 3.14 * radius**3  # вычисление объема текущего шара
+    inner_diameter += 2 * wall_thickness  # увеличение внутреннего диаметра
+
+print("Суммарный объем в литрах:", round(volume / 1000, 2))
