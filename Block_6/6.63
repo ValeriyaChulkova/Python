@@ -1,0 +1,12 @@
+num = input("Введите натуральное число: ")
+is_plaindrome = True
+
+for i in range(len(num) // 2):
+    if num[i] != num[-i-1]:
+        is_plaindrome = False
+        break
+
+if is_plaindrome:
+    print("Данное число является палиндромом.")
+else:
+    print("Данное число не является палиндромом.")
