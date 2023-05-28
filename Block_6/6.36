@@ -1,0 +1,28 @@
+a = input("Введите натуральное число: ")
+a_count = 0
+sum_greater_a = 0
+even_sum = 0
+x_count = 0
+y_count = 0
+x = input("Введите цифру x: ")
+y = input("Введите цифру y: ")
+
+for digit in a:
+    if digit == x:
+        x_count += 1
+    elif digit == y:
+        y_count += 1
+    
+    if digit == str(a):
+        a_count += 1
+    
+    if int(digit) > int(a):
+        sum_greater_a += int(digit)
+    
+    if int(digit) % 2 == 0:
+        even_sum += int(digit)
+
+print(f"Количество цифр {a} в числе: {a_count}")
+print(f"Сумма цифр, больших {a}: {sum_greater_a}")
+print(f"Сумма четных цифр: {even_sum}")
+print(f"Количество цифр {x} и {y} в числе: {x_count} и {y_count}")
