@@ -1,0 +1,20 @@
+number = int(input("Введите натуральное число: "))
+has_three = False
+has_two_and_five = False
+
+# Проверяем каждую цифру числа
+while number > 0:
+    digit = number % 10
+    if digit == 3:
+        has_three = True
+    if digit == 2:
+        has_two_and_five = True
+    if digit == 5:
+        has_two_and_five = has_two_and_five and True
+    number //= 10
+
+# Выводим результаты
+if has_three:
+    print("В числе есть цифра 3")
+if has_two_and_five:
+    print("В числе есть цифры 2 и 5")
