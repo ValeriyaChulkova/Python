@@ -1,0 +1,15 @@
+import math
+
+n = int(input("Введите количество зубцов: "))  # количество зубцов
+
+angle = 360 / n  # угол между зубцами
+radians = math.radians(angle)  # угол в радианах
+sin = math.sin(radians)  # значение синуса угла
+
+arc_length = 2 * sin  # длина дуги между зубцами
+arc_area = 0.5 * arc_length  # площадь соответствующего треугольника
+
+total_area = n * arc_area  # общая площадь всех зубцов
+
+print("Приближенная площадь одной арки синусоиды:", round(arc_area, 2))
+print("Общая площадь всех зубцов:", round(total_area, 2))
