@@ -1,0 +1,27 @@
+def calculate_deposit_growth(initial_deposit, months):
+    # Инфляционный коэффициент
+    inflation_rate = 0.02
+    # Создаем и заполняем список прироста суммы вклада за каждый месяц
+    growths = []
+    for i in range(1, months+1):
+        growth = initial_deposit * pow(1 + inflation_rate, i) - initial_deposit
+        growths.append(growth)
+    # Возвращаем список прироста суммы вклада
+    return growths
+
+def calculate_total_deposit(initial_deposit, months):
+    # Инфляционный коэффициент
+    inflation_rate = 0.02
+    # Вычисляем размер вклада через months месяцев
+    total_deposit = initial_deposit * pow(1 + inflation_rate, months)
+    # Возвращаем размер вклада
+    return total_deposit
+
+# Пример использования функций
+initial_deposit = 1000
+months_list = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+for months in months_list:
+    growths = calculate_deposit_growth(initial_deposit, months)
+    total_deposit = calculate_total_deposit(initial_deposit, months)
+    print(f"Прирост суммы вклада за {months} месяцев: {growths}")
+    print(f"Сумма вклада через {months} месяцев: {total_deposit}\n")
