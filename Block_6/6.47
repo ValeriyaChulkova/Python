@@ -1,0 +1,32 @@
+num = int(input("Введите натуральное число: "))
+
+# Инициализация переменных
+max_digit = 0
+min_digit = 9
+is_max_left = True
+is_min_left = True
+
+# Определение максимальной и минимальной цифры и их позиций
+while num > 0:
+    digit = num % 10
+    if digit > max_digit:
+        max_digit = digit
+        is_max_left = True
+    elif digit < max_digit:
+        is_max_left = False
+
+    if digit < min_digit:
+        min_digit = digit
+        is_min_left = True
+    elif digit > min_digit:
+        is_min_left = False
+
+    num //= 10
+
+# Вывод результата
+if is_max_left:
+    print(f"Цифра {max_digit} расположена левее")
+elif is_min_left:
+    print(f"Цифра {min_digit} расположена левее")
+else:
+    print("Максимальная и минимальная цифры имеют одинаковую позицию")
