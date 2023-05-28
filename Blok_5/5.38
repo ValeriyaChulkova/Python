@@ -1,0 +1,7 @@
+x = 2
+sum = 0
+
+for i in range(1, 12, 2):
+  sum += x**i/i
+
+print(sum)
