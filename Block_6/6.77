@@ -1,0 +1,28 @@
+а)
+def same_digits(n):
+    """
+    Функция проверяет, состоит ли заданное
+    число из одинаковых цифр.
+    """
+    str_n = str(n)
+    first_digit = str_n[0]
+    for digit in str_n[1:]:
+        if digit != first_digit:
+            return False
+    return True
+
+# Пример использования функции:
+print(same_digits(5555)) # True
+print(same_digits(1234)) # False
+
+б)
+def adjacent_digits(n):
+    """
+    Функция проверяет, содержит ли заданное
+    число две одинаковые цифры, стоящие рядом.
+    """
+    str_n = str(n)
+    for i in range(len(str_n)-1):
+        if str_n[i] == str_n[i+1]:
+            return True
+    return False
