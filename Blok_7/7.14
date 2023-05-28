@@ -1,0 +1,6 @@
+p = int(input("Введите натуральное число p: "))
+a = list(map(float, input("Введите вещественные числа через пробел: ").split()))
+
+sum_of_squares = sum([x**2 for x in a])
+
+print("Сумма квадратов вещественных чисел равна:", sum_of_squares)
