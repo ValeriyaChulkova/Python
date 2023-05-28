@@ -1,0 +1,28 @@
+number = int(input("Введите натуральное число: "))
+a = int(input("Введите число a: "))
+b = int(input("Введите число b: "))
+k = int(input("Введите число k: "))
+m = int(input("Введите число m: "))
+
+sum_of_digits = 0
+multiplication_of_digits = 1
+count_of_digits = 0
+first_digit = int(str(number)[0])
+
+# Считаем сумму, произведение и количество цифр
+while number > 0:
+    digit = number % 10
+    sum_of_digits += digit
+    multiplication_of_digits *= digit
+    count_of_digits += 1
+    number //= 10
+
+# Проверяем условия
+if sum_of_digits < a:
+    print("Сумма цифр меньше a")
+if multiplication_of_digits > b:
+    print("Произведение цифр больше b")
+if count_of_digits == k:
+    print(f"Число {number} является {k}-значным")
+if first_digit > m:
+    print(f"Первая цифра числа {number} превышает {m}")
