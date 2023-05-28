@@ -1,0 +1,10 @@
+#(a)
+n = 13
+while n < 100:
+    print(n)
+    n += 13
+    
+#(б)
+n = 13
+for n in range(13, 100, 13):
+    print(n)
