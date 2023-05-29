@@ -1,0 +1,6 @@
+points = [1, 0, 3, 1, 1, 0, 3, 3, 0] # пример списка очков
+# определяем количество выигрышей, проигрышей и ничьих
+wins = points.count(3)
+losses = points.count(0)
+draws = points.count(1)
+print(f"Выигрышей: {wins}, проигрышей: {losses}, ничьих: {draws}")
