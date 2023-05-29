@@ -1,0 +1,25 @@
+print("Введите время удаления игроков в минутах (2, 5 или 10): ")
+team1 = {"total_penalty_time": 0, "total_penalties": 0}
+team2 = {"total_penalty_time": 0, "total_penalties": 0}
+while True:
+  time = int(input())
+  if time == 0:
+    break
+  elif time not in [2, 5, 10]:
+    print("Ошибка: время удаления может быть только 2, 5 или 10 минут")
+  else:
+    team = int(input("Введите команду (1 или 2): "))
+    if team == 1:
+      team1["total_penalty_time"] += time
+      team1["total_penalties"] += 1
+    elif team == 2:
+      team2["total_penalty_time"] += time
+      team2["total_penalties"] += 1
+    else:
+      print("Ошибка: команда может быть только 1 или 2")
+print("Штрафное время и количество удалений команды 1: ")
+print(f"Штрафное время: {team1['total_penalty_time']} минут")
+print(f"Количество удалений: {team1['total_penalties']}")
+print("Штрафное время и количество удалений команды 2: ")
+print(f"Штрафное время: {team2['total_penalty_time']} минут")
+print(f"Количество удалений: {team2['total_penalties']}")
