@@ -1,0 +1,11 @@
+# создаем словарь для хранения информации об удалениях каждой команды
+removals = {'Команда 1': {'total': 0, 'time': 0}, 'Команда 2': {'total': 0, 'time': 0}}
+# запрашиваем информацию об удалениях у пользователя
+for i in range(24):
+    team, duration = input(f"Введите номер команды и продолжительность удаления {i+1}: ").split()
+    duration = int(duration)
+    removals[f"Команда {team}"]['total'] += 1
+    removals[f"Команда {team}"]['time'] += duration
+# выводим информацию об удалениях каждой команды
+for team, info in removals.items():
+    print(f"{team}: Общее число удалений - {info['total']}, Общее время всех удалений - {info['time']} минут")
