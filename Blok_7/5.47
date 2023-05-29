@@ -1,0 +1,4 @@
+prices = [500, 1200, 800, 1500, 900, 1100, 2000, 700]
+
+total_cost = sum(price for price in prices if price > 1000)
+print(total_cost)
