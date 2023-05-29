@@ -1,0 +1,15 @@
+# задаем площади и урожайность в каждом районе
+areas = [10, 15, 20, 12, 8, 5, 18, 14, 16, 22]
+yields = [50, 45, 55, 60, 40, 50, 48, 52, 53, 58]
+
+# вычисляем количество пшеницы и среднюю урожайность по области
+total_wheat = 0
+total_yield = 0
+for i in range(len(areas)):
+total_wheat += areas[i] * yields[i]
+total_yield += yields[i]
+average_yield = total_yield / len(yields)
+
+# выводим результаты
+print("Количество пшеницы в области:", total_wheat, "центнеров")
+print("Средняя урожайность по области:", average_yield, "центнеров/гектар")
