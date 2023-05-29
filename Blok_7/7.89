@@ -1,0 +1,14 @@
+t = int(input("Введите натуральное число t: "))
+n = int(input("Введите количество чисел a: "))
+a = []
+for i in range(n):
+    a.append(int(input(f"Введите {i + 1}-е число a: ")))
+p = int(input("Введите целое число p: "))
+count_yi = 0
+for i in range(n):
+    if a[i] > t and a[i] % p == 0:
+        count_yi += 1
+if count_yi > 0:
+    print(f"Количество чисел больше {t} и кратных {p}: {count_yi}")
+else:
+    print(f"Нет чисел больше {t}, кратных {p}")
