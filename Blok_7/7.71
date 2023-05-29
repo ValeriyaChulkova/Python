@@ -1,0 +1,6 @@
+grades = [[4, 5], [3, 2], [5, 5], [2, 4], [3, 2], [4, 3]]
+count = 0
+for student in grades:
+    if 2 in student:
+        count += 1
+print("Количество студентов, получивших на экзамене двойку: ", count)
