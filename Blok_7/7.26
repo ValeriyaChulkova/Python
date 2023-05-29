@@ -1,0 +1,10 @@
+
+n = int(input("Введите количество чисел: "))
+sum = 0
+
+for i in range(n):
+a = float(input("Введите число: "))
+sum += a
+
+average = sum / n
+print("Среднее арифметическое: ", average)
