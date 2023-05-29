@@ -1,0 +1,12 @@
+numbers = []
+while True:
+num = int(input("Введите число: "))
+if num < 0:
+break
+numbers.append(num)
+
+if len(numbers) == 0:
+print("Последовательность пуста")
+else:
+average = sum(numbers) / len(numbers)
+print("Среднее арифметическое: ", average)
