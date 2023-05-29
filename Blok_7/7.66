@@ -1,0 +1,10 @@
+n = int(input()) # длина последовательности
+count = 0 # счетчик отрицательных чисел
+while n > 0:
+    x = float(input())
+    if x < 0:
+        count += 1
+    else:
+        break
+    n -= 1
+print(count)
