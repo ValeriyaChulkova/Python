@@ -1,0 +1,18 @@
+# первый случай
+precipitation = [0, 0, 2, 0, 1, 0, 0, 3, 0, 0, 0, 0]
+days_without_precipitation = 0
+for i in range(len(precipitation)):
+    if precipitation[i] == 0:
+        days_without_precipitation += 1
+    else:
+        break
+print("Непрерывно, начиная с первого мая, осадков не было", days_without_precipitation, "дней")
+# второй случай
+precipitation = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+days_without_precipitation = 0
+for i in range(len(precipitation)):
+    if precipitation[i] == 0:
+        days_without_precipitation += 1
+    else:
+        break
+print("Непрерывно, начиная с первого мая, осадков не было", days_without_precipitation, "дней")
