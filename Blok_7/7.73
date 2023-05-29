@@ -1,0 +1,17 @@
+n = int(input("Введите количество чисел: "))
+t = int(input("Введите натуральное число: "))
+x = []
+count_t = 0
+count_s = 0
+ 
+for i in range(n):
+    x.append(int(input("Введите число: ")))
+ 
+for i in range(n):
+    if x[i] % 3 == 0:
+        count_t += 1
+    if x[i] % 7 == 0:
+        count_s += 1
+ 
+print("Количество чисел, кратных трем: ", count_t)
+print("Количество чисел, кратных семи: ", count_s)
