@@ -1,0 +1,11 @@
+n = int(input("Введите число n: "))
+ds = []
+for i in range(n):
+    ds.append(float(input("Введите вещественное число: ")))
+    
+sum_greater = sum(filter(lambda x: x > 20.5, ds))
+p = float(input("Введите число p: "))
+if sum_greater < p:
+    print("Сумма чисел, больших 20.5, меньше p")
+else:
+    print("Сумма чисел, больших 20.5, не меньше p")
