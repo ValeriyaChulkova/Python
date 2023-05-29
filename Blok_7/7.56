@@ -1,0 +1,15 @@
+p = int(input("Введите натуральное число p: "))
+n = int(input("Введите количество чисел c: "))
+c = []
+for i in range(n):
+    c.append(int(input("Введите число c{}: ".format(i+1))))
+t = int(input("Введите число t: "))
+r = int(input("Введите число r: "))
+summ = 0
+for i in c:
+    if i <= t:
+        summ += i
+if summ % r == 0:
+    print("Сумма чисел c, которые не превышают t и кратна r, равна {}".format(summ))
+else:
+    print("Сумма чисел c, которые не превышают t и кратна r, не равна {}".format(summ))
