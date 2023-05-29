@@ -1,0 +1,10 @@
+class1_ages = [14, 15, 13, 14, 16, 15, 14, 15, 13, 14, 16, 15, 14, 15, 13, 14, 16, 15, 14, 15]
+class2_ages = [13, 14, 15, 13, 14, 16, 15, 14, 15, 13, 14, 16, 15, 14, 15, 13, 14, 16, 15, 14]
+
+import statistics
+
+class1_avg_age = statistics.mean(class1_ages)
+class2_avg_age = statistics.mean(class2_ages)
+
+print("Средний возраст учеников первого класса:", class1_avg_age)
+print("Средний возраст учеников второго класса:", class2_avg_age)
