@@ -1,0 +1,39 @@
+#a)
+
+p = int(input("Введите количество чисел: "))
+sum_abs = 0
+for i in range(p):
+a = int(input(f"Введите число a{i+1}: "))
+sum_abs += abs(a)
+print("Сумма модулей чисел равна:", sum_abs)
+
+
+#б) Произведение модулей чисел:
+
+p = int(input("Введите количество чисел: "))
+prod_abs = 1
+for i in range(p):
+a = int(input(f"Введите число a{i+1}: "))
+prod_abs *= abs(a)
+print("Произведение модулей чисел равно:", prod_abs)
+
+
+#в) Сумма соседних чисел:
+
+p = int(input("Введите количество чисел: "))
+sum_neighbours = 0
+for i in range(p-1):
+a = int(input(f"Введите число a{i+1}: "))
+b = int(input(f"Введите число a{i+2}: "))
+sum_neighbours += a + b
+print("Сумма соседних чисел равна:", sum_neighbours)
+
+
+#г) Чередующаяся сумма чисел:
+
+p = int(input("Введите количество чисел: "))
+alt_sum = 0
+for i in range(p):
+a = int(input(f"Введите число a{i+1}: "))
+alt_sum += (-1)**(i+1) * a
+print("Чередующаяся сумма чисел равна:", alt_sum)
