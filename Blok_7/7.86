@@ -1,0 +1,11 @@
+n = int(input("Введите количество чисел: "))
+c = []
+count_less_20 = 0
+for i in range(n):
+    c.append(int(input(f"Введите число {i+1}: ")))
+    if c[i] < 20:
+        count_less_20 += 1
+if count_less_20 == 5:
+    print("Количество чисел меньше 20 равно 5")
+else:
+    print("Количество чисел меньше 20 не равно 5")
