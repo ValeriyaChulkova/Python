@@ -1,0 +1,14 @@
+n = int(input("Введите количество чисел: "))
+nums = []
+for i in range(n):
+    num = int(input("Введите число: "))
+    nums.append(num)
+x = int(input("Введите значение х: "))
+neg_count = 0
+for num in nums:
+    if num < 0:
+        neg_count += 1
+if neg_count > x:
+    print("Количество отрицательных чисел превышает х")
+else:
+    print("Количество отрицательных чисел не превышает х")
