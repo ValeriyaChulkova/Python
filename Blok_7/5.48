@@ -1,0 +1,15 @@
+# заданные данные
+newspaper_pages = [8, 12, 16, 10]
+magazine_pages = [20, 24, 18, 30, 22]
+
+# инициализация переменных
+total_magazine_pages = 0
+max_newspaper_pages = max(newspaper_pages)
+
+# цикл для подсчета общего числа страниц в журналах
+for pages in magazine_pages:
+if pages > max_newspaper_pages:
+total_magazine_pages += pages
+
+# вывод результата
+print("Общее число страниц во всех журналах:", total_magazine_pages)
