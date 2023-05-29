@@ -1,0 +1,9 @@
+# вычисляем средний рост учеников класса 1
+avg_height_class1 = sum(heights_class1) / len(heights_class1)
+
+# вычисляем средний рост учеников класса 2
+avg_height_class2 = sum(heights_class2) / len(heights_class2)
+
+# выводим результаты
+print("Средний рост учеников класса 1:", avg_height_class1)
+print("Средний рост учеников класса 2:", avg_height_class2)
