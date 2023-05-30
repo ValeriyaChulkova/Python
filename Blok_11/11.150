@@ -1,0 +1,7 @@
+arr = [5, 8, 3, 6, 2]
+arr = [x-20 for x in arr]
+last_elem = arr[-1]
+arr = [x*last_elem for x in arr]
+B = 4
+arr = [x+B for x in arr]
+print(arr)
