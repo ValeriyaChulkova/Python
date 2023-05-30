@@ -1,0 +1,19 @@
+# initialize variables for the first two terms
+prev_num, prev_denom = 1, 1
+curr_num, curr_denom = 2, 1
+# iterate through the sequence
+while True:
+    # calculate the next term
+    next_num = prev_num + curr_num
+    next_denom = prev_denom + curr_denom
+    next_frac = next_num / next_denom
+    
+    # check if the difference is less than or equal to 0.001
+    if abs(next_frac - curr_frac) <= 0.001:
+        print(next_frac)
+        break
+    
+    # update variables for the next iteration
+    prev_num, prev_denom = curr_num, curr_denom
+    curr_num, curr_denom = next_num, next_denom
+    curr_frac = curr_num / curr_denom
