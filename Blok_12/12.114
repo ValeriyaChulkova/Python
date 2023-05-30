@@ -1,0 +1,16 @@
+word = input("Введите слово из 15 букв: ")
+k = int(input("Введите значение k: "))
+s = int(input("Введите значение s: "))
+
+# проверка корректности введенных значений k и s
+if k >= s or s - k <= 1:
+    print("Некорректный ввод")
+else:
+    word_list = list(word)
+    # индексы букв, которые нужно переставить
+    letters_indexes = list(range(k + 1, s))[::-1]
+    # перестановка букв
+    for i, letter_index in enumerate(letters_indexes):
+        word_list[letter_index] = word[k + 1 + i]
+    # вывод измененного слова
+    print("".join(word_list))
