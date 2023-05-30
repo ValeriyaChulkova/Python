@@ -1,0 +1,24 @@
+# Creating a matrix to store the salary information
+salary_matrix = []
+for i in range(12):
+   salary_row = []
+   for j in range(3):
+      salary = float(input(f"Enter salary of employee {i+1} for month {j+1}: "))
+      salary_row.append(salary)
+   salary_matrix.append(salary_row)
+# Calculating the total amount paid for the quarter to all employees
+total_amount = 0
+for i in range(12):
+   for j in range(3):
+      total_amount += salary_matrix[i][j]
+print(f"Total amount paid for the quarter to all employees: ${total_amount:,.2f}")
+# Calculating the salary received for the quarter by each employee
+for i in range(12):
+   total_salary = sum(salary_matrix[i])
+   print(f"Salary received for the quarter by employee {i+1}: ${total_salary:,.2f}")
+# Calculating the total salary of all employees for each month
+for j in range(3):
+   total_salary = 0
+   for i in range(12):
+      total_salary += salary_matrix[i][j]
+   print(f"Total salary of all employees for month {j+1}: ${total_salary:,.2f}")
