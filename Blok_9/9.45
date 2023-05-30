@@ -1,0 +1,9 @@
+m = 25 # given value of m 
+n = 100 # given value of n
+result = [] # list to hold the required numbers
+for i in range(1, n):
+    sum_of_digits = sum([int(digit) for digit in str(i)]) # calculate the sum of digits of i
+    if sum_of_digits**2 == m and i < n: # check if the square of the sum of digits of i is equal to m and i is less than n
+        result.append(i) # add i to the result list
+        
+print(result) # print the result list
