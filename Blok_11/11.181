@@ -1,0 +1,7 @@
+arr = [5, 8, 3, 9, 8, 2, 7]
+k = 3 # к-тый элемент
+last = arr[-1]
+for i in range(len(arr)-1,k,-1):
+    arr[i] = arr[i-1]
+arr[k] = last
+print(arr)
