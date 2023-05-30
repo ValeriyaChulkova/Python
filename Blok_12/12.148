@@ -1,0 +1,11 @@
+text = input("Введите текст: ")
+digits = []
+
+for symbol in text:
+    if symbol.isdigit():
+        digits.append(symbol)
+
+if digits:
+    print("Цифры в тексте:", " ".join(digits))
+else:
+    print("В тексте нет цифр")
