@@ -1,0 +1,27 @@
+import random
+# get random numbers a, b, c, d
+a = random.randint(1, 8)
+b = random.randint(1, 8)
+c = random.randint(1, 8)
+d = random.randint(1, 8)
+# check if white pawn can move to (c,d) in one move
+if b == d-1 and (a == c-1 or a == c+1):
+    print("White pawn at ({}, {}) can move to ({}, {}) in one move".format(a, b, c, d))
+elif b == d-2 and a == c and b == 7: # check if white pawn is at starting position
+    print("White pawn at ({}, {}) can move to ({}, {}) in one move".format(a, b, c, d))
+elif b == d-1 and a == c and d == 8: # check if white pawn is at end position
+    print("White pawn at ({}, {}) can move to ({}, {}) in one move".format(a, b, c, d))
+elif b > d:
+    print("White pawn at ({}, {}) can beat opponent's piece and move to ({}, {}) in one move".format(a, b, c, d))
+# check if black pawn can move to (c,d) in one move
+if b == d+1 and (a == c-1 or a == c+1):
+    print("Black pawn at ({}, {}) can move to ({}, {}) in one move".format(a, b, c, d))
+elif b == d+2 and a == c and b == 2: # check if black pawn is at starting position
+    print("Black pawn at ({}, {}) can move to ({}, {}) in one move".format(a, b, c, d))
+elif b == d+1 and a == c and d == 1: # check if black pawn is at end position
+    print("Black pawn at ({}, {}) can move to ({}, {}) in one move".format(a, b, c, d))
+elif b < d:
+    print("Black pawn at ({}, {}) can beat opponent's piece and move to ({}, {}) in one move".format(a, b, c, d))
+# check if knight threatens (c,d)
+if (abs(a-c) == 2 and abs(b-d) == 1) or (abs(a-c) == 1 and abs(b-d) == 2):
+    print("Knight at ({}, {}) threatens ({}, {})".format(a, b, c, d))
