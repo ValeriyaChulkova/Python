@@ -1,0 +1,5 @@
+game_results = [1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1]
+if 3 in game_results:
+  print("The first win occurred earlier")
+else:
+  print("The first loss occurred earlier")
