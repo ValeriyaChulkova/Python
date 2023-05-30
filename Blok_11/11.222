@@ -1,0 +1,4 @@
+from math import factorial
+fact = factorial(100)
+digits = [int(d) for d in str(fact)]
+print(digits)
