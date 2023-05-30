@@ -1,0 +1,12 @@
+# без использования генератора списка
+arr = [1, 13, 2, 13, 3, 13, 4, 13]
+new_arr = []
+for i in range(len(arr)):
+    if arr[i] != 13:
+        new_arr.append(arr[i])
+print(new_arr)
+
+# с использованием генератора списка
+arr = [1, 13, 2, 13, 3, 13, 4, 13]
+new_arr = [x for x in arr if x != 13]
+print(new_arr)
