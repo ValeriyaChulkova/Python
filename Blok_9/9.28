@@ -1,0 +1,12 @@
+def divisor_sum(num):
+    div_sum = 1
+    for i in range(2, int(num**0.5)+1):
+        if num%i==0:
+            if i == num//i:
+                div_sum += i
+            else:
+                div_sum += i + num//i
+    return div_sum
+for i in range(100, 301):
+    if divisor_sum(i) == 50:
+        print(i)
