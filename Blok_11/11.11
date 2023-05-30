@@ -1,0 +1,2 @@
+element_index = 3
+print(arr[element_index])
