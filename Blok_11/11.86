@@ -1,0 +1,8 @@
+def has_no_precipitation(arr):
+    count = 0
+    for precipitation in arr:
+        if precipitation == 0:
+            count += 1
+            if count >= 10:
+                return False
+    return True
