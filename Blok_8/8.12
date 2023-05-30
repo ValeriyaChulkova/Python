@@ -1,0 +1,4 @@
+highest_a = 5
+for n in range(1, 1000):
+    if 1 + sum(1/k for k in range(2, n+1)) > highest_a:
+        print(n)
