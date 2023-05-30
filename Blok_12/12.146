@@ -1,0 +1,16 @@
+word = "абвАБВ"
+new_word = ""
+
+for letter in word:
+    if letter == "а":
+        new_word += "б"
+    elif letter == "б":
+        new_word += "а"
+    elif letter == "А":
+        new_word += "Б"
+    elif letter == "Б":
+        new_word += "А"
+    else:
+        new_word += letter
+
+print("Новая строка:", new_word)
