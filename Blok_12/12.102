@@ -1,0 +1,7 @@
+sentence = input("Введите предложение: ")
+
+# Заменяем все вхождения буквосочетания "ах" на "ух"
+new_sentence = sentence.replace('ах', 'ух')
+
+print("Исходное предложение:", sentence)
+print("Новое предложение:", new_sentence)
