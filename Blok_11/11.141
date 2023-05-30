@@ -1,0 +1,7 @@
+birth_years = []
+for i in range(30):
+    birth_year = int(input("Введите год рождения человека: "))
+    birth_years.append(birth_year)
+
+birth_years_sorted = sorted(birth_years, reverse=True)
+print("Годы рождения двух самых старших людей: ", birth_years_sorted[0], " и ", birth_years_sorted[1])
