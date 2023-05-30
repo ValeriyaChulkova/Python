@@ -1,0 +1,10 @@
+elements = [-2, 5, 0, -7, 8, 2, -9]
+positive_count = 0
+negative_count = 0
+for element in elements:
+    if element > 0:
+        positive_count += 1
+    elif element < 0:
+        negative_count += 1
+print("Number of positive elements:", positive_count)
+print("Number of negative elements:", negative_count)
