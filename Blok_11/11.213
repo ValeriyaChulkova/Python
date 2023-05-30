@@ -1,0 +1,5 @@
+students = [("Alice", 175), ("Bob", 180), ("Charlie", 170)]
+if all(x[1] >= y[1] for x,y in zip(students[:-1], students[1:])):
+    print("Students are listed in descending order of their height")
+else:
+    print("Students are not listed in descending order of their height")
