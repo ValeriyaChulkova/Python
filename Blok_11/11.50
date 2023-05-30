@@ -1,0 +1,8 @@
+sep_precipitation = [23, 14, 19, 25, 18, 20, 12, 28, 16, 22, 29, 31, 26, 17, 15, 24, 21, 27, 13, 30, 11, 32, 33, 35, 36, 37, 38, 39, 40]
+# determine average precipitation for first, second and third decades of September
+decade1 = sum(sep_precipitation[0:10]) / 10
+decade2 = sum(sep_precipitation[10:20]) / 10
+decade3 = sum(sep_precipitation[20:]) / len(sep_precipitation[20:])
+print("Average precipitation in first decade of September:", decade1)
+print("Average precipitation in second decade of September:", decade2)
+print("Average precipitation in third decade of September:", decade3)
