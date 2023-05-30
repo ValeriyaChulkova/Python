@@ -1,0 +1,2 @@
+reverse_arr = arr[::-1]
+print(reverse_arr)
