@@ -1,0 +1,15 @@
+sentence = input("Введите предложение: ")
+
+# а) Определить число вхождений буквосочетания "ро"
+count_ro = sentence.count("ро")
+print("Число вхождений буквосочетания 'ро':", count_ro)
+
+# б) Определить число вхождений некоторого буквосочетания из двух букв
+two_letters = input("Введите некоторое буквосочетание из двух букв: ")
+count_two_letters = sentence.count(two_letters)
+print("Число вхождений буквосочетания '", two_letters, "':", count_two_letters)
+
+# в) Определить число вхождений некоторого буквосочетания
+some_letters = input("Введите некоторое буквосочетание: ")
+count_some_letters = sentence.count(some_letters)
+print("Число вхождений буквосочетания '", some_letters, "':", count_some_letters)
