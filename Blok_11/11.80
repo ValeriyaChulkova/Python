@@ -1,0 +1,18 @@
+scores = [5, 4, 3, 5, 2, 4, 4, 5, 3, 2, 4, 5, 2, 3, 4, 5, 3, 2, 2, 4, 3, 5]
+five_count = 0
+four_count = 0
+three_count = 0
+two_count = 0
+for score in scores:
+    if score == 5:
+        five_count += 1
+    elif score == 4:
+        four_count += 1
+    elif score == 3:
+        three_count += 1
+    elif score == 2:
+        two_count += 1
+print("Number of fives:", five_count)
+print("Number of fours:", four_count)
+print("Number of threes:", three_count)
+print("Number of twos:", two_count)
