@@ -1,0 +1,14 @@
+#a)
+birth_years = [1925, 1930, 1945, 1910, 1950, 1935, 1955, 1937, 1952, 1938, 1920, 1940, 1953, 1948, 1951, 1954, 1949, 1921, 1929, 1932, 1934, 1918, 1919, 1941, 1922, 1936, 1927, 1928, 1931, 1926, 1946]
+oldest_person_index = 0
+for i in range(1, len(birth_years)):
+  if birth_years[i] < birth_years[oldest_person_index]:
+    oldest_person_index = i
+print("The oldest person is at index:", oldest_person_index)
+#b)
+birth_years = [1925, 1930, 1945, 1910, 1950, 1935, 1955, 1937, 1952, 1938, 1920, 1940, 1953, 1948, 1951, 1954, 1949, 1921, 1929, 1932, 1934, 1918, 1919, 1941, 1922, 1936, 1927, 1928, 1931, 1926, 1946]
+oldest_person_index = len(birth_years) - 1
+for i in range(len(birth_years) - 2, -1, -1):
+  if birth_years[i] < birth_years[oldest_person_index]:
+    oldest_person_index = i
+print("The oldest person is at index:", oldest_person_index)
