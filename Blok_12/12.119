@@ -1,0 +1,15 @@
+def remove_middle_char(word):
+    word_length = len(word)
+    
+    if word_length % 2 == 0:
+        middle_start = int((word_length / 2) - 1)
+        middle_end = middle_start + 2
+    else:
+        middle_start = int((word_length // 2))
+        middle_end = middle_start + 1
+        
+    return word[:middle_start] + "_" + word[middle_end:]
+
+word = input("Введите слово: ")
+result = remove_middle_char(word)
+print(result)
