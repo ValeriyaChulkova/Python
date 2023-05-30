@@ -1,0 +1,9 @@
+def replace_substring(main_string, old_substring, new_substring):
+    return main_string.replace(old_substring, new_substring)
+
+# пример использования
+text = "Это тестовая строка, строка для замены"
+old_substring = "строка"
+new_substring = "подстрока"
+new_text = replace_substring(text, old_substring, new_substring)
+print(new_text)
