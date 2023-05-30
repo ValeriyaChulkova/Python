@@ -1,0 +1,5 @@
+word = "алигортм"
+
+new_word = word[0] + word[3] + word[1:3] + word[4:]
+
+print("Новое слово:", new_word)
