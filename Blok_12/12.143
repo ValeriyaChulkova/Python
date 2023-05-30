@@ -1,0 +1,6 @@
+word = "килбайот"
+
+# перемещаем буквы
+new_word = word[:3] + word[4] + word[3] + word[5:]
+
+print("Новое слово:", new_word)
