@@ -1,0 +1,6 @@
+word = 'курсор'
+
+# Заменяем буквы для получения слова "танцор"
+new_word = word.replace('к', 'т').replace('у', 'а').replace('р', 'н').replace('с', '').replace('о', 'ц')
+
+print(new_word)
