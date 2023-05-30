@@ -1,0 +1,50 @@
+import random
+def create_question():
+    num1 = random.randint(1, 9)
+    num2 = random.randint(1, 9)
+    return f"What is the product of {num1} x {num2}? ", num1*num2
+def validate_answer(answer, correct_answer):
+    if answer == correct_answer:
+        return True
+    else:
+        return False
+def test_once():
+    question, correct_answer = create_question()
+    answer = int(input(question))
+    if validate_answer(answer, correct_answer):
+        print("Correct!")
+    else:
+        print("Incorrect!")
+def test_twenty_times():
+    num_correct = 0
+    num_incorrect = 0
+    for i in range(20):
+        question, correct_answer = create_question()
+        answer = int(input(question))
+        if validate_answer(answer, correct_answer):
+            num_correct += 1
+            print("Correct!")
+        else:
+            num_incorrect += 1
+            print("Incorrect!")
+    print(f"Number of correct answers: {num_correct}")
+    print(f"Number of incorrect answers: {num_incorrect}")
+def test_until_zero():
+    while True:
+        question, correct_answer = create_question()
+        answer = int(input(question))
+        if answer == 0:
+            break
+        elif validate_answer(answer, correct_answer):
+            print("Correct!")
+        else:
+            print("Incorrect!")
+option = input("Choose an option - a, b or c: ")
+if option == "a":
+    test_once()
+elif option == "b":
+    test_twenty_times()
+elif option == "c":
+    test_until_zero()
+else:
+    print("Invalid option")
