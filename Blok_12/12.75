@@ -1,0 +1,5 @@
+sentence = "  This is a sentence with extra spaces in between this and other words.  "
+
+first_word = sentence.strip().split('  ')[0]
+
+print("The first word in the sentence is:", first_word)
