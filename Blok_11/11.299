@@ -1,0 +1,9 @@
+arr = [5, -8, 3, -9, 5, -2, -7]
+neg_index = next((i for i, x in enumerate(arr) if x < 0), "No negative elements")
+if neg_index != "No negative elements":
+    print(neg_index)
+    print(arr[neg_index:])
+last_neg_index = len(arr) - arr[::-1].index(next((x for x in arr if x < 0), None)) - 1
+if last_neg_index != len(arr) - 1:
+    print(last_neg_index)
+    print(arr[:last_neg_index])
