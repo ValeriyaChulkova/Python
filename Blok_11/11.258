@@ -1,0 +1,12 @@
+# без использования генератора списка
+arr = [1, -2, 3, -4, 5, -6, 7, -8, 9, -10]
+neg_arr = []
+for i in range(len(arr)):
+    if arr[i] < 0:
+        neg_arr.append(arr[i])
+print(neg_arr)
+
+# с использованием генератора списка
+arr = [1, -2, 3, -4, 5, -6, 7, -8, 9, -10]
+neg_arr = [x for x in arr if x < 0]
+print(neg_arr)
