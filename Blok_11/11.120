@@ -1,0 +1,6 @@
+car_speeds = [120, 140, 110, 150, 130, 150, 160, 170, 120, 140, 110, 150, 130, 150, 160, 170, 120, 140, 110, 190, 130, 150, 160, 170, 120, 140, 110, 150, 130, 150, 160, 170, 120, 140, 210, 150, 130, 150, 160, 170]
+fastest_speed = max(car_speeds)
+fastest_index = car_speeds.index(fastest_speed)
+print("The serial number of the fastest car is:", fastest_index)
+last_fastest_index = len(car_speeds) - 1 - car_speeds[::-1].index(fastest_speed)
+print("The serial number of the last fastest car is:", last_fastest_index)
