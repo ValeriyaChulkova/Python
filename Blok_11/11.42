@@ -1,0 +1,29 @@
+# a) calculate sum of array elements
+sum_arr = sum(arr)
+print("Sum of array elements:", sum_arr)
+# b) calculate product of array elements
+prod_arr = 1
+for num in arr:
+  prod_arr *= num
+print("Product of array elements:", prod_arr)
+# c) calculate sum of squares of array elements
+sum_squares = 0
+for num in arr:
+  sum_squares += num**2
+print("Sum of squares of array elements:", sum_squares)
+# d) calculate sum of first six elements of array
+sum_first_six = sum(arr[:6])
+print("Sum of first six elements of array:", sum_first_six)
+# e) calculate sum of elements from k1 to k2 (inclusive)
+k1 = int(input("Enter k1: "))
+k2 = int(input("Enter k2: "))
+sum_k1_k2 = sum(arr[k1-1:k2])
+print("Sum of elements from", k1, "to", k2, ":", sum_k1_k2)
+# f) calculate arithmetic mean of array elements
+mean_arr = sum_arr / len(arr)
+print("Arithmetic mean of array elements:", mean_arr)
+# g) calculate arithmetic mean of array elements from s1 to s2 (inclusive)
+s1 = int(input("Enter s1: "))
+s2 = int(input("Enter s2: "))
+mean_s1_s2 = sum(arr[s1-1:s2]) / (s2-s1+1)
+print("Arithmetic mean of elements from", s1, "to", s2, ":", mean_s1_s2)
