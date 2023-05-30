@@ -1,0 +1,6 @@
+def has_duplicates(array):
+    return len(array) != len(set(array))
+array1 = [1, 2, 3, 4, 5]
+array2 = [1, 2, 3, 4, 4]
+print("Array 1 has duplicates: ", has_duplicates(array1))
+print("Array 2 has duplicates: ", has_duplicates(array2))
