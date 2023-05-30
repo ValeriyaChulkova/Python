@@ -1,0 +1,7 @@
+ages = [25, 32, 45, 25, 32, 50, 18]
+if ages.index(max(ages)) < ages.index(min(ages)):
+  print("The oldest person is listed earlier")
+elif ages.index(min(ages)) < ages.index(max(ages)):
+  print("The youngest person is listed earlier")
+else:
+  print("Both the oldest and youngest persons have the same index")
