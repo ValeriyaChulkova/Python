@@ -1,0 +1,11 @@
+sentence = input("Введите предложение: ") # принимаем строку от пользователя
+words = sentence.strip().split("  ") # удаляем начальные и конечные пробелы, разделяем по двойному пробелу
+if len(words) < 4: # проверяем, что в предложении есть как минимум четыре слова
+    print("Ошибка! В предложении должно быть не менее четырех слов.")
+else:
+    first_word = words[0]
+    second_word = words[1]
+    third_word = words[2]
+    print("Первое слово: " + first_word)
+    print("Второе слово: " + second_word)
+    print("Третье слово: " + third_word)
