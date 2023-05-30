@@ -1,0 +1,7 @@
+arr = []
+for i in range(12):
+    if i < 7:
+        arr.append(random.randint(0, 25))
+    else:
+        arr.append(random.randint(26, 50))
+print(arr)
