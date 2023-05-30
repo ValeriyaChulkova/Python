@@ -1,0 +1,28 @@
+students = [[0]*6 for i in range(5)]
+for i in range(5):
+    for j in range(6):
+        students[i][j] = int(input(f"Enter number of students in Group {j+1} of Course {i+1}: "))
+        
+# Calculate the course with the least students
+min_students = sum(students[0])
+min_course = 1
+for i in range(1,5):
+    course_students = sum(students[i])
+    if course_students < min_students:
+        min_students = course_students
+        min_course = i+1
+print(f"The course with the least students is Course {min_course} with {min_students} students.")
+# Calculate the group with the least students
+min_students = students[0][0]
+min_group = (1,1)
+for i in range(5):
+    for j in range(6):
+        if students[i][j] < min_students:
+            min_students = students[i][j]
+            min_group = (j+1,i+1)
+print(f"The smallest group is Group {min_group[0]} of Course {min_group[1]} with {min_students} students.")
+# Calculate the smallest group for each course
+for i in range(5):
+    min_students = min(students[i])
+    min_group = students[i].index(min_students) + 1
+    print(f"The smallest group for Course {i+1} is Group {min_group} with {min_students} students.")
