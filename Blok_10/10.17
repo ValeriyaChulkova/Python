@@ -1,0 +1,10 @@
+import random
+# Define the full set of domino dice
+dominoes = [(i, j) for i in range(7) for j in range(i, 7)]
+# Randomly select two dice from the full set
+dice1, dice2 = random.sample(dominoes, 2)
+# Check whether the two dice can be presented one to the other
+if dice1[0] == dice2[0] or dice1[0] == dice2[1] or dice1[1] == dice2[0] or dice1[1] == dice2[1]:
+    print("These dice can be presented one to the other in accordance with the rules of dominoes.")
+else:
+    print("These dice cannot be presented one to the other in accordance with the rules of dominoes.")
