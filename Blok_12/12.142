@@ -1,0 +1,7 @@
+word = "ПРОГРАММИРОВАНИЕ"
+k = 5
+
+# перемещаем буквы
+new_word = word[:k-1] + word[-1] + word[k:len(word)-1] + word[k-1]
+
+print("Новое слово:", new_word)
