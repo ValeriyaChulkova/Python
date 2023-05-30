@@ -1,0 +1,10 @@
+import random
+# create a list of all possible domino dice
+dominos = []
+for i in range(7):
+    for j in range(i, 7):
+        dominos.append((i, j))
+# randomly select one domino from the list
+selected_domino = random.choice(dominos)
+# output the selected domino in the desired format
+print("Bone {}-{} is selected".format(selected_domino[0], selected_domino[1]))
