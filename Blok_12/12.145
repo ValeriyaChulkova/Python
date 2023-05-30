@@ -1,0 +1,9 @@
+word = "программирование"
+new_word = ""
+
+for i in range(6):
+    new_word += word[i] + word[11-i] + word[i+1] + word[10-i]
+
+new_word += word[6:8]
+
+print("Новое слово:", new_word)
