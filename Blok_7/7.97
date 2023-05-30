@@ -1,0 +1,12 @@
+numbers = []
+n = int(input("Введите число: "))
+while n != -1:
+  numbers.append(n)
+  n = int(input("Введите число: "))
+for i in range(len(numbers) - 1):
+  if numbers[i] == numbers[i+1]:
+    print(f"Пара одинаковых соседних чисел: {numbers[i]}, {numbers[i+1]}.")
+    print(f"Их порядковые номера: {i+1}, {i+2}.")
+    break
+else:
+  print("В последовательности нет пары одинаковых соседних чисел.")
