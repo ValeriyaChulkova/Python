@@ -1,0 +1,13 @@
+numbers = [10.5, 20.3, 15.2, 25.8, 30.6, 20.1, 35.7, 40.9, 30.2, 20.4, 15.6, 10.8]
+# a) the maximum element exceeds the minimum by no more than 25
+max_num = max(numbers)
+min_num = min(numbers)
+if max_num - min_num <= 25:
+    print("The maximum element does not exceed the minimum by more than 25")
+else:
+    print("The maximum element exceeds the minimum by more than 25")
+# b) the minimum element is less than the maximum by more than 2 times
+if min_num < max_num/2:
+    print("The minimum element is less than the maximum by more than 2 times")
+else:
+    print("The minimum element is not less than the maximum by more than 2 times")
