@@ -1,0 +1,16 @@
+scores = [9.2, 8.6, 9.8, 9.5, 9.4, 9.2, 9.6, 9.7]
+def calculate_score(s):
+    min_score = min(s)
+    max_score = max(s)
+    if s.count(max_score) > 1:
+        s.remove(max_score)
+        max_score = max(s)
+    if s.count(min_score) > 1:
+        s.remove(min_score)
+        min_score = min(s)
+    s.remove(max_score)
+    s.remove(min_score)
+    avg_score = sum(s) / len(s)
+    return avg_score
+athlete_score = calculate_score(scores)
+print("The score for the athlete is:", athlete_score)
