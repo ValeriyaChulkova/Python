@@ -1,0 +1,12 @@
+text = input('Введите текст: ')
+max_length, current_length = 0, 0
+
+for char in text:
+    if char.isdigit():
+        current_length += 1
+        if current_length > max_length:
+            max_length = current_length
+    else:
+        current_length = 0
+
+print('Максимальное количество идущих подряд цифр:', max_length)
