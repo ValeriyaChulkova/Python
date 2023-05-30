@@ -1,0 +1,23 @@
+#Version 1: Using a for loop
+
+m = 0.8
+for i in range(1, 1000):
+    num = i / (i+1)
+    if num < m:
+        print(num)
+    else:
+        break
+
+#Version 2: Using a while loop
+
+m = 0.8
+i = 1
+while i/(i+1) < m:
+    print(i/(i+1))
+    i += 1
+
+#Version 3: Using a list comprehension
+
+m = 0.8
+numbers = [i/(i+1) for i in range(1, 1000) if i/(i+1) < m]
+print(numbers)
