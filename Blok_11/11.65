@@ -1,0 +1,18 @@
+array = [10, 25, 15, 7, 30, 40, 5, 20, 45, 12]
+sum_greater_than_20 = 0
+sum_less_than_50 = 0
+for i in range(len(array)):
+    if array[i] > 20:
+        sum_greater_than_20 += array[i]
+    elif array[i] < 50:
+        sum_less_than_50 += array[i]
+print("Sum of elements greater than 20:", sum_greater_than_20)
+print("Sum of elements less than 50:", sum_less_than_50)
+if sum_greater_than_20 > 100:
+    print("Sum of elements greater than 20 exceeds 100.")
+else:
+    print("Sum of elements greater than 20 does not exceed 100.")
+if sum_less_than_50 % 2 == 0:
+    print("Sum of elements less than 50 is an even number.")
+else:
+    print("Sum of elements less than 50 is not an even number.")
