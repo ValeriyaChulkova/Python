@@ -1,0 +1,7 @@
+heights = [170, 180, 175, 185, 190, 175, 180, 195, 200, 185, 175, 190, 185, 180, 175, 185, 195, 200, 185, 175, 190, 195, 185, 175, 180, 185, 195, 200, 190, 175, 180, 185, 190, 195]
+max_height = max(heights)
+count = 0
+for height in heights:
+    if height == max_height:
+        count += 1
+print("Number of people with maximum height:", count)
