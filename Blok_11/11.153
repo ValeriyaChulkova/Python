@@ -1,0 +1,6 @@
+arr = [3, 8, 2, 7, 5, 7, 4, 9, 1, 6]
+first_three = arr[:3]
+last_three = arr[-3:]
+middle_part = arr[3:-3]
+arr = last_three + middle_part + first_three
+print(arr)
