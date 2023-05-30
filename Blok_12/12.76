@@ -1,0 +1,5 @@
+sentence = "This is an example sentence to find the last word."
+
+last_word = sentence.split()[-1]
+
+print("The last word in the sentence is:", last_word)
