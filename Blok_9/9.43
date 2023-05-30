@@ -1,0 +1,23 @@
+def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+def gcd_multi(numbers):
+    result = numbers[0]
+    for i in range(1, len(numbers)):
+        result = gcd(result, numbers[i])
+    return result
+# example usage
+numbers = [12, 18, 24, 30]
+print(gcd_multi(numbers))  # output: 6
+
+class Node:
+    def __init__(self, a, b, c):
+        self.a = a
+        self.b = b
+        self.c = c
+    def gcd(self):
+        return gcd(gcd(self.a, self.b), self.c)
+# example usage
+node = Node(12, 18, 24)
+print(node.gcd())  # output: 6
