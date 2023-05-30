@@ -1,0 +1,8 @@
+word = "программирование"
+s = 6
+k = 3
+
+# перемещаем s-ю букву на место k-й
+new_word = word[:k-1] + word[s-1] + word[k:s-1] + word[s:]
+
+print("Новое слово:", new_word)
