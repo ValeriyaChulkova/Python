@@ -1,0 +1,7 @@
+residents = []
+for i in range(15):
+    residents_count = int(input("Введите количество жителей на этаже: "))
+    residents.append(residents_count)
+
+residents_sorted = sorted(residents)
+print("Два этажа, на которых проживает меньше всего людей: ", residents_sorted[0], " и ", residents_sorted[1])
