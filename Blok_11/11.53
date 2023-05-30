@@ -1,0 +1,5 @@
+def four_digit_sum(arr):
+  if sum(arr) >= 1000 and sum(arr) <= 9999:
+    return True
+  else:
+    return False
