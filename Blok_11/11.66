@@ -1,0 +1,12 @@
+ 
+even_precip = 0
+odd_precip = 0
+for i in range(len(precipitation)):
+    if i % 2 == 0:
+        even_precip += precipitation[i]
+    else:
+        odd_precip += precipitation[i]
+if even_precip > odd_precip:
+    print("More precipitation fell on even number days.")
+else:
+    print("More precipitation fell on odd number days.")
