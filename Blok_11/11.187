@@ -1,0 +1,26 @@
+# а) числа 100 в начало списка
+arr = [5, 8, 3, 9, 8, 2, 7]
+arr.append(0)
+for i in range(len(arr)-1,0,-1):
+    arr[i] = arr[i-1]
+arr[0] = 100
+print(arr[:-1])
+
+# б) заданного числа в начало списка
+arr = [5, 8, 3, 9, 8, 2, 7]
+n = int(input("Введите число: "))
+arr.append(0)
+for i in range(len(arr)-1,0,-1):
+    arr[i] = arr[i-1]
+arr[0] = n
+print(arr[:-1])
+
+# в) заданного числа перед элементом с заданным индексом в памяти компьютера
+arr = [5, 8, 3, 9, 8, 2, 7]
+n = int(input("Введите число: "))
+k = int(input("Введите индекс: "))
+arr.append(0)
+for i in range(len(arr)-1,k,-1):
+    arr[i] = arr[i-1]
+arr[k] = n
+print(arr[:-1])
