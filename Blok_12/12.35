@@ -1,0 +1,25 @@
+# Решение без использования оператора цикла:
+
+word = 'абвгде'
+
+# Разбиваем слово на две половины и меняем их местами
+new_word = word[len(word)//2:] + word[:len(word)//2]
+
+print(new_word)
+
+
+# Решение с использованием оператора цикла:
+
+word = 'абвгде'
+
+# Преобразуем строку в список символов
+characters = list(word)
+
+# Меняем местами символы в списка символов
+for i in range(len(characters)//2):
+    characters[i], characters[i+len(characters)//2] = characters[i+len(characters)//2], characters[i]
+
+# Преобразуем список символов обратно в строку
+new_word = ''.join(characters)
+
+print(new_word)
