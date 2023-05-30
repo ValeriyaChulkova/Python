@@ -1,0 +1,7 @@
+weights = [60, 65, 70, 75, 80, 85, 90, 95, 100]
+max_weight = max(weights)
+min_weight = min(weights)
+if max_weight > 2*min_weight:
+    print("The weight of the heaviest person exceeds the weight of the lightest by more than 2 times")
+else:
+    print("The weight of the heaviest person does not exceed the weight of the lightest by more than 2 times")
