@@ -1,0 +1,10 @@
+# а)
+arr = [1, 2, 3, 4, 5]
+new_arr = arr[:2] + [10] + arr[2:]
+print(new_arr)
+
+# б)
+arr = [1, 2, 3, 4, 5]
+k = 3 # вставляем после третьего элемента
+new_arr = arr[:k+1] + [100] + arr[k+1:]
+print(new_arr)
