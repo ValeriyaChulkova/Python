@@ -1,0 +1,5 @@
+no_precip_count = 0
+for i in range(len(precipitation)):
+    if precipitation[i] == 0:
+        no_precip_count += 1
+print("The number of days with no precipitation is:", no_precip_count)
