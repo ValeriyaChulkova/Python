@@ -1,0 +1,7 @@
+a_count = 0
+other_count = len(int_arr) - 1
+for i in int_arr:
+    if i % a == 0:
+        a_count += 1
+print("The number of elements that are multiples of a is:", a_count)
+print("The number of elements other than the last element is:", other_count)
