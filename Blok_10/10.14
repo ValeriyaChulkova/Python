@@ -1,0 +1,15 @@
+import random
+player1_score = random.randint(1,6)
+player2_score = random.randint(1,6)
+player3_score = random.randint(1,6)
+print("Player 1 score:", player1_score)
+print("Player 2 score:", player2_score)
+print("Player 3 score:", player3_score)
+if player1_score > player2_score and player1_score > player3_score:
+  print("Player 1 wins!")
+elif player2_score > player1_score and player2_score > player3_score:
+  print("Player 2 wins!")
+elif player3_score > player1_score and player3_score > player2_score:
+  print("Player 3 wins!")
+else:
+  print("It's a tie!")
