@@ -1,0 +1,8 @@
+array = [2, 3, 5, 10, 1, 4, 7]
+sum_array = sum(array)
+larger_than_sum = []
+for i in range(len(array)):
+    if array[i] > sum_array:
+        larger_than_sum.append(i)
+print("Number of elements larger than the sum of all the elements of the array: ", len(larger_than_sum))
+print("Their indices are: ", larger_than_sum)
