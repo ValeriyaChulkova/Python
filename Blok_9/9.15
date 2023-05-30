@@ -1,0 +1,24 @@
+# input data
+income = {
+ "store_1": [50, 80, 75, 90, 110, 130, 85, 75, 95, 100],
+ "store_2": [70, 60, 80, 95, 75, 85, 100, 120, 90, 80],
+ "store_3": [90, 85, 95, 80, 100, 110, 70, 65, 105, 95]
+}
+# determine maximum income for each store and on each day
+max_income_store = {}
+max_income_day = {}
+for store in income.keys():
+ max_income_date = income[store].index(max(income[store])) + 1
+ max_income_store[store] = max_income_date
+ 
+ for day, income_day in enumerate(income[store], start=1):
+  if day not in max_income_day or income_day > income[max_income_day[day]][day-1]:
+   max_income_day[day] = store
+# print results
+print("Maximum income date for each store:")
+for store, max_date in max_income_store.items():
+ print(f"{store}: day {max_date}")
+ 
+print("\nStore with maximum income on each day:")
+for day, store in max_income_day.items():
+ print(f"Day {day}: {store}")
