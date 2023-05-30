@@ -1,0 +1,8 @@
+# Input data
+points = [[10, 6, 8, 4, 7], [9, 5, 7, 6, 8], [8, 7, 6, 5, 9], [7, 8, 5, 7, 10], [6, 9, 4, 8, 6], [5, 4, 9, 9, 5], [4, 3, 10, 3, 4], [3, 2, 3, 2, 3]]
+# a) Maximum of the ratings 
+max_rating = max([max(athlete) for athlete in points])
+print("The maximum rating in the table is", max_rating)
+# b) Points of the competition winner
+winner_points = max([sum(athlete) for athlete in points])
+print("The winner of the competition scored", winner_points, "points.")
