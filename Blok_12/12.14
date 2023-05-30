@@ -1,0 +1,5 @@
+word = "Python"
+if word[1] == word[3]:
+    print("The second and fourth characters are the same.")
+else:
+    print("The second and fourth characters are not the same.")
