@@ -1,0 +1,29 @@
+word = 'трос'
+
+# Получаем слово "сорт"
+word_1 = word[1]
+word_2 = word[3]
+word_3 = word[2]
+word_4 = word[0]
+
+new_word_1 = word_1 + word_2 + word_3 + word_4
+
+# Получаем слово "рост"
+word_5 = word[2]
+word_6 = word[3]
+word_7 = word[1]
+word_8 = word[0]
+
+new_word_2 = word_5 + word_6 + word_7 + word_8
+
+# Получаем слово "торс"
+word_9 = word[0]
+word_10 = word[3]
+word_11 = word[2]
+word_12 = word[1]
+
+new_word_3 = word_9 + word_10 + word_11 + word_12
+
+print(new_word_1)
+print(new_word_2)
+print(new_word_3)
