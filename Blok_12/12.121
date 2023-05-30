@@ -1,0 +1,10 @@
+sentence = input("Введите предложение: ")
+new_sentence = ""
+
+for letter in sentence:
+    if letter != "c":
+        new_sentence += letter
+    else:
+        new_sentence += "_"
+
+print(new_sentence)
