@@ -1,0 +1,8 @@
+sentence = "Дано предложение. Определить число пробелов в нем."
+count_spaces = 0
+
+for letter in sentence:
+    if letter == " ":
+        count_spaces += 1
+
+print("Число пробелов в предложении:", count_spaces)
