@@ -1,0 +1,5 @@
+non_negative_count = 0
+for i in arr:
+    if i >= 0:
+        non_negative_count += 1
+print("The number of non-negative elements is:", non_negative_count)
