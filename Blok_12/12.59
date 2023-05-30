@@ -1,0 +1,12 @@
+sentence = "Дано предложение. Определить число вхождений в него некоторого символа."
+target_char = 'о'
+count = 0
+
+# Приводим все символы к строчным, чтобы искать как заглавные, так и строчные буквы "о"
+sentence = sentence.lower()
+
+for letter in sentence:
+    if letter == target_char:
+        count += 1
+
+print(f"Число вхождений символа {target_char} в предложении: {count}")
