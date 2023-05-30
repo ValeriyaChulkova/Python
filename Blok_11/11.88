@@ -1,0 +1,10 @@
+list2 = [10, 20, 30, 40, 50, 60, 70]
+T = 45
+sum2 = 0
+count2 = 0
+for element in list2:
+    if element < T:
+        sum2 += element
+        count2 += 1
+mean2 = sum2 / count2
+print(mean2)
