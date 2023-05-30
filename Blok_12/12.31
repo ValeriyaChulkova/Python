@@ -1,0 +1,6 @@
+word = 'пробел'
+
+# Заменяем буквы для получения слова "продел"
+new_word = word.replace('п', 'пр').replace('о', 'ои').replace('б', 'д').replace('е', '').replace('л', '')
+
+print(new_word)
