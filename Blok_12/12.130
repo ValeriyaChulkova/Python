@@ -1,0 +1,13 @@
+word = "example_"
+letter = "s"
+
+# Find the index of the first "i" in the word
+i_index = word.index("i")
+
+# Insert the letter after the first "i"
+new_word = word[:i_index+1] + letter + word[i_index+1:]
+
+# Shift all characters after the k-th position to the right by 1
+k = 3
+new_word = new_word[:k+1] + new_word[k] + new_word[k+1:]
+print(new_word)
