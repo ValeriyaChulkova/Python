@@ -1,0 +1,4 @@
+n = 223344
+digits = set(str(n))
+count = len(digits)
+print("Number of distinct digits in", n, "is", count)
