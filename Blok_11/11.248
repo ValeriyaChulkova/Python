@@ -1,0 +1,14 @@
+# 1 способ
+a = [1, 2, 3, 4, 5]
+b = []
+for i in range(len(a)):
+    if i % 2 == 0:
+        b.append(a[i] * 2)
+    else:
+        b.append(a[i])
+print(b)
+
+# 2 способ (с использованием генератора списка)
+a = [1, 2, 3, 4, 5]
+b = [a[i]*2 if i%2==0 else a[i] for i in range(len(a))]
+print(b)
