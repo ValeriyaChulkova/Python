@@ -1,0 +1,9 @@
+# исправление ошибки в слове "глинянный"
+word1 = "глинянный"
+correct_word1 = word1.replace("нн", "н")
+print(correct_word1)
+
+# исправление ошибки в слове "граффика"
+word2 = "граффика"
+correct_word2 = word2.replace("фф", "ф")
+print(correct_word2)
