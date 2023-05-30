@@ -1,0 +1,14 @@
+word = 'апельсин'
+
+# Получаем слово "спаниель"
+word_1 = word[4]
+word_2 = word[5]
+word_3 = word[1]
+word_4 = word[3]
+word_5 = word[4]
+word_6 = word[2]
+word_7 = word[6]
+
+new_word = word_1 + word_2 + word_3 + word_4 + word_5 + word_6 + word_7
+
+print(new_word)
