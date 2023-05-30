@@ -1,0 +1,5 @@
+word = "level"
+if word[0] == word[-1]:
+    print("The word begins and ends with the same letter.")
+else:
+    print("The word does not begin and end with the same letter.")
