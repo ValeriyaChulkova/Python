@@ -1,0 +1,13 @@
+weights = [100, 200, 300, 500, 1000, 1200, 1400, 1500, 2000, 3000]
+def count_ways(v):
+    if v == 0:
+        return 1
+    if v < 0:
+        return 0
+    count = 0
+    for w in weights:
+        count += count_ways(v - w)
+    return count
+v = 5000
+ways = count_ways(v)
+print("Number of ways to make up weight", v, "=", ways)
