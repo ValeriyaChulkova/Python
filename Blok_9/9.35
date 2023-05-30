@@ -1,0 +1,24 @@
+denominations = [64, 32, 16, 8, 4, 2, 1]
+# Dynamic programming table to store minimum number of banknotes required for each value
+dp = [[float('inf')] * 11 for _ in range(65)]
+for i in range(65):
+    dp[i][0] = 0
+for j in range(1, 11):
+    for i in range(64, 0, -1):
+        if i >= denominations[j-1]:
+            dp[i][j] = min(dp[i][j], dp[i - denominations[j-1]][j] + 1)
+        dp[i][j] = min(dp[i][j], dp[i][j-1])
+# Function to calculate minimum number of banknotes required to pay amount n
+def minimum_banknotes(n):
+    banknotes = []
+    j = 10
+    while n > 0:
+        while dp[n][j] == dp[n][j-1]:
+            j -= 1
+        banknotes.append(denominations[j-1])
+        n -= denominations[j-1]
+    return banknotes
+# Example usage
+for n in range(1, 11):
+    print(f"Amount: {n}")
+    print(f"Minimum banknotes: {minimum_banknotes(n)}")
