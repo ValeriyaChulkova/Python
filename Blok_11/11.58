@@ -1,0 +1,7 @@
+figure_skating_array = [70, 80, 75, 74, 82, 81, 85, 90, 88, 92, 95, 91, 84, 87, 89, 93, 97, 96]
+mandatory_program_score = sum(figure_skating_array[:6])
+arbitrary_program_score = sum(figure_skating_array[6:])
+if mandatory_program_score > arbitrary_program_score:
+    print("Athlete performed better in mandatory program")
+else:
+    print("Athlete performed better in arbitrary program")
