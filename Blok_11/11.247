@@ -1,0 +1,16 @@
+# 1 способ
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+c = 5
+new_arr = []
+for i in range(len(arr)):
+    if i >= 3 and i <= 10:
+        new_arr.append(arr[i] * -1)
+    else:
+        new_arr.append(arr[i] / c)
+print(new_arr)
+
+# 2 способ (с использованием генератора списка)
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+c = 5
+new_arr = [arr[i]*-1 if i>=3 and i<=10 else arr[i]/c for i in range(len(arr))]
+print(new_arr)
