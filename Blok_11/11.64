@@ -1,0 +1,13 @@
+array = [3, -5, 2, 8, -1, 6, -4, -2]
+sum_positive = 0
+sum_negative = 0
+for i in range(len(array)):
+    if array[i] > 0:
+        sum_positive += array[i]
+    elif array[i] < 0:
+        sum_negative += array[i]
+if sum_negative == 0:
+    print("Cannot calculate the quotient as the sum of negative elements is zero.")
+else:
+    quotient = sum_positive / abs(sum_negative)
+    print("Quotient of sum of positive elements by modulus of sum of negative elements:", quotient)
