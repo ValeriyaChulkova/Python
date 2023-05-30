@@ -1,0 +1,8 @@
+words = input("Введите последовательность слов: ")
+words_list = words.split()
+
+for word in words_list:
+    if "жи" in word or "ши" in word:
+        print(f"Буквосочетание 'жи' или 'ши' найдено в слове: {word}")
+    else:
+        print(f"Буквосочетание 'жи' или 'ши' НЕ найдено в слове: {word}")
