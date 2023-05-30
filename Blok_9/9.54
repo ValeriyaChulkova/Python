@@ -1,0 +1,16 @@
+def get_fractions():
+    fractions = []
+    for denominator in range(2, 8):
+        for numerator in range(1, denominator):
+            if gcd(numerator, denominator) == 1:
+                fractions.append((numerator, denominator))
+    return fractions
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+fractions = get_fractions()
+fractions.sort()
+for fraction in fractions:
+    print("{}/{}".format(fraction[0], fraction[1]))
