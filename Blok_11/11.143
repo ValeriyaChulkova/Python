@@ -1,0 +1,9 @@
+temperatures = []
+for i in range(31):
+    temperature = float(input("Введите среднедневную температуру за день: "))
+    temperatures.append(temperature)
+
+temperatures_sorted = sorted(temperatures, reverse=True)
+index1 = temperatures.index(temperatures_sorted[0])
+index2 = temperatures.index(temperatures_sorted[1])
+print("Даты двух самых теплых дней: ", index1, " и ", index2)
