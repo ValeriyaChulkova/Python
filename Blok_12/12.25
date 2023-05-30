@@ -1,0 +1,20 @@
+word = 'программа'
+
+# Получаем слово "ром"
+word_1 = word[7]
+word_2 = word[6]
+word_3 = word[5]
+
+new_word_1 = word_1 + word_2 + word_3
+
+# Получаем слово "рампа"
+word_4 = word[1]
+word_5 = word[2]
+word_6 = word[0]
+word_7 = word[8]
+word_8 = word[6]
+
+new_word_2 = word_4 + word_5 + word_6 + word_7 + word_8
+
+print(new_word_1)
+print(new_word_2)
