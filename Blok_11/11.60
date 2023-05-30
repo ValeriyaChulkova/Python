@@ -1,0 +1,10 @@
+array = [12, 7, 21, 8, 15, 10, 9, 30, 16, 5]
+sum_odd_elements = sum(num for num in array if num % 2 != 0)
+print("Sum of odd elements:", sum_odd_elements)
+multiple_of = 3
+sum_multiples_of_given_num = sum(num for num in array if num % multiple_of == 0)
+print("Sum of multiples of", multiple_of, ":", sum_multiples_of_given_num)
+a = 5
+b = 2
+sum_multiple_of_a_or_b = sum(num for num in array if num % a == 0 or num % b == 0)
+print("Sum of elements multiples of", a, "or", b, ":", sum_multiple_of_a_or_b)
