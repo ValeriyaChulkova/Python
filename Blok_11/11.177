@@ -1,0 +1,7 @@
+arr = [5, 8, 3, 9, 8, 2, 7]
+k = 3 # к-тый элемент
+first = arr[0]
+for i in range(1, k):
+    arr[i-1] = arr[i]
+arr[k-1] = first
+print(arr)
