@@ -1,0 +1,38 @@
+#a)
+return dp[n].
+Here is the Python code:
+def num_ways_to_pay(n):
+    coins = [1, 2, 5]
+    bills = [10]
+    dp = [0] * (n+1)
+    dp[0] = 1
+    for coin in coins:
+        for i in range(coin, n+1):
+            dp[i] += dp[i-coin]
+    for bill in bills:
+        for i in range(bill, n+1):
+            dp[i] += dp[i-bill]
+    return dp[n]
+    
+ #b)
+ def get_payment_methods(n, coins, bills):
+    if n == 0:
+        return [[]]
+    methods = []
+    for coin in coins:
+        if n >= coin:
+            sub_methods = get_payment_methods(n - coin, coins, bills)
+            for sub_method in sub_methods:
+                methods.append([coin] + sub_method)
+    for bill in bills:
+        if n >= bill:
+            sub_methods = get_payment_methods(n - bill, coins, bills)
+            for sub_method in sub_methods:
+                methods.append([bill] + sub_method)
+    return methods
+# example usage
+n = 10
+coins = [1, 2, 5]
+bills = [10]
+print(num_ways_to_pay(n)) # 22
+print(get_payment_methods(n, coins, bills))
