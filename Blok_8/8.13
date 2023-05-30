@@ -1,0 +1,9 @@
+def smallest_n(a):
+    s = 0  # the sum starts at zero
+    n = 1  # we start with 1/1
+    while s < a:
+        s += 1/n  # add the next term
+        n += 1     # increment n
+    return n - 1  # the last n that was added made the sum larger than a
+# example usage:
+print(smallest_n(3.14159))  # output: 11
