@@ -1,0 +1,8 @@
+arr = [10, 20, 30, 40, 50, 60, 70, 80]
+a = 55
+print([x for x in arr if x < a])
+for i in range(len(arr)-1):
+    if arr[i] < a and arr[i+1] > a:
+        print(f"Элементы между {arr[i]} и {arr[i+1]}")
+        break
+print(min(arr, key=lambda x: abs(x-a)))
