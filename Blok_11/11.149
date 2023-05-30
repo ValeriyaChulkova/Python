@@ -1,0 +1,6 @@
+arr = [2, 7, 4, 9, 1]
+arr = [x*2 for x in arr]
+A = 3
+arr = [x-A for x in arr]
+arr = [x/arr[0] for x in arr]
+print(arr)
