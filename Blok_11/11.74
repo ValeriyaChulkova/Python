@@ -1,0 +1,2 @@
+# Assuming the array is already defined and a, b are entered from keyboard
+   num_elements_in_interval = sum(1 for element in array if a <= element <= b)
