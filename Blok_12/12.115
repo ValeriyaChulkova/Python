@@ -1,0 +1,16 @@
+word = input("Введите слово: ")
+
+# поиск индексов букв "а" и "о"
+a_index = word.find("а")
+o_index = word.rfind("о")
+
+# проверка наличия этих букв в слове
+if a_index == -1 or o_index == -1:
+    print("В слове нет букв 'а' или 'о'")
+else:
+    # создание списка из букв слова
+    word_list = list(word)
+    # замена букв в списке
+    word_list[a_index], word_list[o_index] = word_list[o_index], word_list[a_index]
+    # вывод измененного слова
+    print("".join(word_list))
