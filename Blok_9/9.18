@@ -1,0 +1,19 @@
+scores = {'Group 1': {'Exam 1': [], 'Exam 2': [], 'Exam 3': []},
+          'Group 2': {'Exam 1': [], 'Exam 2': [], 'Exam 3': []},
+          'Group 3': {'Exam 1': [], 'Exam 2': [], 'Exam 3': []}}
+for group in scores:
+    for exam in scores[group]:
+        print(f"Enter scores for {group}, {exam}:")
+        for i in range(20):
+            score = int(input(f"Student {i+1}: "))
+            scores[group][exam].append(score)
+
+averages = {}
+for group in scores:
+    total = 0
+    for exam in scores[group]:
+        total += sum(scores[group][exam])
+    averages[group] = total / (3*20)
+
+best_group = max(averages, key=averages.get)
+print(f"The best group is {best_group} with an average score of {averages[best_group]}")
