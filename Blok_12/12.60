@@ -1,0 +1,14 @@
+sentence = "Дано предложение. Определить долю (в %) букв а в нем."
+count_a = 0
+
+# Приводим все символы к строчным, чтобы искать как заглавные, так и строчные буквы "а"
+sentence = sentence.lower()
+
+for letter in sentence:
+    if letter == "а":
+        count_a += 1
+
+# Вычисляем долю букв "а" в предложении
+a_share = (count_a / len(sentence)) * 100
+
+print("Доля букв 'а' в предложении:", round(a_share, 2), "%")
