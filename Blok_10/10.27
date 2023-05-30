@@ -1,0 +1,44 @@
+#a) 
+import random
+import math
+# define the function of half sine wave
+def half_sine(x):
+    return abs(math.sin(x)) / 2
+# define the boundaries of the integration
+a = 0
+b = math.pi
+# define the number of points to generate
+n = 1000000
+# initialize the count of points within the area
+count = 0
+# loop through n points and check if they are within the area
+for i in range(n):
+    x = random.uniform(a, b)
+    y = random.uniform(0, 1)
+    if y <= half_sine(x):
+        count += 1
+# calculate the area using the ratio of points within the area to total points
+area = (count / n) * (b - a)
+print("Area of half sine wave =", area)
+
+b) 
+import random
+# define the function of square parabola
+def square_parabola(x):
+    return x ** 2
+# define the boundaries of the integration
+a = 0
+b = 3
+# define the number of points to generate
+n = 1000000
+# initialize the count of points within the area
+count = 0
+# loop through n points and check if they are within the area
+for i in range(n):
+    x = random.uniform(a, b)
+    y = random.uniform(0, square_parabola(x))
+    if y <= 3:
+        count += 1
+# calculate the area using the ratio of points within the area to total points
+area = (count / n) * (b - a) * 3
+print("Area of figure bounded by square parabola and straight line =", area)
