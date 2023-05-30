@@ -1,0 +1,6 @@
+word = 'тетрадь'
+
+# Заменяем буквы для получения слова "дневник"
+new_word = word.replace('т', 'д').replace('р', 'н').replace('д', 'е').replace('ь', 'и')
+
+print(new_word)
