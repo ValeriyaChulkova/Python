@@ -1,0 +1,13 @@
+arr = [3, 8, 2, 7, 5, 7]
+# а) его половины
+half_len = len(arr) // 2
+arr[:half_len], arr[half_len:] = arr[half_len:], arr[:half_len]
+print(arr)
+# б) первый элемент со вторым, третий - с четвертым и т. д.
+for i in range(0, len(arr)-1, 2):
+    arr[i], arr[i+1] = arr[i+1], arr[i]
+print(arr)
+# в) его половины следующим способом: первый элемент поменять с последним, второй - с предпоследним и т. д.
+for i in range(len(arr)//2):
+    arr[i], arr[-i-1] = arr[-i-1], arr[i]
+print(arr)
