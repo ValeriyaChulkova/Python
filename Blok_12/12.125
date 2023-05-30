@@ -1,0 +1,11 @@
+string1 = "АРГЕНТИНА МАНИТ НЕГРА"
+string2 = "ПОТ КАК ПОТОП"
+string3 = "А РОЗА УПАЛА НА ЛАПУ АЗОРА"
+
+def is_palindrome(string):
+    string = string.replace(" ", "")
+    return string == string[::-1]
+
+print(is_palindrome(string1))
+print(is_palindrome(string2))
+print(is_palindrome(string3))
