@@ -1,0 +1,4 @@
+july_sales = [100, 200, 150, 300, 250, 175]
+aug_sales = [150, 175, 225, 275, 200, 225]
+total_sales = sum(july_sales) + sum(aug_sales)
+print("Total sales for July and August:", total_sales)
