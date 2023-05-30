@@ -1,0 +1,8 @@
+#a) 
+for num in array:
+    if 10 <= num <= 99:
+        print(num)
+#b) 
+for num in array:
+    if 100 <= num <= 999:
+        print(num)
