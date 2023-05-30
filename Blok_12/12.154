@@ -1,0 +1,8 @@
+text = input('Введите текст: ')
+numbers = text.split('+')
+sum_numbers = 0
+
+for number in numbers:
+    sum_numbers += int(number.strip())
+
+print('Сумма чисел:', sum_numbers)
