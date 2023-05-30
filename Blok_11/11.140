@@ -1,0 +1,8 @@
+results = []
+for i in range(22):
+    result = float(input("Введите результат спортсмена: "))
+    results.append(result)
+
+results_sorted = sorted(results, reverse=True)
+print("Первое место: ", results_sorted[0])
+print("Второе место: ", results_sorted[1])
