@@ -1,0 +1,11 @@
+def swap_letters(word):
+    if len(word) < 3:
+        return "Слово должно быть не короче 3 символов"
+    else:
+        new_word = word[:2] + word[-1] + word[3:-1] + word[2]
+        return new_word
+
+# пример использования
+word = "программист"
+new_word = swap_letters(word)
+print(new_word)
