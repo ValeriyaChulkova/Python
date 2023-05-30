@@ -1,0 +1,25 @@
+income = [[50,70,60], [65,80,55], [80,60,70], [75,85,90], [90,75,65], 
+          [70,75,75], [80,90,80], [75,70,85], [95,80,75], [85,75,80]]
+total_income = [sum(store) for store in income]
+max_income = max(total_income)
+max_store_idx = total_income.index(max_income) + 1
+print(f"Store {max_store_idx} received the maximum total income of ${max_income} for 10 days.")
+max_daily_income = 0
+max_income_date = 0
+max_income_store = 0
+for i in range(len(income)):
+    for j in range(len(income[i])):
+        if income[i][j] > max_daily_income:
+            max_daily_income = income[i][j]
+            max_income_date = i + 1
+            max_income_store = j + 1
+print(f"On day {max_income_date}, the firm received the maximum total income of ${max_daily_income}. This was from Store {max_income_store}.")
+max_store_income = max([store[i] for i in range(len(store)) for store in income])
+max_store_income_date = 1
+max_store_income_store = 1
+for i in range(len(income)):
+    for j in range(len(income[i])):
+        if income[i][j] == max_store_income:
+            max_store_income_date = i + 1
+            max_store_income_store = j + 1
+print(f"Store {max_store_income_store} received the maximum income of ${max_store_income} on day {max_store_income_date}.")
