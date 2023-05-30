@@ -1,0 +1,8 @@
+scores = []
+for i in range(20):
+    score = int(input("Введите количество очков команды: "))
+    scores.append(score)
+
+scores_sorted = sorted(scores, reverse=True)
+print("Первое место: ", scores_sorted[0])
+print("Второе место: ", scores_sorted[1])
