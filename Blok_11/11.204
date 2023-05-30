@@ -1,0 +1,7 @@
+arr = [10, 8, 6, 4, 2]
+a = 5
+if any(x < a for x in arr):
+    index = arr.index(next(x for x in arr if x < a))
+    print(arr[index+1:] + [x for x in arr if x > a])
+else:
+    print("No elements less than a")
