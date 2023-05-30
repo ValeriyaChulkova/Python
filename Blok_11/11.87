@@ -1,0 +1,9 @@
+list1 = [1, 15, 3, 20, 12, 8, 25]
+sum1 = 0
+count1 = 0
+for element in list1:
+    if element > 10:
+        sum1 += element
+        count1 += 1
+mean1 = sum1 / count1
+print(mean1)
