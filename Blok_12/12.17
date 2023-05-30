@@ -1,0 +1,3 @@
+word = "given"
+letter_combination = word[1] + word[3]
+print(letter_combination)
