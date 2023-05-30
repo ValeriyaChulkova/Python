@@ -1,0 +1,22 @@
+data = [[23, 25, 27, 22],
+        [24, 26, 25, 23],
+        [21, 24, 26, 25],
+        [22, 21, 23, 24],
+        [25, 22, 24, 21],
+        [23, 23, 26, 22],
+        [22, 24, 25, 23],
+        [26, 23, 21, 24],
+        [24, 26, 21, 25],
+        [23, 27, 22, 26],
+        [20, 25, 21, 26]]
+# a) Finding the smallest class size in any school
+min_size = min(min(data))
+print("The smallest class size in any school is:", min_size)
+# b) Finding the minimum total number of students in any parallel
+parallel_totals = [sum(col) for col in zip(*data)] # summing up each column
+min_parallel_total = min(parallel_totals)
+print("The minimum total number of students in any parallel is:", min_parallel_total)
+# c) Finding the minimum total number of students in grades A, B, C, and D
+grade_totals = [sum(row) for row in data] # summing up each row
+min_grade_total = min(grade_totals)
+print("The minimum total number of students in grades A, B, C, and D is:", min_grade_total)
