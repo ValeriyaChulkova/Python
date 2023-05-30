@@ -1,0 +1,14 @@
+# 1 способ
+arr = [1, 2, 3, 4, 5]
+new_arr = []
+for i in range(len(arr)):
+    if i % 2 == 0:
+        new_arr.append(arr[i] * i)
+    else:
+        new_arr.append(arr[i] * 2)
+print(new_arr)
+
+# 2 способ (с использованием генератора списка)
+arr = [1, 2, 3, 4, 5]
+new_arr = [arr[i]*i if i%2==0 else arr[i]*2 for i in range(len(arr))]
+print(new_arr)
