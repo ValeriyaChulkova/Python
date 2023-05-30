@@ -1,0 +1,5 @@
+def six_digit_sum(arr):
+  if sum(arr) >= 100000 and sum(arr) <= 999999:
+    return True
+  else:
+    return False
