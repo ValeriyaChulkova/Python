@@ -1,0 +1,10 @@
+precipitation_array = [10, 15, 7, 20, 12, 18, 25, 14, 10, 13, 16, 22, 8, 17, 19, 11, 9, 14, 21, 7, 12, 18, 23, 27, 14, 16, 20, 19, 13]
+first_half = sum(precipitation_array[:len(precipitation_array)//2])
+second_half = sum(precipitation_array[len(precipitation_array)//2:])
+if first_half > second_half:
+    print("More precipitation fell in the first half of June")
+else:
+    print("More precipitation fell in the second half of June")
+decades = [sum(precipitation_array[i:i+10]) for i in range(0, len(precipitation_array), 10)]
+max_decade = decades.index(max(decades)) + 1
+print("The most precipitation fell in decade", max_decade)
