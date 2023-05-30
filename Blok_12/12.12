@@ -1,0 +1,2 @@
+word = "Programming"
+print("Last character of the word:", word[-1])
