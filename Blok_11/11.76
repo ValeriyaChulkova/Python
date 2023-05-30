@@ -1,0 +1,6 @@
+grades = [4, 5, 3, 4, 5, 2, 4, 4, 5, 3]
+count = 0
+for grade in grades:
+    if grade == 4 or grade == 5:
+        count += 1
+print("The total number of fours and fives is:", count)
