@@ -1,0 +1,18 @@
+import math
+def findRectangles(s, unique=True):
+    rectangles = []
+    for i in range(1, int(math.sqrt(s))+1):
+        if s % i == 0:
+            j = s // i
+            if unique and i > j:
+                continue
+            rectangles.append((i, j))
+            if i != j:
+                rectangles.append((j, i))
+    return rectangles
+# Example Usage
+s = 12
+rectangles1 = findRectangles(s) # different dimensions
+rectangles2 = findRectangles(s, unique=False) # coincident dimensions
+print(rectangles1)
+print(rectangles2)
