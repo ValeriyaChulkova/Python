@@ -1,0 +1,27 @@
+# initialize salary table of 12 employees for 3 months
+salary_table = [[0 for j in range(3)] for i in range(12)]
+# take input for salary_table
+for i in range(12):
+    print("Enter salary for Employee",i+1)
+    for j in range(3):
+        salary = int(input("Enter salary for Month "+str(j+1)+": "))
+        salary_table[i][j] = salary
+# find highest salary for each employee and month
+highest_salary_employee = [0 for i in range(12)]
+highest_salary_month = [0 for i in range(3)]
+for i in range(12):
+    highest_salary = max(salary_table[i])
+    index = salary_table[i].index(highest_salary)
+    highest_salary_employee[i] = index+1
+for j in range(3):
+    salaries = [salary_table[i][j] for i in range(12)]
+    highest_salary = max(salaries)
+    index = salaries.index(highest_salary)
+    highest_salary_month[j] = index+1
+# display results
+print("For each employee - in which of the months he received the highest salary:")
+for i in range(12):
+    print("Employee",i+1,"received highest salary in Month",highest_salary_employee[i])
+print("For each month - which of the employees received the highest salary for that month:")
+for j in range(3):
+    print("For Month",j+1,"Employee",highest_salary_month[j],"received highest salary.")
