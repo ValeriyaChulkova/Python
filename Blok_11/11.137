@@ -1,0 +1,14 @@
+array = [5, 8, 3, 10, 6]
+max_element = max(array)
+max_without_element = max(array[:array.index(max_element)] + array[array.index(max_element) + 1:])
+min_element = min(array)
+min_without_element = min(array[:array.index(min_element)] + array[array.index(min_element) + 1:])
+max_element_indexes = [i for i, x in enumerate(array) if x == max_element]
+max_without_element_indexes = [i for i, x in enumerate(array) if x == max_without_element]
+min_element_indexes = [i for i, x in enumerate(array) if x == min_element]
+min_without_element_indexes = [i for i, x in enumerate(array) if x == min_without_element]
+print("Task 7:")
+print("Maximum element:", max_element, "Element that is maximum without taking into account this element:", max_without_element)
+print("Minimum element:", min_element, "Element that is minimal without taking into account this element:", min_without_element)
+print("Indexes of maximum element:", max_element_indexes, "Indexes of element that is maximum without taking into account this element:", max_without_element_indexes)
+print("Indexes of minimum element:", min_element_indexes, "Indexes of element that is minimum without taking into account this element:", min_without_element_indexes)
