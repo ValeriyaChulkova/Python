@@ -1,0 +1,4 @@
+arr = [10, 8, 6, 4, 2]
+a = 5
+index = next((i for i, x in enumerate(arr) if x < a), "No elements less than a")
+print(index)
