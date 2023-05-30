@@ -1,0 +1,15 @@
+def reverse_letters(word):
+    if len(word) != 12:
+        return "Слово должно быть 12 символов в длину"
+    else:
+        new_word = ''
+        new_word += word[:2]  # добавляем первые две буквы
+        reversed_letters = word[2:10][::-1]  # перевернули буквы с третьей по девятую
+        new_word += reversed_letters
+        new_word += word[10:]  # добавляем оставшиеся буквы
+        return new_word
+
+# пример использования
+word = "программисты"
+new_word = reverse_letters(word)
+print(new_word)
