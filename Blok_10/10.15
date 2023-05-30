@@ -1,0 +1,11 @@
+import random
+# rolling the dice 100 times
+rolls_100 = [random.randint(1,6) for i in range(100)]
+# rolling the dice 1000 times
+rolls_1000 = [random.randint(1,6) for i in range(1000)]
+# calculating the relative frequency of occurrence of each number for 100 rolls
+freq_100 = [rolls_100.count(i)/100 for i in range(1,7)]
+# calculating the relative frequency of occurrence of each number for 1000 rolls
+freq_1000 = [rolls_1000.count(i)/1000 for i in range(1,7)]
+print("Relative frequency of occurrence for 100 rolls: ", freq_100)
+print("Relative frequency of occurrence for 1000 rolls: ", freq_1000)
