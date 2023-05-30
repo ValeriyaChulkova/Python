@@ -1,0 +1,18 @@
+# а) на тех же местах
+arr = [1, 2, 3, 4, 5]
+new_arr = arr.copy()
+for i in range(len(new_arr)):
+    if i % 2 != 0:
+        new_arr[i] = arr[i]
+    else:
+        new_arr[i] = None
+new_arr = [x for x in new_arr if x is not None]
+print(new_arr)
+
+# б) подряд с начала массива
+arr = [1, 2, 3, 4, 5]
+new_arr = []
+for i in range(len(arr)):
+    if i % 2 != 0:
+        new_arr.append(arr[i])
+print(new_arr)
