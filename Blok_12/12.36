@@ -1,0 +1,7 @@
+word = "абракадабра" # заменить на ваше слово из 12 букв
+n = len(word)
+third = n // 3
+new_word_a = word[third:]+word[:third]+word[2*third:3*third]+word[third:2*third]
+new_word_b = word[third:2*third]+word[2*third:]+word[:third]+word[2*third:]
+print("Результат по первому варианту:", new_word_a)
+print("Результат по второму варианту:", new_word_b)
