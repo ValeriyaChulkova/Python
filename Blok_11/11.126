@@ -1,0 +1,7 @@
+precipitation = [10, 20, 15, 25, 30, 20, 35, 40, 30, 20, 15, 10, 20, 25, 30, 40, 35, 30, 25, 20, 15, 10, 5, 10, 15, 20, 25, 30, 35, 40, 30, 25, 20, 15, 10]
+max_precip = max(precipitation)
+count = 0
+for p in precipitation:
+    if p == max_precip:
+        count += 1
+print("Number of days with maximum precipitation:", count)
