@@ -1,0 +1,13 @@
+phrase = "ценая вещь_"
+k = 7  # индекс символа, после которого нужно вставить символ s
+
+# смещение всех символов начиная с (k+1)-го вправо на одну позицию
+phrase = phrase[:k+1] + " " + phrase[k+1:]
+for i in range(len(phrase)-2, k, -1):
+    phrase = phrase[:i] + phrase[i+1] + phrase[i] + phrase[i+2:]
+
+# присваивание (k+1)-му символу строки значения s
+s = "о"
+phrase = phrase[:k+1] + s + phrase[k+2:]
+
+print(phrase)  # выведет: ценая веошь_
