@@ -1,0 +1,4 @@
+array = [1, 2, 3, 4, 5, 6, 7]
+average = sum(array) / len(array)
+closest = min(array, key=lambda x:abs(x-average))
+print("Closest element to the average: ", closest)
