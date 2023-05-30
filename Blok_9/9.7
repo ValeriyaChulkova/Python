@@ -1,0 +1,38 @@
+grades = [
+    [5, 3, 4],
+    [4, 2, 2],
+    [5, 5, 5],
+    [3, 3, 4],
+    [5, 5, 4],
+    [2, 3, 3],
+    [4, 4, 5],
+    [2, 2, 2],
+    [4, 3, 4],
+    [3, 2, 2],
+    [4, 5, 5],
+    [2, 3, 4],
+    [3, 3, 2],
+    [4, 4, 3],
+    [5, 4, 5]
+]
+# a) total number of fives
+num_fives = 0
+for student_grades in grades:
+    for grade in student_grades:
+        if grade == 5:
+            num_fives += 1
+print("Number of fives:", num_fives)
+# b) triples for each student
+for i, student_grades in enumerate(grades):
+    num_triples = 0
+    for grade in student_grades:
+        if grade == 3:
+            num_triples += 1
+    print(f"Student {i + 1} has {num_triples} triples")
+# c) twos in each subject
+for subject in range(3):
+    num_twos = 0
+    for student_grades in grades:
+        if student_grades[subject] == 2:
+            num_twos += 1
+    print(f"Subject {subject + 1}: {num_twos} twos")
