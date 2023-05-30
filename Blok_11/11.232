@@ -1,0 +1,66 @@
+а)scores = [2-1, 3-0, 1-1, 0-1, 2-2, 3-1, 0-0, 2-1, 3-0, 1-0,
+          2-1, 2-3, 0-2, 3-1, 1-0, 2-1, 3-2, 0-0, 1-0, 1-0]
+wins = 0
+for i in range(len(scores)):
+    diff = scores[i]
+    if diff > 0:
+        print("Game", i+1, "was won")
+        wins += 1
+    elif diff < 0:
+        print("Game", i+1, "was lost")
+    else:
+        print("Game", i+1, "was a draw")
+print("Number of wins:", wins)
+б)scores = [2-1, 3-0, 1-1, 0-1, 2-2, 3-1, 0-0, 2-1, 3-0, 1-0,
+          2-1, 2-3, 0-2, 3-1, 1-0, 2-1, 3-2, 0-0, 1-0, 1-0]
+wins = 0
+losses = 0
+for i in range(len(scores)):
+    diff = scores[i]
+    if diff > 0:
+        print("Game", i+1, "was won")
+        wins += 1
+    elif diff < 0:
+        print("Game", i+1, "was lost")
+        losses += 1
+    else:
+        print("Game", i+1, "was a draw")
+print("Number of wins:", wins)
+print("Number of losses:", losses)
+в)scores = [2-1, 3-0, 1-1, 0-1, 2-2, 3-1, 0-0, 2-1, 3-0, 1-0,
+          2-1, 2-3, 0-2, 3-1, 1-0, 2-1, 3-2, 0-0, 1-0, 1-0]
+wins = 0
+draws = 0
+losses = 0
+for i in range(len(scores)):
+    diff = scores[i]
+    if diff > 0:
+        print("Game", i+1, "was won")
+        wins += 1
+    elif diff < 0:
+        print("Game", i+1, "was lost")
+        losses += 1
+    else:
+        print("Game", i+1, "was a draw")
+        draws += 1
+print("Number of wins:", wins)
+print("Number of draws:", draws)
+print("Number of losses:", losses)
+г)scores = [2-1, 3-0, 1-1, 0-1, 2-2, 3-1, 0-0, 2-1, 3-0, 1-0,
+          2-1, 2-3, 0-2, 3-1, 1-0, 2-1, 3-2, 0-0, 1-0, 1-0]
+count = 0
+for i in range(len(scores)):
+    diff = abs(scores[i])
+    if diff >= 3:
+        count += 1
+print("Number of games with a difference of 3 or more goals:", count)
+д)scores = [2-1, 3-0, 1-1, 0-1, 2-2, 3-1, 0-0, 2-1, 3-0, 1-0,
+          2-1, 2-3, 0-2, 3-1, 1-0, 2-1, 3-2, 0-0, 1-0, 1-0]
+points = 0
+for i in range(len(scores)):
+    diff = scores[i]
+    if diff > 0:
+        points += 3
+    elif diff == 0:
+        points += 1
+print("Total points:", points)
