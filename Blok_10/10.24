@@ -1,0 +1,33 @@
+import random
+# generate random numbers for the positions of the rook, elephant, king and queen
+rook_a = random.randint(1,8)
+rook_b = random.randint(1,8)
+elephant_a = random.randint(1,8)
+elephant_b = random.randint(1,8)
+king_a = random.randint(1,8)
+king_b = random.randint(1,8)
+queen_a = random.randint(1,8)
+queen_b = random.randint(1,8)
+# generate random numbers for the target position
+target_c = random.randint(1,8)
+target_d = random.randint(1,8)
+# check if the rook threatens the target position
+if rook_a == target_c or rook_b == target_d:
+  print("The rook threatens the target position")
+else:
+  print("The rook does not threaten the target position")
+# check if the elephant threatens the target position
+if abs(elephant_a - target_c) == abs(elephant_b - target_d):
+  print("The elephant threatens the target position")
+else:
+  print("The elephant does not threaten the target position")
+# check if the king can reach the target position in one move
+if abs(king_a - target_c) <= 1 and abs(king_b - target_d) <= 1:
+  print("The king can reach the target position in one move")
+else:
+  print("The king cannot reach the target position in one move")
+# check if the queen threatens the target position
+if (queen_a == target_c or queen_b == target_d) or (abs(queen_a - target_c) == abs(queen_b - target_d)):
+  print("The queen threatens the target position")
+else:
+  print("The queen does not threaten the target position")
