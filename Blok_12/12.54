@@ -1,0 +1,12 @@
+sentence = "Дано предложение. Вывести все имеющиеся в нем буквосочетания нн."
+nn_combinations = []
+
+# Приводим все символы к строчным, чтобы искать и NN, и nn
+sentence = sentence.lower()
+
+for i in range(len(sentence) - 1):
+    # Если найдено сочетание nn, добавляем его в список
+    if sentence[i:i+2] == 'nn':
+        nn_combinations.append(sentence[i:i+2])
+
+print(nn_combinations)
