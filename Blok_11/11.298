@@ -1,0 +1,5 @@
+arr = [5, 8, 3, 9, 5, 2, 7]
+odd_index = next((i for i, x in enumerate(arr) if x % 2 != 0), "No odd elements")
+print(odd_index)
+mul_13_index = next((i for i, x in enumerate(arr) if x % 13 == 0), "No elements divisible by 13")
+print(mul_13_index)
