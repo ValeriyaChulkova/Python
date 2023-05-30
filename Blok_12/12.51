@@ -1,0 +1,4 @@
+sentence = input("Введите предложение: ")
+print("Третий, шестой и т.д. символы:")
+for i in range(2, len(sentence), 3):
+    print(sentence[i])
