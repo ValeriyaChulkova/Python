@@ -1,0 +1,6 @@
+arr = [3, 8, 2, 7, 5, 7, 4, 8, 1, 6]
+unique_arr = []
+for x in arr:
+    if x not in unique_arr:
+        unique_arr.append(x)
+print(unique_arr)
