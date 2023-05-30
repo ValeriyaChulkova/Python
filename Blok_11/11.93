@@ -1,0 +1,8 @@
+car_costs = [8000, 10000, 12000, 15000, 20000]
+motorcycle_costs = [1000, 1500, 2000, 3000, 4000]
+car_avg_cost = sum(car_costs) / len(car_costs)
+motorcycle_avg_cost = sum(motorcycle_costs) / len(motorcycle_costs)
+if car_avg_cost > (3 * motorcycle_avg_cost):
+    print("The average cost of cars exceeds the average cost of motorcycles by more than 3 times")
+else:
+    print("The average cost of cars does not exceed the average cost of motorcycles by more than 3 times")
