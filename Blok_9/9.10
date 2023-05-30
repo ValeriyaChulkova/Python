@@ -1,0 +1,33 @@
+employee_salaries = [
+    [5000, 6000, 7000],
+    [4500, 5500, 6500],
+    [4000, 5000, 6000],
+    [3500, 4500, 5500],
+    [3000, 4000, 5000],
+    [2500, 3500, 4500],
+    [2000, 3000, 4000],
+    [4500, 5500, 6500],
+    [4000, 5000, 6000],
+    [3500, 4500, 5500],
+    [3000, 4000, 5000],
+    [2500, 3500, 4500]
+]
+# Find maximum salary and the corresponding employee
+max_salary = 0
+max_salary_employee = 0
+for i, salaries in enumerate(employee_salaries):
+    total_salary = sum(salaries)
+    if total_salary > max_salary:
+        max_salary = total_salary
+        max_salary_employee = i + 1
+# Find month with maximum total salary
+max_salary_month = 0
+max_salary_total = 0
+for month in range(3):
+    total_salary = sum([employee_salaries[i][month] for i in range(12)])
+    if total_salary > max_salary_total:
+        max_salary_total = total_salary
+        max_salary_month = month + 1
+print("Maximum salary for the quarter:", max_salary)
+print("Employee who received the largest amount:", max_salary_employee)
+print("Month with the maximum total salary:", max_salary_month)
