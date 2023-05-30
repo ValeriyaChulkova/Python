@@ -1,0 +1,9 @@
+def get_coprimes(p, n):
+    coprimes = []
+    for i in range(n):
+        if math.gcd(p, i) == 1:
+            coprimes.append(i)
+    return coprimes
+
+coprimes = get_coprimes(3, 10)
+print(coprimes)
