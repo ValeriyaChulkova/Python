@@ -1,0 +1,12 @@
+text = 'Дан текст. Сколько раз в нем встречается символ «+» и сколько раз символ «"»?'
+plus_count = 0
+quote_count = 0
+
+for letter in text:
+    if letter == '+':
+        plus_count += 1
+    elif letter == '"':
+        quote_count += 1
+
+print("Число символов '+' в тексте:", plus_count)
+print("Число символов '\"' в тексте:", quote_count)
