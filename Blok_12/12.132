@@ -1,0 +1,19 @@
+a) word = "процесор"
+# Fixing the error by replacing "c" with "с"
+corrected_word = word[:4] + "с" + word[5:]
+print(corrected_word)
+
+b) phrase = "текстовыйфайл"
+# Fixing the error by inserting a space between "ый" and "ф"
+corrected_phrase = phrase[:7] + " " + phrase[7:]
+print(corrected_phrase)
+
+c) phrase = "програма и алгоритм"
+# Fixing the error by replacing "а" with "м" in "програма" and adding a missing letter "р" in "алгоритм"
+corrected_phrase = phrase[:3] + "м" + phrase[4:12] + "р" + phrase[12:]
+print(corrected_phrase)
+
+г) phrase = "процесор и паммять"
+# Fixing the error by replacing "м" with "ь" in "паммять"
+corrected_phrase = phrase[:12] + "ь" + phrase[13:]
+print(corrected_phrase)
