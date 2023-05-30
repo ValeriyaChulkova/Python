@@ -1,0 +1,6 @@
+arr = [3, -8, 2, 7, 5, 7, 4, -9, 1, 6]
+neg_index = next((i for i, x in enumerate(arr) if x < 0), None)
+pos_index = next((i for i in range(len(arr)-1, -1, -1) if arr[i] > 0), None)
+if neg_index is not None and pos_index is not None:
+    arr[neg_index], arr[pos_index] = arr[pos_index], arr[neg_index]
+print(arr)
