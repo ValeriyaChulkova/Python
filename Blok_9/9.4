@@ -1,0 +1,27 @@
+#a)
+grades = [] # create an empty list of grades
+# iterate through each student's grades
+for i in range(12):
+    student_grades = [] # create an empty list of grades for each student
+    for j in range(3):
+        grade = int(input("Enter grade for student {} in subject {}: ".format(i+1, j+1)))
+        student_grades.append(grade) # add grade to the list of grades for the student
+    total = sum(student_grades)
+    grades.append(total) # add the total grade to the list of grades
+# calculate the sum of all grades
+total_grades = sum(grades)
+print("The sum of all grades is:", total_grades)
+
+#b)
+grades = [] # create an empty list of grades
+# iterate through each subject's grades
+for j in range(3):
+    subject_grades = [] # create an empty list of grades for each subject
+    for i in range(12):
+        grade = int(input("Enter grade for student {} in subject {}: ".format(i+1, j+1)))
+        subject_grades.append(grade) # add grade to the list of grades for the subject
+    total = sum(subject_grades)
+    grades.append(total) # add the total grade to the list of grades
+# calculate the sum of all grades
+total_grades = sum(grades)
+print("The sum of all grades is:", total_grades)
