@@ -1,0 +1,6 @@
+arr = [10, 25, 5, 30, 15, 20, 35, 40]
+max_value = max(arr)
+min_value = min(arr)
+arr.remove(max_value)
+arr.remove(min_value)
+print(arr)
