@@ -1,0 +1,9 @@
+count = 0
+for i in range(1, 11):
+    osadki = int(input(f"Введите количество осадков за {i}-й день: "))
+    if osadki == 0:
+        count += 1
+if count == 10:
+    print("Осадков не было 10 дней в месяц")
+else:
+    print("Осадки были в течение месяца")
