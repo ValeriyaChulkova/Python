@@ -1,0 +1,7 @@
+arr = [3, 8, 2, 7, 5, 7, 4, 9, 1, 6]
+# а) все четные элементы, стоящие на нечетных местах
+arr = [arr[i] for i in range(len(arr)) if i % 2 == 1 or arr[i] % 2 == 1]
+print(arr)
+# б) все элементы, кратные 3 или 5
+arr = [x for x in arr if x % 3 != 0 and x % 5 != 0]
+print(arr)
