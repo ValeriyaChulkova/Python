@@ -1,0 +1,8 @@
+ordered = True
+for i in range(1, 15):
+    if x[i] < x[i-1]:
+        ordered = False
+        print("Sequence is not in ascending order. First violation at position", i+1)
+        break
+if ordered:
+    print("Sequence is in ascending order.")
