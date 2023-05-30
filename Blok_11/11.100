@@ -1,0 +1,14 @@
+# array of computer science scores
+scores = [80, 90, 75, 65, 70, 85, 95, 60, 50, 55, 70, 75, 80, 90, 95,
+          75, 85, 90, 80, 70, 65, 55]
+# calculate average grade
+average = sum(scores) / len(scores)
+# store indices of scores less than average
+less_than_avg = []
+for i in range(len(scores)):
+    if scores[i] < average:
+        less_than_avg.append(i)
+# print results
+print("The average grade is:", average)
+print("The number of students with grades less than average is:", len(less_than_avg))
+print("Their scores are located at these indices:", less_than_avg)
