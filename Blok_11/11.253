@@ -1,0 +1,27 @@
+# а) на тех же местах
+arr = [1, -2, 3, -4, 5]
+pos_arr = []
+neg_arr = []
+for i in range(len(arr)):
+    if arr[i] >= 0:
+        pos_arr.append(arr[i])
+        neg_arr.append(None)
+    else:
+        pos_arr.append(None)
+        neg_arr.append(arr[i])
+pos_arr = [x for x in pos_arr if x is not None]
+neg_arr = [x for x in neg_arr if x is not None]
+print(pos_arr)
+print(neg_arr)
+
+# б) подряд с начала массива
+arr = [1, -2, 3, -4, 5]
+pos_arr = []
+neg_arr = []
+for i in range(len(arr)):
+    if arr[i] >= 0:
+        pos_arr.append(arr[i])
+    else:
+        neg_arr.append(arr[i])
+print(pos_arr)
+print(neg_arr)
