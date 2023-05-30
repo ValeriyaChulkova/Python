@@ -1,0 +1,7 @@
+import random
+# Define the possible card values
+values = ["6", "7", "8", "9", "10", "jack", "queen", "king", "ace"]
+# Choose a random value from the list
+card_value = random.choice(values)
+# Print the chosen card value
+print("The dignity of the card is:", card_value)
