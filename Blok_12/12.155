@@ -1,0 +1,11 @@
+text = input('Введите текст: ')
+numbers = text.split(',')
+result = int(numbers[0].strip())
+
+for i in range(1, len(numbers), 2):
+    if numbers[i].strip() == '-':
+        result -= int(numbers[i+1].strip())
+    else:
+        result += int(numbers[i+1].strip())
+
+print('Алгебраическая сумма:', result)
