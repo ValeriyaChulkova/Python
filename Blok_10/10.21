@@ -1,0 +1,19 @@
+import random
+cards = [(suit, value) for suit in ["spades", "clubs", "diamonds", "hearts"] for value in ["six", "seven", "eight", "nine", "ten", "jack", "queen", "king", "ace"]]
+player1 = random.choice(cards)
+player2 = random.choice(cards)
+print("Player 1 chose", player1[1], "of", player1[0])
+print("Player 2 chose", player2[1], "of", player2[0])
+seniority = ["six", "seven", "eight", "nine", "ten", "jack", "queen", "king", "ace"]
+suit_seniority = {"spades": 0, "clubs": 1, "diamonds": 2, "hearts": 3}
+if seniority.index(player1[1]) > seniority.index(player2[1]):
+    print("Player 1 has the older card")
+elif seniority.index(player1[1]) < seniority.index(player2[1]):
+    print("Player 2 has the older card")
+else:
+    if suit_seniority[player1[0]] > suit_seniority[player2[0]]:
+        print("Player 1 has the older card")
+    elif suit_seniority[player1[0]] < suit_seniority[player2[0]]:
+        print("Player 2 has the older card")
+    else:
+        print("It's a tie!")
