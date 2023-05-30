@@ -1,0 +1,19 @@
+# 1)
+heights = [180, 175, 170, 165, 160, 155, 150, 145, 140, 135, 130, 125, 120, 115, 110]
+new_index = 7 # новый ученик на восьмом месте
+new_height = 170 # его рост
+new_heights = heights[:new_index] + [new_height] + heights[new_index:]
+print(new_heights)
+
+# 2)
+heights = [180, 175, 170, 165, 160, 155, 150, 145, 140, 135, 130, 125, 120, 115, 110]
+new_height = 168 # рост нового ученика
+index = -1
+for i in range(len(heights)):
+    if new_height > heights[i]:
+        index = i
+        break
+if index < 0:
+    index = len(heights)
+new_heights = heights[:index] + [new_height] + heights[index:]
+print(new_heights)
