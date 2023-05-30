@@ -1,0 +1,13 @@
+а)areas = [10, 20, 15, 30, 25, 5, 12, 18, 8, 17]
+yields = [25, 30, 22, 40, 50, 20, 28, 35, 18, 30]
+total_yield = 0
+for i in range(len(areas)):
+    total_yield += areas[i] * yields[i]
+print("Total yield in the region is", total_yield)
+print("Average yield in the region is", total_yield/sum(areas))
+б)areas = [10, 20, 15, 30, 25, 5, 12, 18, 8, 17]
+yields = [25, 30, 22, 40, 50, 20, 28, 35, 18, 30]
+total_yield = sum([areas[i]*yields[i] for i in range(len(areas))])
+avg_yield = total_yield/sum(areas)
+print("Total yield in the region is", total_yield)
+print("Average yield in the region is", avg_yield)
