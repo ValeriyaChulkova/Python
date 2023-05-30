@@ -1,0 +1,10 @@
+array = [1, 2, 5, 7, 9, 6, 3, 4, 8, 10, 12, 15, 11, 13, 14, 16, 17, 18, 19, 20]
+max_sum = 0
+max_index = 0
+for i in range(len(array)-4):
+    current_sum = sum(array[i:i+5])
+    if current_sum > max_sum:
+        max_sum = current_sum
+        max_index = i
+print("Maximum sum of 5 neighboring elements: ", max_sum)
+print("The five elements are: ", array[max_index:max_index+5])
