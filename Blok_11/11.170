@@ -1,0 +1,6 @@
+arr = [5, 8, 3, 9, 8, 2, 7]
+x = 10 # первое заданное число
+y = 20 # второе заданное число
+max_index = arr.index(max(arr))
+new_arr = arr[:max_index+1] + [x, y] + arr[max_index+1:]
+print(new_arr)
