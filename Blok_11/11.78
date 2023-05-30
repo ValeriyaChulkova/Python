@@ -1,0 +1,10 @@
+array = [12, 35, 46, 27, 85, 44, 53]
+even_count = 0
+digit_5_count = 0
+for element in array:
+    if element % 2 == 0:
+        even_count += 1
+    if element % 10 == 5:
+        digit_5_count += 1
+print("Number of even elements:", even_count)
+print("Number of elements ending in digit 5:", digit_5_count)
