@@ -1,0 +1,4 @@
+arr = [5, 8, 3, 9, 5, 2, 7, 5]
+p = 9
+print(arr[:arr.index(p)] if p in arr else arr)
+print([x for x in arr[arr.index(7)+1:] if x % 10 == 7] if 7 in arr else [])
