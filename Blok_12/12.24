@@ -1,0 +1,19 @@
+word = 'вертикаль'
+
+# Получаем слово "тир"
+word_1 = word[1]
+word_2 = word[3]
+word_3 = word[0]
+
+new_word_1 = word_1 + word_2 + word_3
+
+# Получаем слово "ветка"
+word_4 = word[2]
+word_5 = word[5]
+word_6 = word[4]
+word_7 = word[0]
+
+new_word_2 = word_4 + word_5 + word_6 + word_7
+
+print(new_word_1)
+print(new_word_2)
