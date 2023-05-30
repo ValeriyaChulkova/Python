@@ -1,0 +1,22 @@
+# Без использования оператора цикла:
+
+def move_first_letters(word):
+    new_word = word[2:] + word[:2]
+    return new_word
+
+# Пример использования
+print(move_first_letters("программист"))
+
+
+# С использованием оператора цикла:
+
+def move_first_letters(word):
+    new_word = ""
+    for i in range(len(word)):
+        if i >= 2:
+            new_word += word[i]
+    new_word += word[0] + word[1]
+    return new_word
+
+# Пример использования
+print(move_first_letters("программист"))
