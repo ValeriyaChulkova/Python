@@ -1,0 +1,9 @@
+text = input('Введите текст: ')
+digits = ''
+
+for char in text:
+    if char.isdigit():
+        digits += char
+
+number = int(digits)
+print('Число, образованное цифрами:', number)
