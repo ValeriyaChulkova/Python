@@ -1,0 +1,3 @@
+cost_per_kg = [10, 11, 12, 14, 15, 8, 16, 20, 18, 9, 7, 6, 5, 12, 11, 8, 13, 10, 14, 16]
+min_cost = min(cost_per_kg)
+print("The cheapest candies cost", min_cost, "dollars per kg.")
