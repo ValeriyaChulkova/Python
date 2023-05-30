@@ -1,0 +1,6 @@
+def get_mutually_prime_numbers(n):
+    result = []
+    for i in range(1, n):
+        if math.gcd(i, n) == 1:
+            result.append(i)
+    return result
