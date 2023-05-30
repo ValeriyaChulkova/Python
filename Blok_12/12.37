@@ -1,0 +1,32 @@
+# Без использования оператора цикла:
+
+def swap_letters(word):
+    if len(word) < 6:
+        return word
+    first_three = word[:3]
+    last_three = word[-3:]
+    middle = word[3:-3]
+    new_word = last_three + middle + first_three
+    return new_word
+
+# Пример использования
+print(swap_letters("программист"))
+
+
+# С использованием оператора цикла:
+
+def swap_letters(word):
+    if len(word) < 6:
+        return word
+    new_word = ""
+    for i in range(len(word)):
+        if i < 3:
+            new_word += word[-(3-i)]
+        elif i >= 3 and i < len(word)-3:
+            new_word += word[i]
+        else:
+            new_word += word[i-(len(word)-3)]
+    return new_word
+    
+    # Пример использования
+print(swap_letters("программист"))
