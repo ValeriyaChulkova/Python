@@ -1,0 +1,8 @@
+numbers = [int(input()) for i in range(15)]
+for i in range(14):
+    if numbers[i] == numbers[i+1]:
+        print("There is a pair of same neighboring numbers!")
+        print("The indexes of the first pair are:", i+1, i+2)
+        break
+else:
+    print("There is no pair of same neighboring numbers in the sequence.")
