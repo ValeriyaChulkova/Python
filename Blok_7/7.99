@@ -1,0 +1,7 @@
+for i in range(len(sequence)-1):
+    if sequence[i] % 2 == 0 and sequence[i+1] % 2 == 0:
+        has_even_pair = True
+        print("The first pair of even numbers is at positions", i+1, "and", i+2)
+        break
+if not has_even_pair:
+    print("There are no neighboring even numbers in the sequence.")
