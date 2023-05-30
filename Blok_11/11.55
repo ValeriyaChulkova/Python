@@ -1,0 +1,5 @@
+def capacity_check(arr, capacity):
+  if sum(arr) <= capacity:
+    return True
+  else:
+    return False
