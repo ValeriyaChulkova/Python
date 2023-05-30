@@ -1,0 +1,2 @@
+# Assuming the cost array is already defined and s is entered from keyboard
+   num_days_exceeded_s = sum(1 for cost in costs if cost > s)
