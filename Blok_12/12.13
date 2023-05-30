@@ -1,0 +1,3 @@
+word = "Python"
+k = 4
+print("k-th character of the word:", word[k-1])
