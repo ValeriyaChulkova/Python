@@ -1,0 +1,10 @@
+array = [2, 3, 5, 10, 1, 4, 7]
+min_element = min(array)
+max_element = max(array)
+mean = (min_element + max_element) / 2
+greater_than_mean = []
+for i in range(len(array)):
+    if array[i] > mean:
+        greater_than_mean.append(i)
+print("Number of elements whose value is greater than the arithmetic mean of the minimum and maximum elements: ", len(greater_than_mean))
+print("Their indices are: ", greater_than_mean)
