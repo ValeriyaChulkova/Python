@@ -1,0 +1,11 @@
+import random
+ones_count = 0
+zeros_count = 0
+for i in range(50):
+  num = random.randint(0, 1)
+  if num == 1:
+    ones_count += 1
+  else:
+    zeros_count += 1
+print("Number of ones:", ones_count)
+print("Number of zeros:", zeros_count)
