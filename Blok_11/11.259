@@ -1,0 +1,14 @@
+# без использования генератора списка
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+k = 3
+new_arr = []
+for i in range(len(arr)):
+    if i != k:
+        new_arr.append(arr[i])
+print(new_arr)
+
+# с использованием генератора списка
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+k = 3
+new_arr = [arr[i] for i in range(len(arr)) if i != k]
+print(new_arr)
