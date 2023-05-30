@@ -1,0 +1,17 @@
+sentence = input("Введите предложение: ")
+
+# Ищем первую запятую в предложении
+comma_index = sentence.find(",")
+
+# Если запятая есть в предложении:
+if comma_index >= 0:
+    count = 0
+    for i in range(comma_index):
+        if sentence[i] == 'н':
+            count += 1
+
+    print("Количество букв 'н', предшествующих первой запятой: ", count)
+
+# Если запятой нет в предложении:
+else:
+    print("В предложении нет запятых")
