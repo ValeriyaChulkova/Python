@@ -1,0 +1,24 @@
+а)scored = [2, 1, 3, 0, 1, 2, 2, 3, 1, 0,
+          1, 2, 0, 3, 1, 2, 3, 0, 1, 1]
+missed = [1, 0, 2, 1, 2, 1, 0, 2, 1, 0,
+          0, 1, 1, 2, 0, 1, 2, 1, 0, 0]
+for i in range(len(scored)):
+    if scored[i] > missed[i]:
+        print("Game", i+1, "was won")
+    elif scored[i] < missed[i]:
+        print("Game", i+1, "was lost")
+    else:
+        print("Game", i+1, "was a draw")
+б)scored = [2, 1, 3, 0, 1, 2, 2, 3, 1, 0,
+          1, 2, 0, 3, 1, 2, 3, 0, 1, 1]
+missed = [1, 0, 2, 1, 2, 1, 0, 2, 1, 0,
+          0, 1, 1, 2, 0, 1, 2, 1, 0, 0]
+results = []
+for i in range(len(scored)):
+    if scored[i] > missed[i]:
+        results.append("won")
+    elif scored[i] < missed[i]:
+        results.append("lost")
+    else:
+        results.append("draw")
+print("Results:", results)
