@@ -1,0 +1,14 @@
+sentence = input("Введите предложение: ")
+# удаление начальных и конечных пробелов из предложения
+sentence = sentence.strip()
+
+# поиск первого пробела с помощью метода find
+first_space = sentence.find(" ")
+
+# получение первого слова
+first_word = sentence[:first_space]
+
+# подсчет количества букв о в слове первое слове
+o_count = first_word.lower().count('о')
+
+print("Количество букв 'о' в первом слове:", o_count)
