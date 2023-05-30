@@ -1,0 +1,7 @@
+sentence = input("Введите предложение: ")
+
+# Заменяем все вхождения буквосочетания "про" на "нет"
+new_sentence = sentence.replace('про', 'нет')
+
+print("Исходное предложение:", sentence)
+print("Новое предложение:", new_sentence)
