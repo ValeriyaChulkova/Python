@@ -1,0 +1,8 @@
+#a) 
+for num in array:
+    if num % 2 == 0:
+        print(num)
+#b) 
+for num in array:
+    if num % 10 == 0:
+        print(num)
