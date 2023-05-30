@@ -1,0 +1,13 @@
+def swap_letters(word, m, n):
+    if len(word) < max(m, n):
+        return "Длина слова слишком короткая"
+    else:
+        split_word = list(word)
+        split_word[m-1], split_word[n-1] = split_word[n-1], split_word[m-1]
+        new_word = "".join(split_word)
+        return new_word
+
+# пример использования
+word = "пример"
+new_word = swap_letters(word, 2, 5)
+print(new_word)
