@@ -1,0 +1,14 @@
+# 1 способ
+t = [1, -2, 3, -4, 5]
+p = []
+for i in range(len(t)):
+    if t[i] >= 0:
+        p.append(t[i] / 3)
+    else:
+        p.append(t[i] ** 2)
+print(p)
+
+# 2 способ (с использованием генератора списка)
+t = [1, -2, 3, -4, 5]
+p = [t[i]/3 if t[i]>=0 else t[i]**2 for i in range(len(t))]
+print(p)
