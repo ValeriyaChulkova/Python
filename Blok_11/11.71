@@ -1,0 +1,2 @@
+ # Assuming the grades array is already defined
+   num_underachievers = sum(1 for grade in grades if grade < 60)
