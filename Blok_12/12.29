@@ -1,0 +1,6 @@
+word = 'вирус'
+
+# Заменяем буквы для получения слова "фокус"
+new_word = word.replace('в', 'ф').replace('и', 'о').replace('р', 'к').replace('с', '')
+
+print(new_word)
