@@ -1,0 +1,2 @@
+word = "Python"
+print("Third character of the word:", word[2])
