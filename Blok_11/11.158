@@ -1,0 +1,11 @@
+arr = [3, 8, 2, 7, 5, 7, 4, 9, 1, 6]
+# а) максимальный элемент
+max_value = max(arr)
+max_index = arr.index(max_value)
+del arr[max_index]
+print(arr)
+# б) минимальный элемент
+min_value = min(arr)
+min_index = arr.index(min_value)
+del arr[min_index]
+print(arr)
