@@ -1,0 +1,99 @@
+import random
+def main():
+    play_again = True
+    correct_answers = 0
+    incorrect_answers = 0
+    total_games = 0
+    
+    while play_again:
+        game_type = input("Choose game type (1 - single round, 2 - multiple rounds, 3 - until player quits): ")
+        
+        if game_type == "1":
+            result = single_game()
+            print(result)
+            total_games += 1
+            if result == "You've won!":
+                correct_answers += 1
+            else:
+                incorrect_answers += 1
+                
+        elif game_type == "2":
+            rounds = int(input("How many rounds do you want to play? "))
+            player_score = 0
+            computer_score = 0
+            
+            for i in range(rounds):
+                result = single_game()
+                print(result)
+                total_games += 1
+                if result == "You've won!":
+                    player_score += 1
+                else:
+                    computer_score += 1
+                    
+            if player_score > computer_score:
+                print("The score is {0}:{1} in your favor. You've won!".format(player_score, computer_score))
+            elif computer_score > player_score:
+                print("The score is {0}:{1} in favor of the computer. You've lost!".format(computer_score, player_score))
+            else:
+                print("The score is tied!")
+                
+            correct_answers += player_score
+            incorrect_answers += computer_score
+                
+        elif game_type == "3":
+            player_score = 0
+            computer_score = 0
+            
+            while True:
+                result = single_game()
+                print(result)
+                total_games += 1
+                if result == "You've won!":
+                    player_score += 1
+                else:
+                    computer_score += 1
+                    
+                continue_playing = input("Continue playing? (Y/N) ")
+                if continue_playing.upper() == "N":
+                    break
+                    
+            if player_score > computer_score:
+                print("You won {0} games and lost {1} games.".format(player_score, computer_score))
+            elif computer_score > player_score:
+                print("You lost {0} games and won {1} games.".format(computer_score, player_score))
+            else:
+                print("The games were tied!")
+                
+            correct_answers += player_score
+            incorrect_answers += computer_score
+                    
+        else:
+            print("Invalid input. Please try again.")
+            continue
+            
+        play_again = input("Play again? (Y/N) ").upper() == "Y"
+        
+    print("Total games played: {0}".format(total_games))
+    print("Correct answers: {0}".format(correct_answers))
+    print("Incorrect answers: {0}".format(incorrect_answers))
+            
+def single_game():
+    player_choice = input("Even (enter 2) or odd (enter 1)? ")
+    computer_choice = random.randint(1, 2)
+    
+    if computer_choice == 1:
+        print("Computer chose odd.")
+        if player_choice == "1":
+            return "The choice was correct! You've won!"
+        else:
+            return "The choice was wrong. You've lost!"
+    else:
+        print("Computer chose even.")
+        if player_choice == "2":
+            return "The choice was correct! You've won!"
+        else:
+            return "The choice was wrong. You've lost!"
+        
+main()
+
