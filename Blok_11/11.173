@@ -1,0 +1,11 @@
+arr = [5, 8, 3, 9, 8, 2, 7]
+p = 6 # первое заданное число
+t = 4 # второе заданное число
+new_arr = []
+for i in arr:
+    if i > p:
+        new_arr.append(p)
+    new_arr.append(i)
+    if i < t:
+        new_arr.append(t)
+print(new_arr)
