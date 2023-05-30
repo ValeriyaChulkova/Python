@@ -1,0 +1,44 @@
+#a)
+dp[i] = dp[i-1] + dp[i-2] + dp[i-5] + dp[i-10] if i >= 10
+dp[i] = dp[i-1] + dp[i-2] + dp[i-5] if i >= 5
+dp[i] = dp[i-1] + dp[i-2] if i >= 2
+dp[i] = 1 if i >= 1
+
+#b)
+dp = [0] * (n+1)
+    dp[0] = 1
+    
+    # Fill dp array
+    for i in range(1, n+1):
+        if i >= 10:
+            dp[i] = dp[i-1] + dp[i-2] + dp[i-5] + dp[i-10]
+        elif i >= 5:
+            dp[i] = dp[i-1] + dp[i-2] + dp[i-5]
+        elif i >= 2:
+            dp[i] = dp[i-1] + dp[i-2]
+        else:
+            dp[i] = 1
+    
+    # Backtrack to get payment methods
+    methods = []
+    i = n
+    while i > 0:
+        if i >= 10 and dp[i] == dp[i-10] + dp[i-5] + dp[i-2] + dp[i-1]:
+            methods.append("10 rubles")
+            i -= 10
+        elif i >= 5 and dp[i] == dp[i-5] + dp[i-2] + dp[i-1]:
+            methods.append("5 rubles")
+            i -= 5
+        elif i >= 2 and dp[i] == dp[i-2] + dp[i-1]:
+            methods.append("2 rubles")
+            i -= 2
+        else:
+            methods.append("1 ruble")
+            i -= 1
+    
+    # Print payment methods in reverse order
+    methods.reverse()
+    print("Payment methods:")
+    for method in methods:
+        print(method, end=", ")
+    print()
