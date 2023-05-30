@@ -1,0 +1,11 @@
+arr = [1, 3, 5, 2, 6, 8, 7, 4, 9, 10, 11, 12, 13, 14] #example array
+max_segment = 0
+curr_segment = 0
+for num in arr:
+    if num%2 != 0: #odd number
+        curr_segment += 1
+        if curr_segment > max_segment:
+            max_segment = curr_segment
+    else: #even number
+        curr_segment = 0
+print(max_segment)
