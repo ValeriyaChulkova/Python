@@ -1,0 +1,10 @@
+import random
+# create an empty array with twenty elements
+array = [None] * 20
+# populate the array with non-repeating numbers
+for i in range(20):
+    while True:  # keep generating random numbers until a non-repeating number is found
+        num = random.randint(1, 100)  # generate a random number between 1 and 100
+        if num not in array[:i]:  # if the number is not in the first i elements of the array,
+            array[i] = num  # add it to the current index in the array
+            break  # move on to the next index
