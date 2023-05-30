@@ -1,0 +1,6 @@
+word = "роцессорп"
+
+# перемещаем буквы
+new_word = word[1] + word[2:4] + word[0] + word[4:]
+
+print("Новое слово:", new_word)
