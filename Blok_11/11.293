@@ -1,0 +1,5 @@
+arr = [180, 175, 172, 170, 167, 165, 162, 160, 158, 155, 152, 150, 147, 145, 142]
+new_height = 159
+arr.append(new_height)
+arr.sort(reverse=True)
+print(arr.index(new_height)+1)
