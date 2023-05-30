@@ -1,0 +1,65 @@
+
+    a, b, c, d, e, f: natural numbers (1 <= a,b,c,d,e,f <= 8)
+    piece1: white piece (rook, queen, knight, bishop, king)
+    piece2: black piece (rook, queen, knight, bishop, king)
+   
+    # check if the white piece is attacking the black piece
+    if is_attacking(a, b, c, d, piece1):
+        # check if the black piece can attack the white piece on the destination field
+        if is_attacking(e, f, c, d, piece2):
+            print("The white {} cannot move to field ({}, {}) without being hit by the black {} at ({}, {}).".format(piece1, e, f, piece2, c, d))
+        else:
+            print("The white {} can move to field ({}, {}) without being hit by the black {} at ({}, {}).".format(piece1, e, f, piece2, c, d))
+    else:
+        print("Invalid input: there is no white {} at ({}, {}).".format(piece1, a, b))
+        
+        
+    x1, y1: position of the attacking piece
+    x2, y2: position of the defending piece
+    piece: type of the attacking piece (rook, queen, knight, bishop, king)
+
+    if x1 == x2 or y1 == y2:
+        if piece == "rook" or piece == "queen":
+            # check if there is no piece between the attacking and the defending piece
+            for i in range(min(x1,x2)+1, max(x1,x2)):
+                if i != x1 and i != x2:
+                    if (i,y1) != (x1,y1) and (i,y1) != (x2,y2):
+                        return False
+            for j in range(min(y1,y2)+1, max(y1,y2)):
+                if j != y1 and j != y2:
+                    if (x1,j) != (x1,y1) and (x1,j) != (x2,y2):
+                        return False
+            return True
+        elif piece == "king":
+            return True
+        else:
+            return False
+    # check if the attacking piece and the defending piece are on the same diagonal
+    elif abs(x1-x2) == abs(y1-y2):
+        if piece == "bishop" or piece == "queen":
+            # check if there is no piece between the attacking and the defending piece
+            for i in range(1, abs(x1-x2)):
+                j = y1 + (y2-y1)*i//abs(x2-x1)
+                if (x1+i,j) != (x1,y1) and (x1+i,j) != (x2,y2):
+                    return False
+            return True
+        elif piece == "king":
+            return True
+        else:
+            return False
+    # check if the attacking piece is a knight and can attack the defending piece
+    elif piece == "knight" and (abs(x1-x2) == 2 and abs(y1-y2) == 1 or abs(x1-x2) == 1 and abs(y1-y2) == 2):
+        return True
+    else:
+        return False
+        
+        
+# test the function for various inputs
+can_white_move(1, 1, 1, 4, 1, 6, "rook", "rook") # True
+can_white_move(1, 1, 1, 4, 1, 6, "rook", "queen") # True
+can_white_move(1, 1, 1, 4, 2, 6, "rook", "rook") # False
+can_white_move(1, 1, 1, 4, 2, 6, "rook", "queen") # False
+can_white_move(1, 1, 3, 2, 4, 4, "knight", "bishop") # True
+can_white_move(3, 4, 5, 6, 7, 8, "queen", "bishop") # False
+can_white_move(1, 4, 2, 2, 3, 4, "horse", "elephant") # True
+can_white_move(5, 2, 6, 4, 4, 5, "king", "queen") # False
