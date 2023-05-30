@@ -1,0 +1,7 @@
+points_array = [62, 45, 73, 91, 54, 87, 78, 58, 69, 82]
+total_points = sum(points_array)
+threshold_points = 700 # known value to advance to next stage
+if total_points > threshold_points:
+    print("Athlete advances to next stage")
+else:
+    print("Athlete does not advance to next stage")
