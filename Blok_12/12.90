@@ -1,0 +1,13 @@
+sentence = input("Введите предложение: ")
+index = 0
+found = False
+
+while index < len(sentence) - 1:
+    if sentence[index] == sentence[index + 1]:
+        print(f"Первая пара одинаковых символов на позициях {index} и {index + 1}")
+        found = True
+        break
+    index += 1
+
+if not found:
+    print("Одинаковые символы не найдены")
