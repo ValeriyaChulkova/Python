@@ -1,0 +1,13 @@
+#a)
+fib = [1, 1]
+while fib[-1] + fib[-2] <= 1000:
+    fib.append(fib[-1] + fib[-2])
+sum_fib = sum(fib[:-1])
+print(sum_fib)
+
+#b)
+n = int(input("Enter n: "))
+fib = [1, 1]
+while fib[-1] <= n:
+    fib.append(fib[-1] + fib[-2])
+print(fib[-1])
