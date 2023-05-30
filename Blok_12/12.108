@@ -1,0 +1,11 @@
+def swap_letters(word):
+    if len(word) < 5:
+        return "Слово должно быть не короче 5 символов"
+    else:
+        new_word = word[:1] + word[4] + word[2:4] + word[1] + word[5:]
+        return new_word
+
+# пример использования
+word = "пример"
+new_word = swap_letters(word)
+print(new_word)
