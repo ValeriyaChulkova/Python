@@ -1,0 +1,10 @@
+sentence = input("Введите предложение: ")
+n_index = sentence.find("н")
+k_index = sentence.find("к")
+
+if n_index == -1 or k_index == -1:
+    print("В предложении нет букв 'н' или 'к'")
+elif n_index < k_index:
+    print("Буква 'н' встречается раньше, чем 'к'")
+else:
+    print("Буква 'к' встречается раньше, чем 'н'")
