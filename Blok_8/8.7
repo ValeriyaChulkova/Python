@@ -1,0 +1,8 @@
+a = float(input('Enter a number a such that 1 < a <= 1.5: '))
+n = 2  # starting from n=2 as 1 + 1/1 = 2 which is always greater than a
+while True:
+    value = 1 + 1/n
+    if value < a:
+        print(f'The first value less than {a} is {value}')
+        break
+    n += 1
