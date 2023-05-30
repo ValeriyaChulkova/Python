@@ -1,0 +1,14 @@
+def count_taller_than_170(arr):
+    count = 0
+    for height in arr:
+        if height > 170:
+            count += 1
+    return count
+def can_form_basketball_team(arr):
+    count = 0
+    for height in arr:
+        if height > 170:
+            count += 1
+            if count >=5:
+                return True
+    return False
