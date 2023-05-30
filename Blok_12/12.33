@@ -1,0 +1,6 @@
+word = 'муха'
+
+# Заменяем буквы для получения слова "слон"
+new_word = word.replace('м', 'с').replace('у', 'л').replace('х', 'о').replace('а', 'н')
+
+print(new_word)
