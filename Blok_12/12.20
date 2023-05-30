@@ -1,0 +1,3 @@
+word = "абвгде" # Введите свое слово
+half_word = word[:len(word)//2]
+print(half_word)
