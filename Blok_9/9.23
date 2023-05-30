@@ -1,0 +1,15 @@
+def count_divisors(n):
+    count = 0
+    for i in range(1,int(n**0.5)+1):
+        if n % i == 0:
+            count += (1 if n/i == i else 2)
+    return count
+  
+def find_integer_with_k_divisors(a,B,k):
+    result = []
+    for n in range(a,B+1):
+        if count_divisors(n) == k:
+            result.append(n)
+    return result
+    
+    
