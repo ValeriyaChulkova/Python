@@ -1,0 +1,16 @@
+import random
+a = int(input("Enter value of a: "))
+b = int(input("Enter value of b: "))
+l = int(input("Enter the number of integers you want: "))
+m = random.randint(1,20)
+n = random.randint(1,20)
+integers = []
+for i in range(l):
+    integers.append(random.randint(a,b))
+real_numbers = []
+for i in range(m):
+    real_numbers.append(random.uniform(0,n))
+print("Random natural number m: ", m)
+print("Random natural number n: ", n)
+print("Random integers ranging from a to b: ", integers)
+print("M non-negative random real numbers not exceeding n: ", real_numbers)
