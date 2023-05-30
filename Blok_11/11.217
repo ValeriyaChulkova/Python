@@ -1,0 +1,28 @@
+а)
+num1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+num2 = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+result = []
+carry = 0
+for i in range(len(num1)-1, -1, -1):
+    s = num1[i] + num2[i] + carry
+    carry = s // 10
+    result.append(s % 10)
+if carry:
+    result.append(carry)
+result.reverse()
+print(result)
+б)
+num1 = [9,9,9]*10 + [0]*10
+num2 = [1]*30
+result = []
+borrow = 0
+for i in range(len(num1)-1, -1, -1):
+    d = num1[i] - num2[i] - borrow
+    if d < 0:
+        d += 10
+        borrow = 1
+    else:
+        borrow = 0
+    result.append(d)
+result.reverse()
+print(result)
