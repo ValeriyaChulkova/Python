@@ -1,0 +1,11 @@
+peaks = ["Aconcagua", "Denali", "Everest", "Kilimanjaro", "Mont Blanc"]
+new_peak = "Matterhorn" # новая вершина
+index = -1
+for i in range(len(peaks)):
+    if new_peak < peaks[i]:
+        index = i
+        break
+if index < 0:
+    index = len(peaks)
+new_peaks = peaks[:index] + [new_peak] + peaks[index:]
+print(new_peaks)
