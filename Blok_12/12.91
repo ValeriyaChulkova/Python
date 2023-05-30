@@ -1,0 +1,13 @@
+sentence = input("Введите предложение: ")
+index = 0
+found = False
+
+while index < len(sentence) - 1:
+    if (sentence[index] == "ч" and sentence[index + 1] == "у") or (sentence[index] == "щ" and sentence[index + 1] == "у"):
+        print(f"Найдено буквосочетание '{sentence[index]}{sentence[index+1]}' на позиции {index}")
+        found = True
+        break
+    index += 1
+
+if not found:
+    print("Буквосочетания 'чу' или 'щу' не найдены")
