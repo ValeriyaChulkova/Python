@@ -1,0 +1,25 @@
+# Input grades of students in 3 subjects
+# Grades are assumed to be integers from 1 to 5
+grades = []
+for i in range(14):
+    student_grades = []
+    for j in range(3):
+        grade = int(input("Enter grade for student %d in subject %d: " % (i+1, j+1)))
+        student_grades.append(grade)
+    grades.append(student_grades)
+# Determine students who passed the session without twos
+passed_students = 0
+for student in grades:
+    if 2 not in student:
+        passed_students += 1
+print("Number of students who passed the session without twos:", passed_students)
+# Determine number of subjects for which only grades "5" and "4" were obtained
+all_good_grades = 0
+for j in range(3):
+    good_grades = 0
+    for student in grades:
+        if student[j] in [4, 5]:
+            good_grades += 1
+    if good_grades == 14:
+        all_good_grades += 1
+print("Number of subjects with only grades '5' and '4':", all_good_grades)
