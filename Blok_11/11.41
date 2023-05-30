@@ -1,0 +1,17 @@
+# a) check if s-th element is positive
+if arr[s] > 0:
+  print("The s-th element of the array is positive.")
+else:
+  print("The s-th element of the array is not positive.")
+# b) check if k-th element is even
+if arr[k] % 2 == 0:
+  print("The k-th element of the array is even.")
+else:
+  print("The k-th element of the array is odd.")
+# c) compare s-th and k-th elements
+if arr[s] > arr[k]:
+  print("The s-th element of the array is larger.")
+elif arr[k] > arr[s]:
+  print("The k-th element of the array is larger.")
+else:
+  print("The s-th and k-th elements are equal.")
