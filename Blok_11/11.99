@@ -1,0 +1,8 @@
+precipitation_array = [20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130, 135, 140, 145, 150, 155, 160]
+avg_precipitation = sum(precipitation_array) / len(precipitation_array)
+count = 0
+for i, item in enumerate(precipitation_array):
+    if item > avg_precipitation:
+        count += 1
+        print("Day", i+1, "had precipitation greater than the average for the month.")
+print("The number of days with precipitation greater than average is:", count)
