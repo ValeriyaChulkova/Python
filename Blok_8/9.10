@@ -1,0 +1,5 @@
+a = float(input("Enter a real number: "))
+for i in range(1, 4):
+    num = 1 + 1/i
+    if num < a:
+        print(num)
