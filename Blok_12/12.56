@@ -1,0 +1,9 @@
+sentence = "Дано предложение. Вывести все буквы, стоящие на четных местах, «столбиком»"
+specified_indexes = [0, 1, 4, 5, 8, 9] # Индексы требуемых символов
+specified_letters = ""
+
+for i in specified_indexes:
+    if i < len(sentence):
+        specified_letters += sentence[i] + "\n" # Добавляем перенос строки, чтобы выводить буквы столбиком
+
+print(specified_letters)
