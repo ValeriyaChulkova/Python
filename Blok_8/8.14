@@ -1,0 +1,24 @@
+Version 1:
+a = float(input("Enter value of a: "))
+n = 1
+while 1/n >= a:
+    n += 1
+print("The first number less than", a, "is", 1/n)
+Version 2:
+a = float(input("Enter value of a: "))
+n = 1
+found = False
+while not found:
+    if 1/n < a:
+        found = True
+    else:
+        n += 1
+print("The first number less than", a, "is", 1/n)
+Version 3:
+def find_number_less_than_a(a):
+    n = 1
+    while 1/n >= a:
+        n += 1
+    return 1/n
+a = float(input("Enter value of a: "))
+print("The first number less than", a, "is", find_number_less_than_a(a))
