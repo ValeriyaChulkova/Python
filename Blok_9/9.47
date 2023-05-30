@@ -1,0 +1,14 @@
+total_rubles = 100
+total_cattle = 100
+bull_price = 10
+cow_price = 5
+calf_price = 0.5
+#Iterating through all possible combinations of bulls, cows, and calves
+for i in range(total_cattle+1):
+    for j in range(total_cattle-i+1):
+        k = total_cattle - i - j
+        total_cost = i*bull_price + j*cow_price + k*calf_price
+        if(total_cost == total_rubles):
+            print("Number of bulls:",i)
+            print("Number of cows:",j)
+            print("Number of calves:",k)
