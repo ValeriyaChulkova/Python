@@ -1,0 +1,2 @@
+eight_underscores = "_" * 8
+print(eight_underscores)
