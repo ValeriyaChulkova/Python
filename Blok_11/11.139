@@ -1,0 +1,4 @@
+costs = [50, 100, 75, 200, 150, 250, 175, 275, 300, 225, 125, 350, 375, 400, 425, 375, 350, 365, 380, 390, 395, 410, 415, 405, 385, 370, 375, 380, 390, 395, 400, 405, 410, 415, 420, 425, 430, 440, 450]
+sorted_costs = sorted(costs, reverse=True)
+most_expensive_goods = sorted_costs[:2]
+print("Costs of the two most expensive types of goods:", most_expensive_goods)
