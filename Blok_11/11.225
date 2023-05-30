@@ -1,0 +1,11 @@
+а)champ1 = [2, 3, 1, 4, 0, 2, 1, 3, 2, 4, 3, 1, 2, 0, 4, 1, 3, 2, 0, 2, 3, 1, 4, 0, 2, 1]
+champ2 = [1, 0, 3, 2, 4, 1, 2, 0, 3, 1, 0, 2, 4, 3, 1, 0, 2, 4, 3, 0, 1, 2, 4, 3, 0, 2]
+total_goals = sum(champ1) + sum(champ2)
+print("Total goals scored in both championships:", total_goals)
+б)areas = [10.5, 12.3, 8.7, 15.6, 20.4]
+harvests = [25.6, 30.2, 22.5, 40.1, 50.0]
+avg_harvests = []
+for i in range(len(areas)):
+    avg_harvests.append(harvests[i]/areas[i])
+print("Average harvest in each district:", avg_harvests)
+print("Average harvest in the region is", sum(harvests)/sum(areas))
