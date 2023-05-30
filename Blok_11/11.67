@@ -1,0 +1,11 @@
+odd_residents = 0
+even_residents = 0
+for i in range(len(residents)):
+    if i % 2 == 0:
+        even_residents += residents[i]
+    else:
+        odd_residents += residents[i]
+if even_residents > odd_residents:
+    print("The even numbered side of the street has more residents.")
+else:
+    print("The odd numbered side of the street has more residents.")
