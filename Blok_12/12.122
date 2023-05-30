@@ -1,0 +1,10 @@
+sentence = input("Введите строку: ")
+new_sentence = ""
+
+for letter in sentence:
+    if letter != " ":
+        new_sentence += letter
+
+new_sentence = new_sentence[:-1] + "_"
+
+print(new_sentence)
