@@ -1,0 +1,8 @@
+word = input("Введите слово: ")
+new_word = ""
+for letter in word:
+    if letter not in new_word:
+        new_word += letter
+    else:
+        new_word += "_"
+print("Новое слово без повторяющихся букв:", new_word)
