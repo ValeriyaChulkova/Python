@@ -1,0 +1,8 @@
+june_precipitation = [25, 34, 23, 40, 12, 17, 11, 36, 29, 21, 30, 39, 20, 18, 28, 31, 24, 37, 16, 27, 32, 19, 22, 26, 33, 15, 35, 14, 38]
+# determine total precipitation for each decade of June
+decade1 = sum(june_precipitation[0:10])
+decade2 = sum(june_precipitation[10:20])
+decade3 = sum(june_precipitation[20:])
+print("Total precipitation for first decade of June:", decade1)
+print("Total precipitation for second decade of June:", decade2)
+print("Total precipitation for third decade of June:", decade3)
