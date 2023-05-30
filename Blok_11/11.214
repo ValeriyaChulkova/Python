@@ -1,0 +1,6 @@
+scores = [10, 20, 30, 40, 50]
+sorted_scores = sorted(scores, reverse=True)
+if scores == sorted_scores:
+    print("Teams are listed in the order of their ranking in the championship")
+else:
+    print("Teams are not listed in the order of their ranking in the championship")
