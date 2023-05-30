@@ -1,0 +1,11 @@
+import random
+# Roll a die for each player
+player1_roll = random.randint(1, 6)
+player2_roll = random.randint(1, 6)
+# Determine the winner
+if player1_roll == player2_roll:
+    print("It's a tie!")
+elif player1_roll > player2_roll:
+    print("Player 1 wins with a roll of", player1_roll)
+else:
+    print("Player 2 wins with a roll of", player2_roll)
