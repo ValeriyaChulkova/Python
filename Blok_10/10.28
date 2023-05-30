@@ -1,0 +1,32 @@
+import random
+num_points = 1000000
+count = 0
+
+for i in range(num_points):
+    x = random.uniform(-1, 1)
+    y = random.uniform(-1, 1)
+    if x**2 + y**2 <= 1:
+        count += 1
+
+ratio = count / num_points
+circle_area = 4 * ratio      # multiplying by 4 gives the area of the unit circle (since the side length of the square is 2)
+
+l = 2 * circle_area * math.pi
+print(l)
+
+import math
+
+import random
+import math
+num_points = 1000000
+count = 0
+for i in range(num_points):
+    x = random.uniform(-1, 1)
+    y = random.uniform(-1, 1)
+    if x**2 + y**2 <= 1:
+        count += 1
+        
+ratio = count / num_points
+circle_area = 4 * ratio
+l = 2 * circle_area * math.pi
+print(l)
