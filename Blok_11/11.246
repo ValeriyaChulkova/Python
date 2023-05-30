@@ -1,0 +1,16 @@
+# 1 способ
+arr = [1, 2, 3, 4, 5]
+m = 3
+new_arr = []
+for i in range(len(arr)):
+    if i % 2 != 0:
+        new_arr.append(arr[i] * m)
+    else:
+        new_arr.append(m / i)
+print(new_arr)
+
+# 2 способ (с использованием генератора списка)
+arr = [1, 2, 3, 4, 5]
+m = 3
+new_arr = [arr[i]*m if i%2!=0 else m/i for i in range(len(arr))]
+print(new_arr)
