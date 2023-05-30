@@ -1,0 +1,11 @@
+sentence = "Hello, World! This is a sentence with some letters like 's' and 'l'"
+
+s_index = sentence.rfind('s')
+l_index = sentence.rfind('l')
+
+if s_index > l_index:
+    print("The letter 's' appears later.")
+elif l_index > s_index:
+    print("The letter 'l' appears later.")
+else:
+    print("The letters 's' and 'l' do not appear in the sentence in the order specified.")
