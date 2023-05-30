@@ -1,0 +1,11 @@
+arr = [22, 31, 13, 35, 56, 61, 13, 24, 42, 33, 65, 56, 44, 23, 34, 61, 15, 54, 46, 26, 63, 35]
+valid_domino = False
+
+# Case A
+if all(str(x)[1] == str(y)[0] for x,y in zip(arr[:-1], arr[1:])):
+    valid_domino = True
+# Case B
+if all(str(x)[1] == str(y)[0] or str(x)[0] == str(y)[1] for x,y in zip(arr[:-1], arr[1:])):
+    valid_domino = True
+
+print(valid_domino)
