@@ -1,0 +1,6 @@
+word1 = "Apple"
+word2 = "Elephant"
+if word1[0] == word2[-1]:
+    print("The first word begins with the same letter that the second word ends with.")
+else:
+    print("The first word does not begin with the same letter that the second word ends with.")
