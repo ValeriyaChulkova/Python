@@ -1,0 +1,15 @@
+def remove_chars(sentence, n1, n2):
+    sentence_length = len(sentence)
+    if n2 >= sentence_length:
+        return "Ошибка: n2 больше или равно длине предложения."
+    
+    if n1 > n2:
+        return "Ошибка: n1 больше, чем n2."
+    
+    return sentence[:n1-1] + sentence[n2:]
+
+sentence = input("Введите предложение: ")
+n1 = int(input("Введите n1: "))
+n2 = int(input("Введите n2: "))
+result = remove_chars(sentence, n1, n2)
+print(result)
