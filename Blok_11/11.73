@@ -1,0 +1,2 @@
+ # Assuming the height array is already defined and G is entered from keyboard
+   num_students_below_G = sum(1 for height in heights if height <= G)
