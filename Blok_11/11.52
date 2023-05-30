@@ -1,0 +1,10 @@
+def even_sum(arr):
+  if sum(arr) % 2 == 0:
+    return True
+  else:
+    return False
+def five_digit_sum(arr):
+  if sum([i**2 for i in arr]) >= 10000 and sum([i**2 for i in arr]) <= 99999:
+    return True
+  else:
+    return False
