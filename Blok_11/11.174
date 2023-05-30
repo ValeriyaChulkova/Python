@@ -1,0 +1,8 @@
+arr = [15, 25, 35, 45, 55, 65, 75]
+a = 7 # заданное число
+new_arr = []
+for i in arr:
+    new_arr.append(i)
+    if '5' in str(i):
+        new_arr.append(a)
+print(new_arr)
