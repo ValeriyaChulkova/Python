@@ -1,0 +1,10 @@
+n = 100
+while n < 1000:
+    divisors = [1]
+    for i in range(2, int(n/2) + 1):
+        if n % i == 0:
+            divisors.append(i)
+    if sum(divisors) == n:
+        print(n, "is a perfect number!")
+        break
+    n += 1
