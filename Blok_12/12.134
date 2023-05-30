@@ -1,0 +1,3 @@
+word = "слово"
+corrected_word = word[-1] + word[0:len(word)-1][1:]
+print(corrected_word)
