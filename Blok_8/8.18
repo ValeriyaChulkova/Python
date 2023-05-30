@@ -1,0 +1,7 @@
+a, x, e = 2.0, 5.0, 0.0001
+y_prev = a
+y_curr = 0.5 * (y_prev + x / (y_prev - 1))
+while abs(y_curr ** 2 - y_prev ** 2) >= e:
+    y_prev = y_curr
+    y_curr = 0.5 * (y_prev + x / (y_prev - 1))
+print("The first term y_n that satisfies the inequality is", y_curr)
