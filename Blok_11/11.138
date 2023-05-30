@@ -1,0 +1,4 @@
+speeds = [120, 130, 110, 140, 125, 150, 135, 155, 160, 145, 115, 170, 180, 190, 200, 175, 165, 172, 178, 182, 188, 195, 198, 185, 179, 173, 177, 181, 187, 194, 197, 196, 193, 192, 191, 186, 183, 180, 177]
+sorted_speeds = sorted(speeds, reverse=True)
+fastest_cars = sorted_speeds[:2]
+print("Speeds of the two fastest cars:", fastest_cars)
