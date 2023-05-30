@@ -1,0 +1,4 @@
+team = "Манчестер Юнайтед"
+
+for letter in team:
+    print(letter)
