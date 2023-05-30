@@ -1,0 +1,11 @@
+arr = [3, -8, 2, 7, 5, 7, 4, -9, 1, 6]
+# а) первый отрицательный элемент
+if any(x < 0 for x in arr):
+    neg_index = next(i for i, x in enumerate(arr) if x < 0)
+    del arr[neg_index]
+print(arr)
+# б) последний четный элемент
+if any(x % 2 == 0 for x in arr):
+    last_even_index = next(i for i in range(len(arr)-1, -1, -1) if arr[i] % 2 == 0)
+    del arr[last_even_index]
+print(arr)
