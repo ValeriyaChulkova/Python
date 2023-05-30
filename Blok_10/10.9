@@ -1,0 +1,21 @@
+import random
+num_tails = 0
+num_heads = 0
+for i in range(1000):
+    coin_toss = random.randint(0, 1)
+    if coin_toss == 0:
+        num_tails += 1
+    else:
+        num_heads += 1
+print("Tails occurred", num_tails, "times")
+print("Heads occurred", num_heads, "times")
+
+freq_tails = num_tails / 100
+freq_heads = num_heads / 100
+print("Relative frequency of tails:", freq_tails)
+print("Relative frequency of heads:", freq_heads)
+
+freq_tails = num_tails / 1000
+freq_heads = num_heads / 1000
+print("Relative frequency of tails:", freq_tails)
+print("Relative frequency of heads:", freq_heads)
