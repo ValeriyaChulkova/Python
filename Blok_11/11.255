@@ -1,0 +1,17 @@
+# а) сумма элементов
+arr1 = [1, 2, 3, 4, 5]
+arr2 = [6, 7, 8, 9, 10]
+sum_arr = [arr1[i] + arr2[i] for i in range(len(arr1))]
+print(sum_arr)
+
+# б) произведение элементов
+arr1 = [1, 2, 3, 4, 5]
+arr2 = [6, 7, 8, 9, 10]
+prod_arr = [arr1[i] * arr2[i] for i in range(len(arr1))]
+print(prod_arr)
+
+# в) максимальный элемент
+arr1 = [1, 2, 3, 4, 5]
+arr2 = [6, 7, 8, 9, 10]
+max_arr = [max(arr1[i], arr2[i]) for i in range(len(arr1))]
+print(max_arr)
