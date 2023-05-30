@@ -1,0 +1,11 @@
+word = "программирование"
+s = 4
+k = 8
+
+s_letter = word[s]
+s_to_k = word[s+1:k]
+k_to_end = word[k:]
+
+new_word = word[:s] + word[s+1:k] + s_letter + word[k:]
+
+print("Новое слово:", new_word)
