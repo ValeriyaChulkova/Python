@@ -1,0 +1,7 @@
+cost_array = [10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105]
+avg_cost = sum(cost_array) / len(cost_array)
+count = 0
+for item in cost_array:
+    if item < avg_cost:
+        count += 1
+print("The number of types of goods with cost less than average is:", count)
