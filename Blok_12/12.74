@@ -1,0 +1,8 @@
+sentence = "This is an example sentence. It may or may not have a comma,"
+
+if ',' in sentence:
+    comma_index = sentence.index(',')
+    chars_before_comma = sentence[:comma_index]
+    print("The characters before the first comma in the sentence are:", chars_before_comma)
+else:
+    print("There are no commas in the sentence.")
