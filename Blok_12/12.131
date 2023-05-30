@@ -1,0 +1,14 @@
+sentence = "This is an example sentence. "
+letter = "q"
+k = 8
+
+# Find the index of the last "i" in the sentence
+i_index = sentence.rfind("i")
+
+# Insert the letter before the last "i"
+new_sentence = sentence[:i_index] + letter + sentence[i_index:]
+
+# Shift all characters after the k-th position to the right by 1 and insert "s" at k+1
+new_sentence = new_sentence[:k+1] + "s" + new_sentence[k:-1] + new_sentence[-1]
+
+print(new_sentence)
