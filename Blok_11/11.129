@@ -1,0 +1,9 @@
+arr = [1, 2, 3, 4, 5, 1, 6, 7, 8, 9, 10, 2, 3, 4, 5]
+# a) with the minimum value
+min_val = min(arr)
+index_min = [i for i in range(len(arr)) if arr[i] == min_val]
+print("Indices of minimum value elements:", index_min)
+# b) with the maximum value
+max_val = max(arr)
+index_max = [i for i in range(len(arr)) if arr[i] == max_val]
+print("Indices of maximum value elements:", index_max)
