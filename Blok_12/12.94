@@ -1,0 +1,11 @@
+sentence = input("Введите предложение: ")
+first_comma_index = sentence.find(",")
+if first_comma_index == -1:
+    print("В предложении нет запятой")
+else:
+    second_comma_index = sentence.find(",", first_comma_index + 1)
+    if second_comma_index == -1:
+        substring = sentence[first_comma_index + 1:]
+    else:
+        substring = sentence[first_comma_index + 1:second_comma_index]
+    print(f"Символы, расположенные между первой и второй запятыми (если есть): {substring}")
