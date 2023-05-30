@@ -1,0 +1,13 @@
+def swap_letters(word):
+    if len(word) % 2 != 0:
+        return "Длина слова должна быть четной"
+    else:
+        new_word = ''
+        for i in range(0, len(word)-1, 2):
+            new_word += word[i+1] + word[i]
+        return new_word
+
+# пример использования
+word = "примеры"
+new_word = swap_letters(word)
+print(new_word)
