@@ -1,0 +1,7 @@
+heights = [160, 165, 150, 170, 175, 162, 163, 164, 160, 168, 170, 161, 155, 163, 160, 165, 170, 155, 166, 169, 162, 168, 173, 180, 175]
+avg_height = sum(heights) / len(heights)
+num_greater_than_avg = 0
+for height in heights:
+    if height > avg_height:
+        num_greater_than_avg += 1
+print("Number of students whose height is greater than the average height in the class: ", num_greater_than_avg)
