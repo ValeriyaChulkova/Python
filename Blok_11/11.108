@@ -1,0 +1,9 @@
+arr = [10, -4, 12, 56, -4, -89] #example array
+sign_changes = 0
+prev_sign = arr[0]/abs(arr[0]) #start with the sign of the first element
+for i in range(1, len(arr)):
+    curr_sign = arr[i]/abs(arr[i])
+    if curr_sign != prev_sign: #sign has changed
+        sign_changes += 1
+    prev_sign = curr_sign #update previous sign for next iteration
+print(sign_changes)
