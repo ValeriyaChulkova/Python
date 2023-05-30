@@ -1,0 +1,6 @@
+word = input("Введите слово: ")
+k = int(input("Введите число k: "))
+
+new_word = word[k-1] + word[0:k-1] + word[k:]
+
+print("Новое слово:", new_word)
