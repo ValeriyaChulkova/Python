@@ -1,0 +1,8 @@
+def digital_root(num):
+    while num > 9:
+        num = sum(int(digit) for digit in str(num))
+    return num
+# Example usage
+print(digital_root(12345)) # Output: 6
+print(digital_root(6789)) # Output: 3
+print(digital_root(99999999)) # Output: 9
