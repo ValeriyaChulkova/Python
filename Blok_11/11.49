@@ -1,0 +1,4 @@
+feb_precipitation = [10, 15, 6, 8, 13, 17, 9, 12, 14, 11, 7, 5, 16, 18, 9, 10, 11, 8, 14, 12, 19, 13, 5, 7, 6, 4, 15, 9, 11]
+# determine average daily rainfall in February
+avg_rainfall = sum(feb_precipitation) / len(feb_precipitation)
+print("Average daily rainfall in February:", avg_rainfall)
