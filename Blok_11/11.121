@@ -1,0 +1,6 @@
+rainfall = [10, 5, 8, 15, 20, 10, 30, 25, 10, 5, 8, 15, 20, 30, 25, 10, 5, 8, 15, 20, 30, 25, 10, 5, 8, 15, 20, 30, 25, 10, 5, 8, 15, 20, 30, 25, 10, 5, 8, 15, 20]
+max_rainfall = max(rainfall)
+first_max_index = rainfall.index(max_rainfall)
+print("The date of the first rainiest day is:", first_max_index+1)
+last_max_index = len(rainfall) - 1 - rainfall[::-1].index(max_rainfall)
+print("The date of the last rainiest day is:", last_max_index+1)
