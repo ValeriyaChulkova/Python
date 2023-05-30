@@ -1,0 +1,5 @@
+arr = [3, -5, 2, 7, -4, 8, -1]
+max_abs_value = max(map(abs, arr))
+max_abs_index = arr.index(max_abs_value)
+arr[max_abs_index] = -arr[max_abs_index]
+print(arr)
