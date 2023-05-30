@@ -1,0 +1,48 @@
+#Option 1:
+def prime_factors(n):
+    i = 2
+    factors = []
+    while i * i <= n:
+        if n % i:
+            i += 1
+        else:
+            n //= i
+            if i not in factors:
+                factors.append(i)
+    if n > 1:
+        factors.append(n)
+    return factors
+def print_factors_once(n):
+    factors = prime_factors(n)
+    print(f"The prime factors of {n} are: ", end="")
+    for factor in factors:
+        print(factor, end=", ")
+print_factors_once(24)
+# Output: The prime factors of 24 are: 2, 3,
+
+#Option 2:
+
+def prime_factors(n):
+    i = 2
+    factors = []
+    while i * i <= n:
+        if n % i:
+            i += 1
+        else:
+            n //= i
+            factors.append(i)
+    if n > 1:
+        factors.append(n)
+    return factors
+def print_factors_multiple_times(n):
+    factors = prime_factors(n)
+    print(f"The prime factors of {n} are: ", end="")
+    for factor in factors:
+        count = 0
+        while n % factor == 0:
+            n /= factor
+            count += 1
+        for i in range(count):
+            print(factor, end=", ")
+print_factors_multiple_times(24)
+# Output: The prime factors of 24 are: 2, 2, 2, 3, 
