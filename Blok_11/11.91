@@ -1,0 +1,15 @@
+mass = [75, 115, 85, 90, 110, 95, 100, 130, 120, 98, 105, 97, 102, 88, 92, 99, 102, 98, 125, 107, 104, 97, 116, 140, 93]
+sum_overweight = 0
+count_overweight = 0
+sum_regular = 0
+count_regular = 0
+for element in mass:
+    if element > 100:
+        sum_overweight += element
+        count_overweight += 1
+    else:
+        sum_regular += element
+        count_regular += 1
+mean_overweight = sum_overweight / count_overweight
+mean_regular = sum_regular / count_regular
+print(mean_overweight, mean_regular)
