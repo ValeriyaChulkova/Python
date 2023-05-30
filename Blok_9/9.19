@@ -1,0 +1,8 @@
+for num in range(120, 141):
+    divisors = []
+    # We can use another loop to find the divisors of each number
+    for i in range(1, num+1):
+        if num % i == 0:
+            divisors.append(i)
+    # We can then print the number and the number of divisors
+    print(f"{num} has {len(divisors)} divisors: {divisors}")
