@@ -1,0 +1,21 @@
+def removeOutliers(data, num_outliers):
+ retval = sorted(data)
+ for i in range(num_outliers):
+ retval.pop()
+ for i in range(num_outliers):
+ retval.pop(0)
+ return retval
+def main():
+ values = []
+ s=input("Введите значение (Enter для окончания ввода): ")
+ while s != "":
+ num = float(s)
+ values.append(num)
+ s = input("Введите значение (Enter для окончания ввода): ")
+ if len(values) < 4:
+ print("Вы ввели недостаточное количество чисел.")
+ else:
+ print("Список с удаленными выбросами: ", \
+ removeOutliers(values, 2))
+ print("Исходный список: ", values)
+main()
