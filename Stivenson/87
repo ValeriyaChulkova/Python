@@ -1,0 +1,11 @@
+def calculate_shipping_cost(num_items):
+ if num_items <= 0:
+return 0
+ elif num_items == 1:
+return 10.95
+ else:
+return 10.95 + (num_items - 1) * 2.95
+
+num_items = int(input("Введите количество товаров в заказе: "))
+shipping_cost = calculate_shipping_cost(num_items)
+print("Сумма доставки: $", shipping_cost)
