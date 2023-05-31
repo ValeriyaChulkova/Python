@@ -1,0 +1,12 @@
+def height_difference(heights):
+    # находим самый высокий и самый низкий рост в списке
+    max_height = max(heights)
+    min_height = min(heights)
+    # вычисляем разницу между ними
+    difference = max_height - min_height
+    return difference
+
+# пример использования функции
+heights = [175, 170, 182, 164, 190]
+diff = height_difference(heights)
+print(diff)
