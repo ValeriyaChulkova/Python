@@ -1,0 +1,13 @@
+def check_num(num, A):
+num_str = str(num)
+a = int(num_str[0]) + int(num_str[1])
+b = int(num_str[2]) + int(num_str[3])
+c = a + b
+d = int(num_str[0]) * int(num_str[1]) * int(num_str[2]) * int(num_str[3])
+print("Равна ли сумма двух первых его цифр сумме двух его последних цифр: ", a == b)
+print("Кратна ли трем сумма его цифр: ", c % 3 == 0)
+print("Кратно ли четырем произведение его цифр: ", d % 4 == 0)
+print("Кратно ли произведение его цифр числу А: ", d % A == 0)
+num = 1234
+A = 5
+check_num(num, A)
