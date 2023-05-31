@@ -1,0 +1,6 @@
+k = int(input("Введите число k: "))
+n = 1
+while k > len(str(n)):
+    k -= len(str(n))
+    n += 1
+print(str(n)[k-1])
