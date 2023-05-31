@@ -1,0 +1,10 @@
+a_vals = [1, -1, 2]
+b_vals = [2, 3, 1]
+c_vals = [1, 7, 3]
+
+real_roots = 0
+for a, b, c in zip(a_vals, b_vals, c_vals):
+    if b ** 2 - 4 * a * c >= 0:
+        real_roots += 1
+
+print("Количество уравнений с вещественными корнями:", real_roots)

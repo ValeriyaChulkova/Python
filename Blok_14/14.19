@@ -1,0 +1,11 @@
+a_vals = [1, 2, 3, 4, 5, 6, 7, 8]
+b_vals = [8, 7, 6, 5, 4, 3, 2, 1]
+
+def is_even(n):
+    return n % 2 == 0
+
+even_a = len(list(filter(is_even, a_vals)))
+odd_b = len(list(filter(lambda n: n % 2 != 0, b_vals)))
+
+print("Четных чисел в первой последовательности:", even_a)
+print("Нечетных чисел во второй последовательности:", odd_b)

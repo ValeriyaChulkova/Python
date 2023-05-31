@@ -1,0 +1,14 @@
+
+def hypothenuse(a,b):
+    return (a**2 + b**2)**0.5
+
+AB = float(input("Введите сторону AB: "))
+AD = float(input("Введите сторону AD: "))
+CD = float(input("Введите сторону CD: "))
+
+BC = hypothenuse(CD, AB)
+BD = hypothenuse(BC, AD)
+
+perimeter = AB + BD + CD
+print("Периметр фигуры ABCD равен", perimeter)
+

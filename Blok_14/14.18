@@ -1,0 +1,11 @@
+def triangle_area(x1, y1, x2, y2, x3, y3):
+    return abs((x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2)) / 2)
+
+x_vals = [1, 2, 3, 4, 5]
+y_vals = [3, 7, 8, 6, 2]
+
+area = 0
+for i in range(3, len(x_vals)):
+    area += triangle_area(x_vals[0], y_vals[0], x_vals[i-1], y_vals[i-1], x_vals[i], y_vals[i])
+
+print("Площадь пятиугольника:", area)
