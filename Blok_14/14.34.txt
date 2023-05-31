@@ -1,0 +1,15 @@
+def gcd(a, b):
+    if b == 0:
+        return a
+    return gcd(b, a % b)
+
+def lcm(a, b):
+    return a * b // gcd(a, b)
+
+numbers = [12, 24, 30, 36]
+lcm_result = 1
+for i in range(len(numbers)):
+    lcm_result = lcm(lcm_result, numbers[i])
+
+print("НОК:", lcm_result)
+print("НОД:", gcd(numbers[0], gcd(numbers[1], gcd(numbers[2], numbers[3]))))

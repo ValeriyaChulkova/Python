@@ -1,0 +1,9 @@
+def is_palindrome(word):
+    return word == word[::-1]
+
+words = ["level", "python", "racecar"]
+
+if any(is_palindrome(word) for word in words):
+    print("В списке есть палиндром")
+else:
+    print("В списке нет палиндрома")

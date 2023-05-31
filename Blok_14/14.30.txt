@@ -1,0 +1,11 @@
+def is_palindrome(num):
+    num_str = str(num)
+    return num_str == num_str[::-1]
+
+num1 = 12345
+num2 = 12321
+
+if is_palindrome(num1) or is_palindrome(num2):
+    print("At least one number is palindrome")
+else:
+    print("Neither number is a palindrome")

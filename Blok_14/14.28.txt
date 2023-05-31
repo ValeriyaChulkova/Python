@@ -1,0 +1,13 @@
+def sum_of_digits(num):
+    sum = 0
+    while num > 0:
+        sum += num % 10
+        num //= 10
+    return sum
+
+count = 0
+for i in range(100000, 1000000):
+    first_three = i // 1000
+    last_three = i % 1000
+    if sum_of_digits(first_three) == sum_of_digits(last_three):
+        count += 1

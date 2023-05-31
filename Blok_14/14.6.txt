@@ -1,0 +1,13 @@
+def draw_line(length):
+    line = ""
+    for i in range(length):
+        line += "*"
+    print(line)
+
+def draw_rect(rows, cols):
+    draw_line(cols)
+    for i in range(rows-2):
+        print("*" + " " * (cols - 2) + "*")
+    draw_line(cols)
+
+draw_rect(10, 20)

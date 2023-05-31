@@ -1,0 +1,21 @@
+def triangle_perimeter(a, b, c):
+    return a + b + c
+
+def triangle_area(a, b, c):
+    s = (a + b + c) / 2
+    return (s * (s - a) * (s - b) * (s - c)) ** 0.5
+
+a1, b1, c1 = 3, 4, 5
+a2, b2, c2 = 4, 5, 6
+
+p1 = triangle_perimeter(a1, b1, c1)
+p2 = triangle_perimeter(a2, b2, c2)
+a1 = triangle_area(a1, b1, c1)
+a2 = triangle_area(a2, b2, c2)
+
+print("Perimeter of triangle 1:", p1)
+print("Perimeter of triangle 2:", p2)
+print("Area of triangle 1:", a1)
+print("Area of triangle 2:", a2)
+print("Total perimeter:", p1 + p2)
+print("Total area:", a1 + a2)

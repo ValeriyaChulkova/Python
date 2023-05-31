@@ -1,0 +1,16 @@
+def find_last_occurrence(text, letter):
+    return text.rfind(letter)
+
+sentence1 = "Hello, world!"
+sentence2 = "Python is awesome!"
+letter = 'o'
+
+last_position1 = find_last_occurrence(sentence1, letter)
+last_position2 = find_last_occurrence(sentence2, letter)
+
+if last_position1 > last_position2:
+    print(f"'{letter}' встречается позже в первом предложении (позиция {last_position1})")
+elif last_position2 > last_position1:
+    print(f"'{letter}' встречается позже во втором предложении (позиция {last_position2})")
+else:
+    print(f"'{letter}' встречается на одинаковом расстоянии от конца обоих предложений (позиции {last_position1} и {last_position2})")

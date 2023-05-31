@@ -1,0 +1,18 @@
+def count_in_array(num, arr):
+    count = 0
+    for i in arr:
+        if i == num:
+            count += 1
+    return count
+
+m1 = [1, 2, 3, 4, 5]
+m2 = [1, 1, 2, 3, 4, 4]
+m3 = [5, 6, 7, 1, 4]
+
+num_of_m1 = sum(1 for i in m3 if i in m1)
+num_of_m2 = sum(1 for i in m3 if i in m2)
+
+if num_of_m1 > num_of_m2:
+    print("m1")
+else:
+    print("m2")

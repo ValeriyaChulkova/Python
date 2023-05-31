@@ -1,0 +1,9 @@
+AB = float(input("Введите сторону AB: "))
+AD = float(input("Введите сторону AD: "))
+CD = float(input("Введите сторону CD: "))
+
+BC = ((CD**2) + (AB**2))**0.5
+BD = ((BC**2) + (AD**2))**0.5
+
+perimeter = AB + BD + CD
+print("Периметр фигуры ABCD равен", perimeter)

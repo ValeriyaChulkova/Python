@@ -1,0 +1,14 @@
+def is_palindrome(word):
+    return word == word[::-1]
+
+words = ["level", "python", "racecar"]
+palindromes = []
+
+for word in words:
+    if is_palindrome(word):
+        palindromes.append(word)
+
+if palindromes:
+    print("Слова-палиндромы:", ", ".join(palindromes))
+else:
+    print("Нет слов-палиндромов")

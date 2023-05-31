@@ -1,0 +1,18 @@
+def digitCount(n):
+    count = 0
+    while (n > 0):
+        count += 1
+        n = n // 10
+    return count
+
+a, b = map(int, input().split())
+
+count1 = digitCount(a)
+count2 = digitCount(b)
+
+if (count1 > count2):
+    print("Число", a, "имеет больше цифр, чем число", b)
+elif (count1 < count2):
+    print("Число", b, "имеет больше цифр, чем число", a)
+else:
+    print("Числа", a, "и", b, "имеют одинаковое количество цифр.")

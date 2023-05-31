@@ -1,0 +1,6 @@
+def draw_rectangle():
+    for i in range(20):
+        line = "*" * 60
+        print(line)
+
+draw_rectangle()

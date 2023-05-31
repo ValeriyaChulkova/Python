@@ -1,0 +1,25 @@
+def draw_triangle():
+    for i in range(1, 6):
+        print("*" * i)
+    for i in range(4, 0, -1):
+        print("*" * i)
+
+draw_triangle()
+
+def draw_pyramid():
+    symbol = "*"
+    line = ""
+    for i in range(1, 7):
+        spaces = " " * (6 - i)
+        stars = symbol * i
+        line += spaces + stars
+        print(line)
+        line = ""
+    for i in range(5, 0, -1):
+        spaces = " " * (6 - i)
+        stars = symbol * i
+        line += spaces + stars
+        print(line)
+        line = ""
+
+draw_pyramid()
