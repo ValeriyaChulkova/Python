@@ -1,0 +1,24 @@
+def is_leap_year(year):
+
+return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
+
+def get_next_date(year, month, day):
+
+days_in_month = [31, 28 + is_leap_year(year), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+  if day < days_in_month[month - 1]:
+return year, month, day + 1
+  elif month < 12:
+return year, month + 1, 1
+  else:
+return year + 1, 1, 1
+
+# Запрос даты у пользователя
+year = int(input("Введите год: "))
+month = int(input("Введите месяц: "))
+day = int(input("Введите день: "))
+
+# Получение следующей даты
+next_year, next_month, next_day = get_next_date(year, month, day)
+
+# Вывод следующей даты на экран
+print("Следующая дата: {}-{}-{}".format(next_day, next_month, next_year))
