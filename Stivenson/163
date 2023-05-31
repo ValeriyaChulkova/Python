@@ -1,0 +1,28 @@
+FIRST_YEAR = 1900
+LAST_YEAR = 2012
+def LoadAndAdd(fname, names):
+ inf = open(fname, "r")
+ line = inf.readline()
+ inf.close()
+ parts = line.split()
+ name = parts[0]
+ if name not in names:
+ names.append(name)
+def main():
+ girls = []
+ boys = []
+ for year in range(FIRST_YEAR, LAST_YEAR + 1):
+ girl_fname = "../Data/BabyNames/" + str(year) + \
+ "_GirlsNames.txt"
+ boy_fname = "../Data/BabyNames/" + str(year) + \
+ "_BoysNames.txt"
+ LoadAndAdd(girl_fname, girls)
+ LoadAndAdd(boy_fname, boys)
+ print("Самые популярные имена девочек:")
+ for name in girls:
+ print(" ", name)
+ print()
+ print("Самые популярные имена мальчиков: ")
+ for name in boys:
+ print(" ", name)
+main()
