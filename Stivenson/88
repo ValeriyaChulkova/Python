@@ -1,0 +1,17 @@
+def median(a, b, c):
+ if a < b and b < c or a > b and b > c:
+ return b
+ if b < a and a < c or b > a and a > c:
+ return a
+ if c < a and b < c or c > a and b > c:
+ return c
+ def alternateMedian(a, b, c):
+ return a + b + c – min(a, b, c) – max(a, b, c)
+def main():
+ x = float(input("Введите первое число: "))
+ y = float(input("Введите второе число: "))
+ z = float(input("Введите третье число: "))
+ print("Медиана равна:", median(x, y, z))
+ print("С помощью альтернативного метода:", \
+ alternateMedian(x, y, z))
+main()
