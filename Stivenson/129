@@ -1,0 +1,24 @@
+def tokenList(s) :
+ s = s.replace(" ", "")
+ tokens = []
+ i = 0
+ while i < len(s):
+ if s[i] == "*" or s[i] == "/" or s[i] == "ˆ" or \
+ s[i] == "(" or s[i] == ")" or s[i] == "+" or s[i] == "–":
+ tokens.append(s[i])
+ i = i + 1
+ elif s[i] >= "0" and s[i] <= "9":
+ num = ""
+ while i < len(s) and s[i] >= "0" and s[i] <= "9":
+ num = num + s[i]
+ i = i + 1
+ tokens.append(num)
+ else:
+ return []
+ return tokens
+def main():
+ exp = input("Введите математическое выражение: ")
+ tokens = tokenList(exp)
+ print("Лексемы:", tokens)
+if __name__ == "__main__":
+ main()
