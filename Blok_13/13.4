@@ -1,0 +1,23 @@
+employee_data = {
+    "John": "conscripted",
+    "Alice": "not conscripted",
+    "Bob": "conscripted",
+    "Mary": "not conscripted",
+    "Jane": "not conscripted",
+    "Mike": "conscripted",
+    "Sarah": "not conscripted",
+    "David": "conscripted",
+    "Emily": "conscripted",
+    "Tom": "not conscripted",
+    "Jack": "not conscripted",
+    "Liz": "conscripted",
+    "Mark": "conscripted",
+    "Judy": "not conscripted",
+    "Sam": "conscripted",
+    "Luke": "not conscripted"
+}
+military_personnel = []
+for name, status in employee_data.items():
+    if status == "conscripted":
+        military_personnel.append(name)
+print("Military personnel:", ", ".join(military_personnel))
