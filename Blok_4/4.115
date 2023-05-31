@@ -1,0 +1,8 @@
+y = float(input("Введите значение y: "))
+if y > 2:
+    f = y ** 2
+elif 0 < y < 2:
+    f = 0
+else:
+    f = y
+print("Значение функции f(y) =", f)
