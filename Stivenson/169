@@ -1,0 +1,21 @@
+inf_name = input("Введите имя файла для редактирования: ")
+inf = open(inf_name, "r")
+sen_name = input("Введите имя файла со служебными словами: ")
+sen = open(sen_name, "r")
+words = []
+line = sen.readline()
+while line != "":
+ line = line.rstrip()
+ words.append(line)
+ line = sen.readline()
+sen.close()
+outf_name = input("Введите имя нового файла: ")
+outf = open(outf_name, "w")
+line = inf.readline()
+while line != "":
+ for word in words:
+ line = line.replace(word, "*" * len(word))
+ outf.write(line)
+ line = inf.readline()
+inf.close()
+outf.close()
