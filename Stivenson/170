@@ -1,0 +1,22 @@
+from sys import argv
+if len(argv) == 1:
+ print("По крайней мере одно имя файла должно присутствовать в качестве", \
+ "аргумента командной строки.")
+ print("Завершаем программу...")
+ quit()
+for fname in argv[1 : len(argv)]:
+ try:
+ inf = open(fname, "r")
+ prev = " "
+ lnum = 1
+ for line in inf:
+ if line.startswith("def ") and prev[0] != "#":
+ bracket_pos = line.index("(")
+ name = line[4 : bracket_pos]
+ print("%s строка %d: %s" % (fname, lnum, name))
+ prev = line
+ lnum = lnum + 1
+ inf.close()
+ except:
+ print("Возникла проблема с файлом '%s'." % fname)
+ print("Идем к следующему файлу...")
