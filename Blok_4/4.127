@@ -1,0 +1,26 @@
+num1 = int(input("Введите первое число: "))
+num2 = int(input("Введите второе число: "))
+num3 = int(input("Введите третье число: "))
+max_num = max(num1, num2, num3)
+min_num = min(num1, num2, num3)
+if num1 == max_num:
+    result_max = "первое число"
+elif num2 == max_num:
+    result_max = "второе число"
+else:
+    result_max = "третье число"
+if num1 == min_num:
+    result_min = "первое число"
+elif num2 == min_num:
+    result_min = "второе число"
+else:
+    result_min = "третье число"
+if (num1 != max_num) and (num1 != min_num):
+    result_mid = "первое число"
+elif (num2 != max_num) and (num2 != min_num):
+    result_mid = "второе число"
+else:
+    result_mid = "третье число"
+print("Самое большое число -", result_max)
+print("Самое маленькое число -", result_min)
+print("Среднее число -", result_mid)
