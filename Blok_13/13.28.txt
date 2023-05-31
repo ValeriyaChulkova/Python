@@ -1,0 +1,10 @@
+def max_density(masses, volumes):
+    densities = []
+    for i in range(len(masses)):
+        density = masses[i] / volumes[i]
+        densities.append(density)
+    return max(densities)
+
+masses = [10, 20, 30, 15, 25, 35]
+volumes = [1, 2, 3, 1.5, 2.5, 3.5]
+print(max_density(masses, volumes))

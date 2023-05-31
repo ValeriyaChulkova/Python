@@ -1,0 +1,10 @@
+def max_population_density(populations, areas):
+    densities = []
+    for i in range(len(populations)):
+        density = populations[i] / (areas[i] * 1000)
+        densities.append(density)
+    return max(densities)
+
+populations = [100, 200, 300, 150, 250, 350]
+areas = [10, 20, 30, 15, 25, 35]
+print(max_population_density(populations, areas))

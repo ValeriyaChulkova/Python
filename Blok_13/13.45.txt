@@ -1,0 +1,26 @@
+students = [[4, 5, 3, 4], 
+            [3, 4, 4, 5], 
+            [5, 3, 4, 4], 
+            [4, 4, 4, 4]]
+
+subjects = ['math', 'physics', 'chemistry', 'history']
+
+new_subject = ['biology', 5, 4, 3, 5] # новый предмет
+
+position = 2 # позиция, на которую нужно вставить новый предмет
+
+students_transposed = list(map(list, zip(*students))) # транспонируем таблицу
+
+for i in range(len(students_transposed)):
+    students_transposed[i].insert(position, new_subject[i+1]) # вставляем оценки нового предмета на нужную позицию
+
+students_transposed.append(new_subject[1:]) # добавляем новый предмет в конец таблицы
+
+students = list(map(list, zip(*students_transposed))) # транспонируем таблицу обратно
+
+# выводим измененную таблицу на экран
+for i in range(len(students)):
+    print(subjects[i], end=' ')
+    for j in range(len(students[0])):
+        print(students[i][j], end=' ')
+    print()

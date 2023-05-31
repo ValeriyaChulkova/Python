@@ -1,0 +1,5 @@
+people = [['John Smith', '123-456-7890'], ['Mary Johnson', '234-567-8901'], 
+          ['David Lee', '345-678-9012'], ['Karen Brown', '456-789-0123']]
+for person in people:
+  if person[1][0] == '3' or person[1][0] == '7':
+    print(person[0])

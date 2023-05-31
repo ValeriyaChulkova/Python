@@ -1,0 +1,6 @@
+students = [['John', '9', '5'], ['Mary', '10', '4'], ['David', '9', '2'], 
+            ['Karen', '11', '5'], ['Emily', '9', '3']]
+for i in range(len(students)):
+  if students[i][1] == '9' and students[i][2] == '5':
+    print(students[i][0])
+

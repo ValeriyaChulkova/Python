@@ -1,0 +1,11 @@
+heights = [165, 170, 172, 175, 176, 178, 179, 180, 182, 183, 184, 187, 189, 191, 192]
+
+new_height = 181 # новый рост
+
+heights.insert(0, new_height) # вставляем новый рост в начало списка
+
+heights.sort() # сортируем список по возрастанию
+
+# выводим список фамилий учеников в порядке убывания роста
+for height in reversed(heights):
+    print('Student', heights.index(height)+1)

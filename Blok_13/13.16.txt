@@ -1,0 +1,6 @@
+import datetime
+students = [{'name': 'Иванов Иван Иванович', 'birthdate': datetime.date(2005, 5, 12)}, {'name': 'Петров Петр Петрович', 'birthdate': datetime.date(2006, 7, 20)}, {'name': 'Сидорова Елена Сергеевна', 'birthdate': datetime.date(2005, 4, 5)}]
+today = datetime.date.today()
+for student in students:
+    if student['birthdate'].month == today.month and student['birthdate'].day == today.day:
+        print(student['name'])

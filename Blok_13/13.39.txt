@@ -1,0 +1,19 @@
+trains = [
+    {
+        "number": input("Введите номер поезда: "),
+        "destination": input("Введите пункт назначения: "),
+        "arr_hour": int(input("Введите часы прибытия: ")),
+        "arr_min": int(input("Введите минуты прибытия: ")),
+        "dep_hour": int(input("Введите часы отправления: ")),
+        "dep_min": int(input("Введите минуты отправления: "))
+    }
+    for i in range(25)
+]
+
+current_hour = int(input("Введите текущее время (часы): "))
+current_min = int(input("Введите текущее время (минуты): "))
+
+for train in trains:
+    if train["dep_hour"] < current_hour or (train["dep_hour"] == current_hour and train["dep_min"] <= current_min):
+        if train["arr_hour"] > current_hour or (train["arr_hour"] == current_hour and train["arr_min"] >= current_min):
+            print("Поезд {} в пункте назначения {}".format(train["number"], train["destination"]))

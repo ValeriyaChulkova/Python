@@ -1,0 +1,11 @@
+points = [20, 18, 15, 13, 12, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, 0, 0, 0]
+
+t1 = int(input("Введите количество очков 20 команды: "))
+points.append(t1)
+points.sort(reverse=True)
+
+print("20-я команда заняла", points.index(t1) + 1, "место")
+
+print("Команды, набравшие меньше очков, чем 20-я команда:")
+for i in range(points.index(t1)):
+    print("Команда", i + 1, "- набрано очков:", points[i])

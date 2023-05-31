@@ -1,0 +1,58 @@
+students = {
+    "Ivanov": 167,
+    "Petrov": 174,
+    "Sidorov": 180,
+    "Kuznetsov": 159,
+    "Smirnov": 172,
+    "Popov": 178,
+    "Vorobev": 165,
+    "Fedorov": 170,
+    "Makarov": 176,
+    "Nikonov": 160,
+    "Alexeev": 181,
+    "Golubev": 163,
+    "Borisov": 168,
+    "Sokolov": 175,
+    "Zaytsev": 183,
+    "Morozov": 164,
+    "Egorov": 177,
+    "Kiselev": 171,
+    "Tarasov": 179,
+    "Rodionov": 166
+}
+
+# a) самый высокий и самый низкий ученики
+max_name = ""
+max_height = 0
+min_name = ""
+min_height = 1000
+for name, height in students.items():
+    if height > max_height:
+        max_height = height
+        max_name = name
+    if height < min_height:
+        min_height = height
+        min_name = name
+print("Самый высокий ученик - ", max_name)
+print("Самый низкий ученик - ", min_name)
+
+# б) два самых высоких ученика
+max_height = 0
+second_max_height = 0
+for height in students.values():
+    if height > max_height:
+        second_max_height = max_height
+        max_height = height
+    elif height > second_max_height:
+        second_max_height = height
+
+top_students = []
+for name, height in students.items():
+    if height == max_height or height == second_max_height:
+        top_students.append(name)
+
+print("Два самых высоких ученика - ", top_students)
+
+# в) два самых высоких ученика без использования двух циклов
+sorted_students = sorted(students.items(), key=lambda x: x[1], reverse=True)
+print("Два самых высоких ученика - ", [sorted_students[0][0], sorted_students[1][0]])

@@ -1,0 +1,39 @@
+surnames = []
+ages = []
+status = []
+
+for i in range(16):
+    surname = input("Введите фамилию: ")
+    age = int(input("Введите возраст: "))
+    st = input("Является ли военнообязанным? (да/нет): ")
+
+    surnames.append(surname)
+    ages.append(age)
+    if st.lower() == "да":
+        status.append(True)
+    else:
+        status.append(False)
+
+youngest_surname = None
+min_age = float('inf')
+
+for i in range(16):
+    if status[i] and ages[i] < min_age:
+        youngest_surname = surnames[i]
+        min_age = ages[i]
+
+print("Самый младший военнообязанный:", youngest_surname)
+
+oldest_surname, oldest_not_military_surname = None, None
+max_age, max_not_military_age = float('-inf'), float('-inf')
+
+for i in range(16):
+    if status[i] and ages[i] > max_age:
+        oldest_surname = surnames[i]
+        max_age = ages[i]
+    elif not status[i] and ages[i] > max_not_military_age:
+        oldest_not_military_surname = surnames[i]
+        max_not_military_age = ages[i]
+
+print("Самый старший военнообязанный:", oldest_surname)
+print("Самый старший невоеннообязанный:", oldest_not_military_surname)

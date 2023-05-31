@@ -1,0 +1,60 @@
+
+employees = {
+    "Ivanov": {"salary": 32000, "gender": "male"},
+    "Petrov": {"salary": 28000, "gender": "male"},
+    "Sidorova": {"salary": 23000, "gender": "female"},
+    "Kuznetsova": {"salary": 21000, "gender": "female"},
+    "Smirnov": {"salary": 35000, "gender": "male"},
+    "Popova": {"salary": 29000, "gender": "female"},
+    "Vorobeva": {"salary": 31000, "gender": "female"},
+    "Fedorova": {"salary": 24000, "gender": "female"},
+    "Makarov": {"salary": 38000, "gender": "male"},
+    "Nikonov": {"salary": 26000, "gender": "male"},
+    "Alexeev": {"salary": 41000, "gender": "male"},
+    "Golubev": {"salary": 35000, "gender": "male"},
+    "Borisova": {"salary": 20000, "gender": "female"},
+    "Sokolova": {"salary": 24000, "gender": "female"},
+    "Zaytseva": {"salary": 29000, "gender": "female"},
+    "Morozova": {"salary": 27000, "gender": "female"},
+    "Egorov": {"salary": 39000, "gender": "male"},
+    "Kiselev": {"salary": 31000, "gender": "male"},
+    "Tarasova": {"salary": 22000, "gender": "female"},
+    "Rodionov": {"salary": 35000, "gender": "male"}
+}
+
+# a) мужчина с самой большой зарплат
+ой
+max_salary = 0
+max_name = ""
+for name, data in employees.items():
+    if data["gender"] == "male" and data["salary"] > max_salary:
+        max_salary = data["salary"]
+        max_name = name
+print("Мужчина с самой большой зарплатой - ", max_name)
+
+# б) мужчина и женщина с самой маленькой зарплатой
+min_male_salary = 100000
+min_male_name = ""
+min_female_salary = 100000
+min_female_name = ""
+for name, data in employees.items():
+    if data["salary"] < min_male_salary and data["gender"] == "male":
+        min_male_salary = data["salary"]
+        min_male_name = name
+    elif data["salary"] < min_female_salary and data["gender"] == "female":
+        min_female_salary = data["salary"]
+        min_female_name = name
+print("Мужчина и женщина с самой маленькой зарплатой - ", min_male_name, min_female_name)
+
+# в) мужчина и женщина с самой маленькой зарплатой без использования двух циклов
+sorted_employees = sorted([(name, data["salary"], data["gender"]) for name, data in employees.items()], key=lambda x: x[1])
+min_male_name = ""
+min_female_name = ""
+for name, salary, gender in sorted_employees:
+    if gender == "male" and not min_male_name:
+        min_male_name = name
+    elif gender == "female" and not min_female_name:
+        min_female_name = name
+    if min_male_name and min_female_name:
+        break
+print("Мужчина и женщина с самой маленькой зарплатой - ", min_male_name, min_female_name)

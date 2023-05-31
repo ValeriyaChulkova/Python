@@ -1,0 +1,12 @@
+prices = [10000, 8000, 15000, 12000, 9500, 6500, 9000, 11000, 18000, 13500, 20000, 7000, 16000, 10000, 17000, 13000, 19000, 14000, 8500, 12000]
+ages = [3, 5, 7, 10, 1, 4, 2, 9, 12, 6, 8, 11, 14, 13, 2, 5, 4, 3, 7, 10]
+
+total_price = 0
+count = 0
+for i in range(len(prices)):
+    if ages[i] > 6:
+        total_price += prices[i]
+        count += 1
+average_price = total_price / count
+print('Average price of cars older than 6 years:', average_price)
+

@@ -1,0 +1,34 @@
+grades = {
+  'student1': {'math': 6, 'history': 5, 'english': 7, 'biology': 4, 'chemistry': 5, 'geography': 4, 'physics': 6, 'literature': 7, 'music': 6, 'art': 8, 'physical_education': 7, 'foreign_language': 8},
+  'student2': {'math': 4, 'history': 6, 'english': 5, 'biology': 7, 'chemistry': 6, 'geography': 8, 'physics': 4, 'literature': 5, 'music': 6, 'art': 8, 'physical_education': 5, 'foreign_language': 6},
+  'student3': {'math': 6, 'history': 7, 'english': 6, 'biology': 4, 'chemistry': 5, 'geography': 6, 'physics': 6, 'literature': 6, 'music': 5, 'art': 7, 'physical_education': 8, 'foreign_language': 7},
+  'student4': {'math': 7, 'history': 4, 'english': 6, 'biology': 7, 'chemistry': 8, 'geography': 5, 'physics': 4, 'literature': 5, 'music': 6, 'art': 6, 'physical_education': 5, 'foreign_language': 4},
+  'student5': {'math': 5, 'history': 6, 'english': 4, 'biology': 5, 'chemistry': 5, 'geography': 4, 'physics': 6, 'literature': 7, 'music': 6, 'art': 8, 'physical_education': 7, 'foreign_language': 6},
+  'student6': {'math': 8, 'history': 7, 'english': 7, 'biology': 6, 'chemistry': 7, 'geography': 6, 'physics': 7, 'literature': 8, 'music': 7, 'art': 9, 'physical_education': 9, 'foreign_language': 8},
+  'student7': {'math': 5, 'history': 5, 'english': 5, 'biology': 4, 'chemistry': 5, 'geography': 5, 'physics': 5, 'literature': 6, 'music': 6, 'art': 7, 'physical_education': 7, 'foreign_language': 6},
+  'student8': {'math': 6, 'history': 6, 'english': 7, 'biology': 5, 'chemistry': 4, 'geography': 6, 'physics': 7, 'literature': 7, 'music': 6, 'art': 8, 'physical_education': 6, 'foreign_language': 7},
+  'student9': {'math': 7, 'history': 8, 'english': 8, 'biology':7, 'chemistry': 6, 'geography': 7, 'physics': 8, 'literature': 9, 'music': 8, 'art': 9, 'physical_education': 8, 'foreign_language': 9},
+  'student10': {'math': 5, 'history': 6, 'english': 4, 'biology': 4, 'chemistry': 5, 'geography': 5, 'physics': 6, 'literature': 6, 'music': 5, 'art': 7, 'physical_education': 6, 'foreign_language': 7},
+  'student11': {'math': 6, 'history': 5, 'english': 6, 'biology': 5, 'chemistry': 6, 'geography': 6, 'physics': 5, 'literature': 7, 'music': 6, 'art': 8, 'physical_education': 7, 'foreign_language': 6},
+  'student12': {'math': 7, 'history': 7, 'english': 8, 'biology': 6, 'chemistry': 7, 'geography': 7, 'physics': 8, 'literature': 8, 'music': 7, 'art': 9, 'physical_education': 8, 'foreign_language': 9},
+  'student13': {'math': 5, 'history': 6, 'english': 7, 'biology': 4, 'chemistry': 5, 'geography': 6, 'physics': 6, 'literature': 7, 'music': 6, 'art': 7, 'physical_education': 7, 'foreign_language': 7},
+  'student14': {'math': 8, 'history': 7, 'english': 8, 'biology': 7, 'chemistry': 8, 'geography': 7, 'physics': 9, 'literature': 9, 'music': 8, 'art': 9, 'physical_education': 9, 'foreign_language': 9},
+  'student15': {'math': 4, 'history': 5, 'english': 6, 'biology': 5, 'chemistry': 4, 'geography': 6, 'physics': 5, 'literature': 6, 'music': 5, 'art': 8, 'physical_education': 6, 'foreign_language': 7},
+  'student16': {'math': 6, 'history': 7, 'english': 5, 'biology': 6, 'chemistry': 7, 'geography': 6, 'physics': 7, 'literature': 8, 'music': 7, 'art': 8, 'physical_education': 9, 'foreign_language': 8},
+  'student17': {'math': 7, 'history': 8, 'english': 8, 'biology': 7, 'chemistry': 6, 'geography': 7, 'physics': 8, 'literature': 9, 'music': 8, 'art': 9, 'physical_education': 8, 'foreign_language': 9},
+  'student18': {'math': 4, 'history': 5, 'english': 6, 'biology': 5, 'chemistry': 4, 'geography': 7, 'physics': 5, 'literature': 5, 'music': 6, 'art': 7, 'physical_education': 5, 'foreign_language': 6},
+  'student19': {'math': 5, 'history': 6, 'english': 4, 'biology': 4, 'chemistry': 5, 'geography': 6, 'physics': 6, 'literature': 6, 'music': 5, 'art': 7, 'physical_education': 5, 'foreign_language': 7},
+  'student20': {'math': 6, 'history': 5, 'english': 6, 'biology': 5, 'chemistry': 6, 'geography': 6, 'physics': 5, 'literature': 7, 'music': 6, 'art': 8, 'physical_education': 7, 'foreign_language': 6}
+}
+
+avg_grades = {}
+for student in grades:
+  avg_grade = sum(grades[student].values()) / len(grades[student])
+  avg_grades[student] = avg_grade
+class_avg = sum(avg_grades.values()) / len(avg_grades)
+
+print(f'Средняя оценка по классу: {class_avg}')
+
+for student in avg_grades:
+  if avg_grades[student] > class_avg:
+    print(student)

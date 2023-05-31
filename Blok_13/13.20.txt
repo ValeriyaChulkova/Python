@@ -1,0 +1,40 @@
+class Car:
+    def __init__(self, power, cost):
+        self.power = power
+        self.cost = cost
+
+cars = [
+    Car(80, 45000),
+    Car(120, 60000),
+    Car(150, 75000),
+    Car(80, 50000),
+    Car(130, 65000),
+    Car(110, 57000),
+    Car(180, 90000),
+    Car(100, 53000),
+    Car(140, 68000),
+    Car(120, 62000),
+    Car(100, 50000),
+    Car(110, 55000),
+    Car(130, 66000),
+    Car(150, 79000),
+    Car(120, 61000),
+    Car(80, 42000),
+    Car(160, 85000),
+    Car(170, 92000),
+    Car(120, 62000),
+    Car(130, 64000),
+    Car(140, 70000),
+    Car(180, 95000),
+    Car(100, 55000),
+    Car(90, 47000),
+    Car(140, 70000),
+    Car(160, 80000),
+    Car(170, 89000),
+    Car(130, 63000),
+    Car(160, 81000)
+]
+
+total_cost = sum(filter(lambda x: x.power > 100, [car.cost for car in cars]))
+
+print(total_cost)

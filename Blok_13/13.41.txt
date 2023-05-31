@@ -1,0 +1,24 @@
+scores = [(2, 1), (1, 1), (3, 0), (2, 2), (0, 1), (1, 0), (4, 0), (3, 1), (2, 0), (1, 0), (0, 0), (2, 1), (1, 2), (0, 2), (3, 1), (2, 3), (1, 0), (0, 1), (2, 1), (1, 1), (2, 0), (1, 2)]
+
+# задача а
+results = ["выигрыш" if s[0]>s[1] else "проигрыш" if s[0]<s[1] else "ничья" for s in scores]
+print(results)
+
+# задача б
+win_count = sum([1 for s in scores if s[0]>s[1]])
+print(win_count)
+
+# задача в
+win_count = sum([1 for s in scores if s[0]>s[1]])
+lose_count = sum([1 for s in scores if s[0]<s[1]])
+print(win_count, lose_count)
+
+# задача г
+win_count = sum([1 for s in scores if s[0]>s[1]])
+draw_count = sum([1 for s in scores if s[0]==s[1]])
+lose_count = sum([1 for s in scores if s[0]<s[1]])
+print(win_count, draw_count, lose_count)
+
+# задача д
+points = sum([3 if s[0]>s[1] else 1 if s[0]==s[1] else 0 for s in scores])
+print(points)

@@ -1,0 +1,14 @@
+import datetime
+employees = [['John Smith', '123 Main St, Anytown, USA', '01-2000'], 
+             ['Mary Johnson', '456 Elm St, Anytown, USA', '03-2002'], 
+             ['David Lee', '789 Oak St, Anytown, USA', '11-2005'], 
+             ['Karen Brown', '321 Pine St, Anytown, USA', '07-2001']]
+today = datetime.datetime.today()
+for employee in employees:
+  hire_date = datetime.datetime.strptime(employee[2], '%m-%Y')
+  years_worked = today.year - hire_date.year
+  if today.month < hire_date.month or (today.month == hire_date.month and today.day < hire_date.day):
+    years_worked -= 1
+  if years_worked >= 3:
+    print(employee[0] + ", " + employee[1])
+

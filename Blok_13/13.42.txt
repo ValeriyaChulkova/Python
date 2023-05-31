@@ -1,0 +1,18 @@
+heights = [190, 185, 180, 175, 170, 165, 160, 155, 150, 145, 140, 135, 130, 125, 120]
+new_student_height = 180
+
+# задача а
+lower_heights = [h for h in heights if h<new_student_height]
+print(lower_heights)
+
+# задача б
+insert_index = 0
+for i in range(len(heights)):
+    if new_student_height > heights[i]:
+        insert_index = i
+        break
+print(heights[:insert_index] + [new_student_height] + heights[insert_index:])
+
+# задача в
+closest_height = min(heights, key=lambda x:abs(x-new_student_height))
+print(closest_height)

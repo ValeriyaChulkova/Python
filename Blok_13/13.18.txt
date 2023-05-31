@@ -1,0 +1,16 @@
+
+students = [
+    {"last_name": "Ivanov", "first_name": "Ivan", "address": "Lenina 1", "school": 5, "class": 9},
+    {"last_name": "Petrov", "first_name": "Petr", "address": "Pushkina 2", "school": 5, "class": 11},
+    {"last_name": "Sidorov", "first_name": "Sidor", "address": "Gogolya 3", "school": 7, "class": 10},
+    {"last_name": "Kuznetsov", "first_name": "Kuzma", "address": "Lenina 4", "school": 7, "class": 11},
+    {"last_name": "Smirnov", "first_name": "Sergey", "address": "Mayakovskogo 5", "school": 9, "class": 11}
+]
+
+senior_students = []
+for student in students:
+    if student["class"] >= 10:
+        senior_students.append({"last_name": student["last_name"], "first_name": student["first_name"], "address": student["address"]})
+
+print(senior_students)
+

@@ -1,0 +1,9 @@
+schools = ['school', 'tech', 'school', 'tech', 'tech', 'school', 'school', 'tech', 'school', 'school', 'tech', 'tech', 'school', 'tech', 'school']
+students = [100, 50, 80, 75, 60, 90, 85, 70, 95, 70, 60, 55, 80, 65, 75]
+
+total_students = 0
+for i in range(len(schools)):
+    if schools[i] == 'school':
+        total_students += students[i]
+print('Total number of students in schools:', total_students)
+

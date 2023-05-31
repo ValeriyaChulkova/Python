@@ -1,0 +1,7 @@
+phonebook = {'Иванов': '111-11-11', 'Петров': '222-22-22', 'Сидоров': '333-33-33'}
+name = input('Введите фамилию человека: ')
+if name in phonebook:
+    print(phonebook[name])
+else:
+    print('Такой человек не найден')
+

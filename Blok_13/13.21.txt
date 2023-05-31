@@ -1,0 +1,8 @@
+ages = [30, 45, 25, 22, 28, 32, 37, 41, 33, 27, 39, 50, 35, 29, 24, 26, 43, 31, 36, 48]
+gender = ['M', 'F', 'M', 'M', 'M', 'F', 'M', 'M', 'F', 'M', 'F', 'M', 'F', 'M', 'F', 'M', 'F', 'M', 'F', 'M']
+
+total_mass = 0
+for i in range(len(ages)):
+    if gender[i] == 'M':
+        total_mass += ages[i] * 2.5 # 2.5 is an assumed average weight for males
+print('Total mass of males:', total_mass)

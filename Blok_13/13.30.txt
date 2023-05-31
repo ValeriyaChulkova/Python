@@ -1,0 +1,10 @@
+masses = [10, 15, 20, 5, 12, 8, 6, 18, 11, 14, 16, 17, 22, 9, 13, 7, 25, 19, 23, 24, 26, 21, 27, 28, 30]
+volumes = [4, 6, 5, 2, 3, 1, 2, 5, 3, 4, 4.5, 6.5, 7.5, 2.5, 3.5, 1.5, 9, 6.5, 7, 8, 8.5, 5.2, 7.3, 7.5, 8.3]
+
+materials_density = [masses[i]/volumes[i] for i in range(len(masses))]
+
+min_density = min(materials_density)
+material_index = materials_density.index(min_density)
+
+print("Материал с минимальной плотностью: ", material_index)
+

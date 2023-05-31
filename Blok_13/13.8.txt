@@ -1,0 +1,6 @@
+employees = [['John', 'Married', 'Yes'], ['Mary', 'Single', 'No'], 
+             ['David', 'Married', 'Yes'], ['Karen', 'Married', 'No']]
+for employee in employees:
+  if employee[1] == 'Married' and employee[2] == 'Yes':
+    print(employee[0])
+

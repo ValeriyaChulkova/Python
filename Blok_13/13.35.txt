@@ -1,0 +1,84 @@
+teams = [("team1", 23), ("team2", 26), ("team3", 17), ("team4", 31), ("team5", 29), ("team6", 20), ("team7", 25), ("team8", 28), ("team9", 21), ("team10", 27), ("team11", 19), ("team12", 22), ("team13", 24), ("team14", 30), ("team15", 18), ("team16", 33), ("team17", 32), ("team18", 34), ("team19", 16), ("team20", 35)]
+
+sorted_teams = sorted(teams, key=lambda x: x[1], rever
+se=True)
+
+print("Champion:", sorted_teams[0][0])
+print("Second place:", sorted_teams[1][0])
+print("Third place:", sorted_teams[2][0])
+
+
+Программа 2:
+
+teams = [("team1", 23), ("team2", 26), ("team3", 17), ("team4", 31), ("team5", 29), ("team6", 20), ("team7", 25), ("team8", 28), ("team9", 21), ("team10", 27), ("team11", 19), ("team12", 22), ("team13", 24), ("team14", 30), ("team15", 18), ("team16", 33), ("team17", 32), ("team18", 34), ("team19", 16), ("team20", 35)]
+
+max_score = 0
+winner = ""
+
+for team in teams:
+    if team[1] > max_score:
+        max_score = team[1]
+        winner = team[0]
+
+print("Champion:", winner)
+
+teams_without_winner = [team for team in teams if team[0] != winner]
+sorted_teams_without_winner = sorted(teams_without_winner, key=lambda x: x[1], reverse=True)
+
+print("Second place:", sorted_teams_without_winner[0][0])
+print("Third place:", sorted_teams_without_winner[1][0])
+
+Программа 3:
+
+teams = [("team1", 23), ("team2", 26), ("team3", 17), ("team4", 31), ("team5", 29), ("team6", 20), ("team7", 25), ("team8", 28), ("team9", 21), ("team10", 27), ("team11", 19), ("team12", 22), ("team13", 24), ("team14", 30), ("team15", 18), ("team16", 33), ("team17", 32), ("team18", 34), ("team19", 16), ("team20", 35)]
+
+champion = max(teams, key=lambda x: x[1])
+second_place = max([team for team in teams if team != champion], key=lambda x: x[1])
+third_place = max([team for team in teams if team not in [champion, second_place]], key=lambda x: x[1])
+
+print("Champion:", champion[0])
+print("Second place:", second_place[0])
+print("Third place:", third_place[0])
+
+13.36:
+
+Программа 1:
+
+heights = [("student1", 170), ("student2", 155), ("student3", 190), ("student4", 175), ("student5", 150), ("student6", 185), ("student7", 165), ("student8", 195), ("student9", 160), ("student10", 180), ("student11", 200), ("student12", 145), ("student13", 170), ("student14", 175), ("student15", 165), ("student16", 185), ("student17", 155), ("student18", 180), ("student19", 190), ("student20", 150), ("student21", 195), ("student22", 160), ("student23", 170), ("student24", 185), ("student25", 175)]
+
+sorted_heights = sorted(heights, key=lambda x: x[1])
+
+print("The tallest student:", sorted_heights[-1][0])
+print("The shortest student:", sorted_heights[0][0])
+
+tallest_students = []
+for i in range(1, len(sorted_heights)):
+    if sorted_heights[-i][1] == sorted_heights[-1][1]:
+        tallest_students.append(sorted_heights[-i][0])
+    else:
+        break
+
+print("Two tallest students in the class (excluding the tallest one):", tallest_students[:2])
+
+Программа 2:
+
+heights = [("student1", 170), ("student2", 155), ("student3", 190), ("student4", 175), ("student5", 150), ("student6", 185), ("student7", 165), ("student8", 195), ("student9", 160), ("student10", 180), ("student11", 200), ("student12", 145), ("student13", 170), ("student14", 175), ("student15", 165), ("student16", 185), ("student17", 155), ("student18", 180), ("student19", 190), ("student20", 150), ("student21", 195), ("student22", 160), ("student23", 170), ("student24", 185), ("student25", 175)]
+
+max_height = 0
+min_height = float('inf')
+tallest_students = []
+
+for student in heights:
+    if student[1] > max_height:
+        max_height = student[1]
+        tallest_student = student[0]
+    if student[1] < min_height:
+        min_height = student[1]
+        shortest_student = student[0]
+
+for student in heights:
+    if student[1] == max_height and student[0] != tallest_student:
+        tallest_students.append(student[0])
+
+print("The tallest student:",
+

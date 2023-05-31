@@ -1,0 +1,13 @@
+precipitation = [12, 15, 10, 7, 5, 0, 0, 0, 4, 8, 15, 20, 23, 12, 8, 10, 18, 20, 15, 10, 5, 0, 0, 0, 0, 0, 2, 5, 10]
+temperature = [-5, -3, 0, 3, 5, 10, 15, 20, 22, 18, 12, 5, 0, -3, -5, -8, -10, -12, -5, 0, 5, 10, 12, 15, 18, 20, 15, 10, 5]
+
+snow = 0
+rain = 0
+for i in range(len(precipitation)):
+    if temperature[i] <= 0:
+        snow += precipitation[i]
+    else:
+        rain += precipitation[i]
+
+print("Snow: ", snow)
+print("Rain: ", rain)
