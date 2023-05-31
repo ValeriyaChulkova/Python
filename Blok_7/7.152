@@ -1,0 +1,27 @@
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] # замените данный список на свой
+p = 7.5 # замените данный элемент на свой
+
+if p in a:
+    # если p уже есть в последовательности, просто получаем его индекс
+    idx = a.index(p)
+    val = p
+else:
+    # если p нет в последовательности, находим ближайший элемент
+    lower_idx = 0
+    upper_idx = len(a) - 1
+    while lower_idx < upper_idx:
+        middle_idx = (lower_idx + upper_idx) // 2
+        if a[middle_idx] < p:
+            lower_idx = middle_idx + 1
+        else:
+            upper_idx = middle_idx
+
+    # ищем ближайший элемент
+    if upper_idx == 0:
+        idx = 0
+    elif abs(a[upper_idx]-p) < abs(a[upper_idx-1]-p):
+        idx = upper_idx
+    else:
+        idx = upper_idx - 1
+
+    val = a[idx]
