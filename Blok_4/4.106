@@ -1,0 +1,14 @@
+a = float(input("Введите первое число: "))
+b = float(input("Введите второе число: "))
+c = float(input("Введите третье число: "))
+d = float(input("Введите четвертое число: "))
+neg_count = 0
+if a < 0:
+    neg_count += 1
+if b < 0:
+    neg_count += 1
+if c < 0:
+    neg_count += 1
+if d < 0:
+    neg_count += 1
+print("Количество отрицательных чисел:", neg_count)
