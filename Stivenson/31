@@ -1,0 +1,7 @@
+pressure_kpa = float(input("Введите давление в килопаскалях (кПа): "))
+pressure_psi = pressure_kpa * 0.145038
+pressure_mmhg = pressure_kpa * 7.50062
+pressure_atm = pressure_kpa / 101.325
+print("Давление в фунтах на квадратный дюйм:", round(pressure_psi, 2))
+print("Давление в миллиметрах ртутного столба:", round(pressure_mmhg, 2))
+print("Давление в атмосферах:", round(pressure_atm, 2))
