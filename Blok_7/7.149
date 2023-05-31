@@ -1,0 +1,16 @@
+def mass_difference(masses):
+    # находим самую тяжелую и самую легкую массы в списке
+    max_mass = max(masses)
+    min_mass = min(masses)
+    # вычисляем отношение между ними
+    relation = max_mass / min_mass
+    # проверяем условие
+    if relation > 2:
+        return True
+    else:
+        return False
+
+# пример использования функции
+masses = [72, 65, 80, 58, 90]
+result = mass_difference(masses)
+print(result)
