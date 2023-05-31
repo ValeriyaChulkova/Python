@@ -1,0 +1,11 @@
+from exercise_98 import isPrime
+
+def nextPrime(n):
+i = n + 1
+ while True:
+  if isPrime(i):
+return i
+i += 1
+
+n = int(input("Введите число: "))
+print("Первое простое число, большее", n, ":", nextPrime(n))
