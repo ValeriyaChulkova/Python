@@ -1,0 +1,12 @@
+suit = int(input("Введите номер масти (1-4): "))
+
+if suit == 1:
+    print("Масть - пики")
+elif suit == 2:
+    print("Масть - трефы")
+elif suit == 3:
+    print("Масть - бубны")
+elif suit == 4:
+    print("Масть - червы")
+else:
+    print("Некорректный номер масти")
