@@ -1,0 +1,7 @@
+x = float(input("Введите x : "))
+y = float(input("Введите y : "))
+#a
+if (x > 3 and y > 2):
+  print(" Да все ок")
+else:
+  print(" Есть некоторые проблемки")
