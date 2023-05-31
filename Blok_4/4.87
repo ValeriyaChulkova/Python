@@ -1,0 +1,13 @@
+first_birth_year = int(input("Введите год рождения первого человека: "))
+first_birth_month = int(input("Введите номер месяца рождения первого человека: "))
+first_birth_day = int(input("Введите день рождения первого человека: "))
+second_birth_year = int(input("Введите год рождения второго человека: "))
+second_birth_month = int(input("Введите номер месяца рождения второго человека: "))
+second_birth_day = int(input("Введите день рождения второго человека: "))
+
+if first_birth_year < second_birth_year or (first_birth_year == second_birth_year and first_birth_month < second_birth_month) or (first_birth_year == second_birth_year and first_birth_month == second_birth_month and first_birth_day < second_birth_day):
+    print("Первый человек старше")
+elif first_birth_year == second_birth_year and first_birth_month == second_birth_month and first_birth_day == second_birth_day:
+    print("Оба человека родились в один день")
+else:
+    print("Второй человек старше")
