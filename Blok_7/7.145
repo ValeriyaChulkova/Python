@@ -1,0 +1,12 @@
+def calculate_score(scores):
+    # удаляем наибольшее и наименьшее значение
+    scores.remove(max(scores))
+    scores.remove(min(scores))
+    # высчитываем среднее арифметическое из оставшихся значений
+    score = sum(scores) / len(scores)
+    return score
+
+# пример использования функции
+scores = [8.5, 8.9, 9.0, 9.2, 8.7]
+final_score = calculate_score(scores)
+print(final_score)
