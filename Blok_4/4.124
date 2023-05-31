@@ -1,0 +1,9 @@
+age_mity = int(input("Введите возраст Мити: "))
+age_vasya = int(input("Введите возраст Васи: "))
+if age_mity > age_vasya:
+    result = "Митя старше Васи"
+elif age_mity < age_vasya:
+    result = "Вася старше Мити"
+else:
+    result = "Митя и Вася одного возраста"
+print(result)
