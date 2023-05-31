@@ -1,0 +1,9 @@
+price = 3.49
+discount = 0.6
+num_bread = int(input("Введите количество приобретенных вчерашних буханок хлеба: "))
+regular_price = num_bread * price
+discounted_price = regular_price * (1 - discount)
+total_price = discounted_price
+print("Обычная цена за буханку: {:.2f}".format(price))
+print("Цена со скидкой: {:.2f}".format(price*(1-discount)))
+print("Общая стоимость приобретенного хлеба: {:.2f}".format(total_price))
