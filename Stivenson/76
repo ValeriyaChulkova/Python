@@ -1,0 +1,15 @@
+def is_palindrome(s):
+# Удаляем пробелы и знаки препинания из строки
+s = ''.join(e for e in s if e.isalnum()).lower()
+# Проверяем, является ли строка палиндромом
+return s == s[::-1]
+
+# Примеры использования
+print(is_palindrome("go dog")) # True
+print(is_palindrome("flee to me remote elf")) # True
+print(is_palindrome("some men interpret nine memos")) # True
+print(is_palindrome("А кобыле цена дана, да не целы бока")) # True
+print(is_palindrome("А Луна канула")) # True
+print(is_palindrome("Was it a car or a cat I saw?")) # True
+print(is_palindrome("No 'x' in Nixon")) # True
+print(is_palindrome("Hello world")) # False
