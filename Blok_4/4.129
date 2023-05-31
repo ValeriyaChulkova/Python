@@ -1,0 +1,26 @@
+a = float(input("Введите первое число: "))
+b = float(input("Введите второе число: "))
+c = float(input("Введите третье число: "))
+
+sum_two_largest = 0
+
+if a > b and a > c:
+    sum_two_largest = a
+    if b > c:
+        sum_two_largest += b
+    else:
+        sum_two_largest += c
+elif b > a and b > c:
+    sum_two_largest = b
+    if a > c:
+        sum_two_largest += a
+    else:
+        sum_two_largest += c
+else:
+    sum_two_largest = c
+    if a > b:
+        sum_two_largest += a
+    else:
+        sum_two_largest += b
+
+print("Сумма двух наибольших чисел: ", sum_two_largest)
