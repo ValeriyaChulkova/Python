@@ -1,0 +1,37 @@
+1) # сначала вводим последовательность
+numbers = input("Введите последовательность чисел через пробел: ").split()
+
+# затем меняем тип данных элементов в списке на int
+numbers = [int(num) for num in numbers]
+
+n = len(numbers)
+cur_len = 1
+max_len = 1
+for i in range(1, n):
+    if numbers[i] > numbers[i-1] or numbers[i] < numbers[i-1]:
+        cur_len += 1
+        if cur_len > max_len:
+            max_len = cur_len
+    else:
+        cur_len = 1
+
+print("Наибольшая длина монотонного фрагмента: ", max_len)
+
+2) # вводим все числа последовательности в одну строку, разделенные пробелом
+numbers_str = input("Введите последовательность чисел через пробел: ")
+
+# разбиваем строку на список чисел, меняем тип данных элементов в списке на int
+numbers = list(map(int, numbers_str.split()))
+
+n = len(numbers)
+cur_len = 1
+max_len = 1
+for i in range(1, n):
+    if numbers[i] > numbers[i-1] or numbers[i] < numbers[i-1]:
+        cur_len += 1
+        if cur_len > max_len:
+            max_len = cur_len
+    else:
+        cur_len = 1
+
+print("Наибольшая длина монотонного фрагмента: ", max_len)
