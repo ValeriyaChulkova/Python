@@ -1,0 +1,5 @@
+temp_celsius = float(input("Введите температуру воздуха (в градусах Цельсия): "))
+temp_fahrenheit = (temp_celsius * 9/5) + 32
+temp_kelvin = temp_celsius + 273.15
+print("Температура в градусах Фаренгейта:", round(temp_fahrenheit, 2))
+print("Температура в градусах Кельвина:", round(temp_kelvin, 2))
