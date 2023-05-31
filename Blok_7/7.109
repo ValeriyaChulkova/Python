@@ -1,0 +1,26 @@
+numbers = [10, 21, 28, 14, 35, 42, 49, 56, 63, 70, 77, 84]
+
+even_sum = 0  # счетчик для хранения суммы четных чисел
+even_count = 0  # счетчик для хранения количества четных чисел
+odd_sum = 0  # счетчик для хранения суммы нечетных чисел
+odd_count = 0  # счетчик для хранения количества нечетных чисел
+
+for number in numbers:
+    if number % 2 == 0:
+        even_sum += number
+        even_count += 1
+    else:
+        odd_sum += number
+        odd_count += 1
+
+if even_count != 0:
+    even_average = even_sum / even_count
+    print("Среднее арифметическое четных чисел равно", even_average)
+else:
+    print("Четных чисел в последовательности нет")
+
+if odd_count != 0:
+    odd_average = odd_sum / odd_count
+    print("Среднее арифметическое нечетных чисел равно", odd_average)
+else:
+    print("Нечетных чисел в последовательности нет")
