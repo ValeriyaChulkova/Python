@@ -1,0 +1,21 @@
+a = int(input("Введите час прибытия поезда: "))
+b = int(input("Введите минуту прибытия поезда: "))
+c = int(input("Введите час отправления поезда: "))
+d = int(input("Введите минуту отправления поезда: "))
+p = int(input("Введите час прихода пассажира на платформу: "))
+t = int(input("Введите минуту прихода пассажира на платформу: "))
+
+if a < c or (a == c and b < d):
+    train_time = (a + 24 - c) * 60 + b - d
+else:
+    train_time = (a - c) * 60 + b - d
+
+if p < c or (p == c and t < d):
+    passenger_time = (p + 24 - c) * 60 + t - d
+else:
+    passenger_time = (p - c) * 60 + t - d
+
+if passenger_time <= train_time:
+    print("Поезд будет стоять на платформе")
+else:
+    print("Поезд уже ушел")
