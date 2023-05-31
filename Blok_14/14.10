@@ -1,0 +1,6 @@
+
+import math
+
+x = (math.sqrt(6) + 6)/2 + (math.sqrt(13) + 13)/2 + (math.sqrt(21) + 21)/2
+
+print(x)
