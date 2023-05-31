@@ -1,0 +1,20 @@
+age = int(input("Введите возраст в месяцах: "))
+
+years = age // 12
+months = age % 12
+
+if years == 1:
+    years_str = "год"
+elif years in [2, 3, 4]:
+    years_str = "года"
+else:
+    years_str = "лет"
+
+if months == 1:
+    months_str = "месяц"
+elif months in [2, 3, 4]:
+    months_str = "месяца"
+else:
+    months_str = "месяцев"
+
+print("{} {} {} {}".format(years, years_str, months, months_str))
