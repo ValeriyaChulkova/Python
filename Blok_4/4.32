@@ -1,0 +1,4 @@
+a = int(input())
+square = a**2
+sum_cube  = sum([ int(i) **3 for i in str(a)])
+print('OK' if square == sum_cube else 'NO')
