@@ -1,0 +1,8 @@
+mass = float(input("Введите массу воды в граммах: "))
+temp_change = float(input("Введите желаемое температурное изменение в градусах Цельсия: "))
+# Константы для расчетов
+specific_heat_capacity = 4.186 # Удельная теплоемкость воды в Дж/(г * С)
+heat_energy_direction = "нагреть" if temp_change > 0 else "остудить" # Направление потребляемой энергии
+heat_energy = round(mass * specific_heat_capacity * temp_change, 2) # Количество потребляемой/выделяющейся энергии (Дж)
+# Вывод результата
+print("Для %s массы воды и желаемого изменения температуры на %.2f°C необходимо %s %.2f Дж энергии." % (mass, temp_change, heat_energy_direction, abs(heat_energy)))
