@@ -1,0 +1,20 @@
+# Даны числа
+p = 7
+a = [8, 10, 15, 6, 10, 14, 21]
+
+# a) Номер последнего числа 10
+last_index = -1
+for i in range(p):
+    if a[i] == 10:
+        last_index = i
+
+print("Номер последнего числа 10:", last_index)
+
+# б) Номер первого числа 10
+first_index = -1
+for i in range(p):
+    if a[i] == 10:
+        first_index = i
+        break # Выходим из цикла, как только нашли первое число 10
+
+print("Номер первого числа 10:", first_index)
