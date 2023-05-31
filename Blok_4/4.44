@@ -1,0 +1,8 @@
+x = float(input("Введите x : "))
+y = float(input("Введите y : "))
+if (x > 5):
+  print("попало в I")
+elif (x < -1):
+  print("попало в III")
+else:
+  print("Есть некоторые проблемки(не попало)")
