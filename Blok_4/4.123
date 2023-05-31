@@ -1,0 +1,8 @@
+points = int(input("Введите количество очков: "))
+if points == 3:
+    result = "выигрыш"
+elif points == 1:
+    result = "ничья"
+else:
+    result = "проигрыш"
+print("Результат игры -", result)
