@@ -1,0 +1,13 @@
+import datetime
+
+# заданные значения месяца и дня
+month = 8
+day = 15
+
+# определение даты предыдущего дня
+date_prev = datetime.date(1, month, day) - datetime.timedelta(days=1)
+print("Предыдущий день:", date_prev)
+
+# определение даты следующего дня
+date_next = datetime.date(1, month, day) + datetime.timedelta(days=1)
+print("Следующий день:", date_next)
