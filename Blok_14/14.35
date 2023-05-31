@@ -1,0 +1,16 @@
+def count_letter_occurrences(text, letter):
+    return text.count(letter)
+
+sentence1 = "Hello, world!"
+sentence2 = "Python is awesome!"
+letter = 'o'
+
+n1 = count_letter_occurrences(sentence1, letter)
+n2 = count_letter_occurrences(sentence2, letter)
+
+if n1 > n2:
+    print(f"Буква '{letter}' встречается чаще в первом предложении ({n1} раз)")
+elif n2 > n1:
+    print(f"Буква '{letter}' встречается чаще во втором предложении ({n2} раз)")
+else:
+    print(f"Буква '{letter}' встречается одинаково часто в обоих предложениях ({n1} раз)")

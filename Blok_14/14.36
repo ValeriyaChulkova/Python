@@ -1,0 +1,22 @@
+def count_letter_occurrences(text, letter):
+    return text.count(letter)
+
+sentence1 = "Hello, world!"
+sentence2 = "Python is awesome!"
+letter = 'o'
+
+n1 = count_letter_occurrences(sentence1, letter)
+n2 = count_letter_occurrences(sentence2, letter)
+
+def letter_ratio(n, total):
+    return round(n / total * 100, 2)
+
+ratio1 = letter_ratio(n1, len(sentence1))
+ratio2 = letter_ratio(n2, len(sentence2))
+
+if ratio1 > ratio2:
+    print(f"Буква '{letter}' встречается в большем процентном соотношении в первом предложении ({ratio1}%)")
+elif ratio2 > ratio1:
+    print(f"Буква '{letter}' встречается в большем процентном соотношении во втором предложении ({ratio2}%)")
+else:
+    print(f"Буква '{letter}' встречается в обоих предложениях в одинаковом процентном соотношении ({ratio1}%)")
