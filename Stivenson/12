@@ -1,0 +1,18 @@
+EARTH_RADIUS = 6371.01
+# ввод координат первой точки
+t1 = float(input("Введите широту первой точки в градусах: "))
+g1 = float(input("Введите долготу первой точки в градусах: "))
+# ввод координат второй точки
+t2 = float(input("Введите широту второй точки в градусах: "))
+g2 = float(input("Введите долготу второй точки в градусах: "))
+# перевод градусов в радианы
+t1_rad = math.radians(t1)
+g1_rad = math.radians(g1)
+t2_rad = math.radians(t2)
+g2_rad = math.radians(g2)
+# вычисление расстояния по формуле
+distance = EARTH_RADIUS * math.acos(math.sin(t1_rad) * math.sin(t2_rad) + 
+                                     math.cos(t1_rad) * math.cos(t2_rad) * 
+                                     math.cos(g1_rad - g2_rad))
+# вывод результата
+print("Расстояние между двумя точками на поверхности Земли: {:.2f} км".format(distance))
