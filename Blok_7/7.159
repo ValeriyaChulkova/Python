@@ -1,0 +1,7 @@
+num_apartments = int(input("Введите количество квартир: "))
+counts = []
+for i in range(num_apartments):
+    count = int(input(f"Введите количество жильцов в квартире №{i+1}: "))
+    counts.append(count)
+max_count_apartment_index = len(counts) - 1 - counts[::-1].index(max(counts)) #номер последней квартиры с максимальным количеством жильцов в списке
+print(f"Квартира №{max_count_apartment_index+1} имеет больше всего жильцов: {max(counts)}")
