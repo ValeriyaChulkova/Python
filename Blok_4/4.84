@@ -1,0 +1,8 @@
+k = int(input("Введите количество грибов: "))
+
+if k % 10 == 1 and k != 11:
+    print("Мы нашли {} гриб в лесу".format(k))
+elif k % 10 in [2, 3, 4] and not (k % 100 in range(12, 15)):
+    print("Мы нашли {} гриба в лесу".format(k))
+else:
+    print("Мы нашли {} грибов в лесу".format(k))
