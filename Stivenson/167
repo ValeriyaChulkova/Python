@@ -1,0 +1,32 @@
+from only_words import onlyTheWords
+import sys
+WORDS_FILE = "../Data/words.txt"
+if len(sys.argv) != 2:
+ print("При вызове программы должен быть указан один аргумент.")
+ print("Завершаем программу...")
+ quit()
+try:
+ inf = open(sys.argv[1], "r")
+except:
+ print("Ошибка при открытии файла '%s' на чтение. Завершаем программу..." % \
+ sys.argv[1])
+ quit()
+valid = {}
+words_file = open(WORDS_FILE, "r")
+for word in words_file:
+ word = word.lower().rstrip()
+ valid[word] = 0
+words_file.close()
+misspelled = []
+for line in inf:
+ words = onlyTheWords(line)
+ for word in words:
+ if word.lower() not in valid and word not in misspelled:
+ misspelled.append(word)
+inf.close()
+if len(misspelled) == 0:
+ print("Все слова написаны правильно.")
+else:
+ print("Следующие слова написаны неправильно:")
+ for word in misspelled:
+ print(" ", word)
