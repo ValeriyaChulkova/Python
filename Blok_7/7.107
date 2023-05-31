@@ -1,0 +1,15 @@
+x = 5 # заменить на нужное натуральное число
+numbers = [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60] # заменить на нужный список
+total = 0
+count = 0
+
+for number in numbers:
+    if number > x:
+        total += number
+        count += 1
+        
+if count > 0:
+    average = total / count
+    print("Среднее арифметическое чисел больше", x, "равно", average)
+else:
+    print("Среднее арифметическое невозможно посчитать. Нет чисел больше", x)
