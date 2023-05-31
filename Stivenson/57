@@ -1,0 +1,38 @@
+minutes = int(input("Введите количество израсходованных минут: "))
+messages = int(input("Введите количество израсходованных сообщений: "))
+
+# Расчет базовой суммы тарификации
+base_price = 15.00
+
+# Расчет стоимости дополнительных минут и сообщений
+ if minutes > 50:
+  extra_minutes = minutes - 50
+  extra_minutes_price = extra_minutes * 0.25
+ else:
+  extra_minutes = 0
+  extra_minutes_price = 0
+
+ if messages > 50:
+  extra_messages = messages - 50
+  extra_messages_price = extra_messages * 0.15
+ else:
+  extra_messages = 0
+  extra_messages_price = 0
+
+# Расчет суммы отчислений кол-центрам 911 и налога
+emergency_tax = 0.44
+sales_tax = 0.05
+total_tax = (base_price + extra_minutes_price + extra_messages_price + emergency_tax) * sales_tax
+
+# Расчет итоговой суммы к оплате
+total_price = base_price + extra_minutes_price + extra_messages_price + emergency_tax + total_tax
+
+# Вывод результатов на экран
+print("Базовая сумма тарификации: $%.2f" % base_price)
+ if extra_minutes > 0:
+print("Стоимость дополнительных минут: $%.2f" % extra_minutes_price)
+ if extra_messages > 0:
+print("Стоимость дополнительных сообщений: $%.2f" % extra_messages_price)
+print("Сумма отчислений кол-центрам 911: $%.2f" % emergency_tax)
+print("Налог: $%.2f" % total_tax)
+print("Итоговая сумма к оплате: $%.2f" % total_price)
