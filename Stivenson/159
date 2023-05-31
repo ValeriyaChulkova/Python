@@ -1,0 +1,17 @@
+from random import randrange
+WORD_FILE = "../Data/words.txt"
+words = []
+inf = open(WORD_FILE, "r")
+for line in inf:
+ line = line.rstrip()
+ if len(line) >= 3 and len(line) <= 7:
+ words.append(line)
+inf.close()
+first = words[randrange(0, len(words))]
+first = first.capitalize()
+password = first
+while len(password) < 8 or len(password) > 10:
+ second = words[randrange(0, len(words))]
+ second = second.capitalize()
+ password = first + second
+print("Случайный пароль:", password)
