@@ -1,0 +1,17 @@
+def calculate_coins(change):
+    coins = [200, 100, 25, 10, 5, 1] # список достоинств монет в центах
+    coin_names = {200: "тоони", 100: "луни", 25: "25 центов", 10: "10 центов", 5: "5 центов", 1: "1 цент"} # словарь названий монет в единственном числе
+    
+    change = int(change) # преобразуем сумму в целое число
+    coins_used = [] # список использованных монет
+    for coin in coins:
+        coin_count = change // coin # сколько монет данного достоинства можно использовать для выдачи сдачи
+        if coin_count > 0: # если можем использовать монеты данного достоинства
+            coins_used.append((coin_count, coin_names[coin])) # добавляем в список использованные монеты с количеством и названием
+            change -= coin_count * coin # вычитаем из оставшегося значения сумму, которую задействовали монеты данного достоинства
+    return coins_used
+if __name__ == "__main__":
+    change = input("Введите сумму сдачи в центах: ")
+    coins_used = calculate_coins(change)
+    for count, coin_name in coins_used:
+        print(f"{count} {coin_name}")
