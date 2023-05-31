@@ -1,0 +1,7 @@
+results = []
+num_of_participants = 5
+
+for i in range(num_of_participants):
+    result = float(input("Введите результат спортсмена: "))
+    results.append(result)
+    print("Лучший результат:", min(results))
