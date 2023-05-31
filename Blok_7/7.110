@@ -1,0 +1,18 @@
+# Создаем список масс людей
+masses = [80, 67, 105, 92, 113, 99, 72, 124, 55, 102]
+
+# Создаем список масс полных людей
+obese_masses = [x for x in masses if x > 100]
+
+# Вычисляем среднюю массу полных людей
+average_obese_mass = sum(obese_masses) / len(obese_masses)
+
+# Создаем список масс не полных людей
+thin_masses = [x for x in masses if x <= 100]
+
+# Вычисляем среднюю массу не полных людей
+average_thin_mass = sum(thin_masses) / len(thin_masses)
+
+# Вывод результатов на экран
+print("Средняя масса полных людей: ", average_obese_mass)
+print("Средняя масса не полных людей: ", average_thin_mass)
