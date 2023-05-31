@@ -1,0 +1,32 @@
+month = input("Введите название месяца: ")
+day = int(input("Введите день: "))
+if month == "Январь" or month == "Февраль":
+ season = "Зима"
+elif month == "Март":
+ if day < 20:
+ season = "Зима"
+ else:
+ season = "Весна"
+elif month == "Апрель" or month == "Май":
+ season = "Весна"
+elif month == "Июнь":
+ if day < 21:
+ season = "Весна"
+ else:
+ season = "Лето"
+elif month == "Июль" or month == "Август":
+ season = "Лето"
+elif month == "Сентябрь":
+ if day < 22:
+ season = "Лето"
+ else:
+ season = "Осень"
+elif month == "Октябрь" or month == "Ноябрь":
+ season = "Осень"
+elif month == "Декабрь":
+ if day < 21:
+ season = "Осень"
+ else:
+ season = "Зима"
+# Выводим результат
+print(month, day, "соответствует сезону", season)
