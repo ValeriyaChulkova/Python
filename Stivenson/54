@@ -1,0 +1,22 @@
+RAISE_FACTOR = 2400.00
+UNACCEPTABLE = 0
+ACCEPTABLE = 0.4
+MERITORIOUS = 0.6
+# Запрашиваем у пользователя рейтинг
+rating = float(input("Введите рейтинг: "))
+# Классифицируем сотрудников
+if rating == UNACCEPTABLE:
+ performance = "низкий"
+elif rating == ACCEPTABLE:
+ performance = "удовлетворительный"
+elif rating >= MERITORIOUS:
+ performance = "высокий"
+else:
+ performance = ""
+ if performance == "":
+ print("Введен ошибочный рейтинг.")
+else:
+ print("Основываясь на введенном рейтинге, ваш уровень: %s." % \
+ performance)
+print("Прибавка к зарплате составит: $%.2f." % \
+ (rating * RAISE_FACTOR))
