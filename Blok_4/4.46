@@ -1,0 +1,6 @@
+import math
+x = float(input("Введите x : "))
+if (x > 0.2 and x < 0.9):
+  print("f= ",math.sin(x))
+else:
+  print("f= 1")
