@@ -1,0 +1,11 @@
+# Даны числа
+k = 8
+b = [-5, 12, -7, 0, 3, -10, 25, -2]
+
+# Номер последнего отрицательного числа
+last_negative_index = -1
+for i in range(k):
+    if b[i] < 0:
+        last_negative_index = i
+
+print("Номер последнего отрицательного числа:", last_negative_index)
