@@ -1,0 +1,17 @@
+def is_difference_less_than_25(p, a):
+    # находим максимальное и минимальное число в списке a
+    max_num = max(a[:p])
+    min_num = min(a[:p])
+    # вычисляем разницу между ними
+    difference = max_num - min_num
+    # проверяем условие
+    if difference <= 25:
+        return True
+    else:
+        return False
+
+# пример использования функции
+p = 5
+a = [15, 30, 20, 10, 40, 35, 25, 5, 28, 42, 18, 22, 16, 12, 32]
+result = is_difference_less_than_25(p, a)
+print(result)
