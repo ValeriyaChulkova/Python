@@ -1,0 +1,16 @@
+import random
+
+def generate_license_plate():
+old_format = False
+ if random.random() < 0.5: # 50% вероятность выбора старого формата
+  old_format = True
+  if old_format:
+    letters = [chr(random.randint(65, 90)) for _ in range(3)] # генерация трех случайных букв
+    numbers = [str(random.randint(0, 9)) for _ in range(3)] # генерация трех случайных цифр
+return ''.join(letters + numbers) # объединение букв и цифр в строку
+  else:
+   numbers = [str(random.randint(0, 9)) for _ in range(4)] # генерация четырех случайных цифр
+   letters = [chr(random.randint(65, 90)) for _ in range(3)] # генерация трех случайных букв
+return ''.join(numbers + letters) # объединение цифр и букв в строку
+
+print(generate_license_plate()) # вывод случайного номерного знака
