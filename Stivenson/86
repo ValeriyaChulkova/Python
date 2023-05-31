@@ -1,0 +1,10 @@
+def taxi_fare(distance_km):
+base_fare = 4.00
+distance_m = distance_km * 1000
+distance_increments = distance_m / 140
+fare = base_fare + (distance_increments * 0.25)
+return fare
+
+distance = 5 # расстояние поездки в километрах
+total_fare = taxi_fare(distance)
+print("Итоговая сумма оплаты такси: $", total_fare)
