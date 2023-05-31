@@ -1,0 +1,10 @@
+def readAndTotal():
+ line = input("Введите число (пропустите ввод для завершения): ")
+ if line == "":
+ return 0
+ else:
+ return float(line) + readAndTotal()
+def main():
+ total = readAndTotal()
+ print("Сумма введенных чисел:", total)
+main()
