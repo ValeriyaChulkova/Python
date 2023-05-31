@@ -1,0 +1,14 @@
+teams = ['Real Madrid', 'Liverpool', 'Barcelona', 'PSG', 'Bayern Munich', 'Manchester City', 'Juventus', 'Chelsea', 'Arsenal', 'Atletico Madrid', 
+         'Borussia Dortmund', 'Benfica', 'Napoli', 'Tottenham Hotspur', 'AS Roma', 'Porto', 'Valencia', 'Ajax', 'Inter Milan', 'Shakhtar Donetsk']
+
+points = [87, 82, 79, 75, 72, 68, 65, 62, 59, 55, 51, 47, 44, 41, 39, 36, 34, 32, 30, 27]
+ 
+# создаем список кортежей из названий команд и их очков
+teams_and_points = list(zip(teams, points))
+
+# сортируем список по убыванию очков
+teams_and_points_sorted = sorted(teams_and_points, key=lambda x: x[1], reverse=True)
+
+# выводим список команд в соответствии с занятыми ими местами в чемпионате
+for i, team in enumerate(teams_and_points_sorted):
+    print(str(i+1) + '.', team[0])
