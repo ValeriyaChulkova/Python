@@ -1,0 +1,8 @@
+import math
+r = float(input("Введите радиус: "))
+# вычисляем площадь круга
+area = math.pi * r ** 2
+print("Площадь круга: ", area)
+# вычисляем объем шара
+volume = 4 / 3 * math.pi * r ** 3
+print("Объем шара: ", volume) 
