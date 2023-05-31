@@ -1,0 +1,9 @@
+subtotal = float(input("Введите сумму вашего заказа: $"))
+tax_rate = 0.08 
+tip_rate = 0.18 
+tax = subtotal * tax_rate
+tip = subtotal * tip_rate
+total = subtotal + tax + tip
+print("Налог: $%.2f" % tax)
+print("Чаевые: $%.2f" % tip)
+print("Итого: $%.2f" % total)
