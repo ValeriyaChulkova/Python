@@ -1,0 +1,22 @@
+peak_data = {
+    "Mount Everest": 8848,
+    "K2": 8611,
+    "Kangchenjunga": 8586,
+    "Lhotse": 8516,
+    "Makalu": 8485,
+    "Cho Oyu": 8188,
+    "Dhaulagiri": 8167,
+    "Manaslu": 8163,
+    "Nanga Parbat": 8126,
+    "Annapurna": 8091,
+    "Gasherbrum I": 8080,
+    "Broad Peak": 8051,
+    "Gasherbrum II": 8035,
+    "Shishapangma": 8027,
+    "Annapurna II": 7937
+}
+tall_peaks = []
+for peak, height in peak_data.items():
+    if height > 3000:
+        tall_peaks.append(peak)
+print("Tall peaks:", ", ".join(tall_peaks))
