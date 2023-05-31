@@ -1,0 +1,14 @@
+import math
+
+a = float(input("Введите значение угла в градусах: "))
+v0 = float(input("Введите начальную скорость: "))
+R = float(input("Введите расстояние до цели: "))
+H = float(input("Введите высоту цели: "))
+
+t = R / (v0 * math.cos(math.radians(a)))
+y = v0 * t * math.sin(math.radians(a)) - 0.5 * 9.8 * t ** 2
+
+if y <= H:
+    print("Снаряд поразит цель")
+else:
+    print("Снаряд не достигнет цели")
