@@ -1,0 +1,14 @@
+birth_year = int(input("Введите год рождения: "))
+birth_month = int(input("Введите номер месяца рождения: "))
+current_year = int(input("Введите текущий год: "))
+current_month = int(input("Введите номер текущего месяца: "))
+
+years = current_year - birth_year
+
+if current_month < birth_month:
+    years -= 1
+    months = current_month + 12 - birth_month
+else:
+    months = current_month - birth_month
+
+print("Возраст: {} лет {} месяцев".format(years, months))
