@@ -1,0 +1,27 @@
+car_data = {
+    "Toyota Camry": 180,
+    "Honda Accord": 177,
+    "Nissan Altima": 179,
+    "Ford Fusion": 175,
+    "Chevrolet Malibu": 174,
+    "Hyundai Sonata": 185,
+    "Kia Optima": 185,
+    "Volkswagen Passat": 174,
+    "Mazda6": 190,
+    "Subaru Legacy": 209,
+    "Audi A4": 240,
+    "BMW 3 Series": 260,
+    "Mercedes-Benz C-Class": 250,
+    "Lexus ES": 210,
+    "Volvo S60": 210,
+    "Cadillac CTS": 261,
+    "Infiniti Q50": 285,
+    "Acura RLX": 250,
+    "Lincoln Continental": 250,
+    "Genesis G80": 245
+}
+fast_cars = []
+for model, speed in car_data.items():
+    if speed > 180:
+        fast_cars.append(model)
+print("Fast cars:", ", ".join(fast_cars))
