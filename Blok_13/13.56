@@ -1,0 +1,8 @@
+elements = {'медь': 'Cu', 'кислород': 'O', 'углерод': 'C'}
+
+element_abbr = input("Введите обозначение элемента: ")
+
+if element_abbr in elements.values():
+    print("Такой элемент есть в словаре")
+else:
+    print("Такого элемента нет в словаре")

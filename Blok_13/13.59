@@ -1,0 +1,23 @@
+students = {
+    "1а": 25,
+    "1б": 20,
+    "6а": 30,
+    "6б": 28,
+    "11а": 22,
+    "11б": 25,
+    "16": 18,
+    "26": 15
+}
+
+students["3а"] = 27
+students["6а"] = 32
+students["11а"] = 20
+students["19"] = 23
+del students["16"]
+
+total_num_students = sum(students.values())
+
+for class_name in students:
+    print(class_name, students[class_name])
+
+print("Общее количество учащихся:", total_num_students)

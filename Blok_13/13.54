@@ -1,0 +1,13 @@
+elements = {'медь': 'Cu', 'кислород': 'O', 'углерод': 'C'}
+
+element_abbr = input("Введите обозначение элемента: ")
+
+try:
+    for key, value in elements.items():
+        if value == element_abbr:
+            print("Название элемента:", key)
+            break
+    else:
+        print("Такой элемент не найден")
+except KeyError:
+    print("Такой элемент не найден")

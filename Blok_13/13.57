@@ -1,0 +1,15 @@
+capitals = {'Россия': 'Москва', 'Франция': 'Париж', 'Великобритания': 'Лондон'}
+
+country = input("Введите название государства или столицу: ")
+
+if country in capitals.values():
+    for key, value in capitals.items():
+        if value == country:
+            print("Столица", key)
+            break
+else:
+    if country in capitals:
+        print("Столица", capitals[country])
+    else:
+        print("Такого государства или с
+толицы нет в словаре")

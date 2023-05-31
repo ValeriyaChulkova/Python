@@ -1,0 +1,9 @@
+text = "Lorem ipsum 123 sit 321 amet 111"
+digits_count = {}
+for char in text:
+  if char.isdigit():
+    if char in digits_count:
+      digits_count[char] += 1
+    else:
+      digits_count[char] = 1
+print(digits_count)

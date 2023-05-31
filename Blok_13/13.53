@@ -1,0 +1,13 @@
+elements = {"медь": "Cu",
+            "кислород": "O",
+            "азот": "N",
+            "фтор": "F"}
+
+name = input("Введите название химического элемента: ")
+symbol = elements.get(name)
+
+if symbol:
+    print(f"Обозначение элемента {name}: {symbol}")
+else:
+    print("Такого элемента в словаре нет")
+

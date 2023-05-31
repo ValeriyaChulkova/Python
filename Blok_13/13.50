@@ -1,0 +1,93 @@
+
+teams = [
+    [0, 3, 1, 0, 0],
+    [1, 0, 0, 3, 1],
+    [0, 3, 0, 1, 1],
+    [1, 0, 1, 0, 0],
+    [3, 0, 0, 1, 3]
+]
+
+team_names = [
+    "Team A",
+    "Team B",
+    "Team C",
+    "Team D",
+    "Team E"
+]
+
+winners = []
+
+for i in range(len(team_names)):
+    wins = 0
+    losses = 0
+    for j in range(len(team_names)):
+        if teams[i][j] == 3:
+            wins += 1
+        elif teams[i][j] == 0:
+            losses += 1
+    if wins > losses:
+        winners.append(team_names[i])
+
+print("Teams with more wins than losses:", winners)
+# b)
+teams = [
+    [0, 3, 1, 0, 0],
+    [1, 0, 0, 3, 1],
+    [0, 3, 0, 1, 1],
+    [1, 0, 1, 0, 0],
+    [3, 0, 0, 1, 3]
+]
+
+team_names = [
+    "Team A",
+    "Team B",
+    "Team C",
+    "Team D",
+    "Team E"
+]
+
+undefeated = []
+
+for i in range(len(team_names)):
+    losses = 0
+    for j in range(len(team_names)):
+        if teams[i][j] == 0:
+            losses += 1
+    if losses == 0:
+        undefeated.append(team_names[i])
+
+print("Undefeated teams:", undefeated)
+# c)
+teams = [
+    [0, 3, 1, 0, 0],
+    [1, 0, 0, 3, 1],
+    [0, 3, 0, 1, 1],
+    [1, 0, 1, 0, 0],
+    [3, 0, 0, 1, 3]
+]
+
+team_names = [
+    "Team A",
+    "Team B",
+    "Team C",
+    "Team D",
+    "Team E"
+]
+
+champion = ""
+
+highest_score = 0
+for i in range(len(team_names)):
+    score = 0
+    for j in range(len(team_names)):
+        if teams[i][j] == 3:
+            score += 3
+        elif teams[i][j] == 1:
+            score += 1
+    if score > highest_score:
+        highest_score = score
+        champion = team_names[i]
+
+print("Champion:", champion)
+
+

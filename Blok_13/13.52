@@ -1,0 +1,52 @@
+
+# 1
+seq = []
+for i in range(20):
+    left = int(input())
+    right = int(input())
+    seq.append((left, right))
+
+for i in range(1, len(seq)):
+    if seq[i-1][1] != seq[i][0]:
+        print("Последовательность не является рядом костей домино.")
+        print("Нарушение на кости номер", i+1)
+        break
+else:
+    print("Последовательность является рядом костей домино.")
+# 2
+seq1 = []
+seq2 = []
+for i in range(20):
+    left1 = int(input())
+    right1 = int(input())
+    left2 = int(input())
+    right2 = int(input())
+    seq1.append((left1, right1))
+    seq2.append((left2, right2))
+
+for i in range(1, len(seq1)):
+    if seq1[i-1][1] != seq1[i][0] or seq2[i-1][1] != seq2[i][0]:
+        print("Последовательность не является рядом костей домино.")
+        print("Нарушение на кости номер", i+1)
+        break
+else:
+    print("Последовательность является рядом костей домино.")
+
+
+
+# 3
+seq = []
+for i in range(20):
+    left1 = int(input())
+    right1 = int(input())
+    left2 = int(input())
+    right2 = int(input())
+    seq.append(((left1, right1), (left2, right2)))
+
+for i in range(1, len(seq)):
+    if seq[i-1][1][1] != seq[i][0][0]:
+        print("Последовательность не является рядом костей домино.")
+        print("Нарушение на кости номер", i+1)
+        break
+else:
+    print("Последовательность является рядом костей домино.")
