@@ -1,0 +1,3 @@
+a = float(input("Введите число: "))
+abs_a = a if a >= 0 else -a
+print("Абсолютная величина числа:", abs_a)
