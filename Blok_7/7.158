@@ -1,0 +1,6 @@
+t = int(input("Введите натуральное число t: "))
+numbers = list(map(int, input("Введите целые числа через пробел: ").split()))
+max_number_index = len(numbers) - 1 - numbers[::-1].index(max(numbers)) #номер последнего максимального элемента в списке
+min_number_index = len(numbers) - 1 - numbers[::-1].index(min(numbers)) #номер последнего минимального элемента в списке
+print(f"Номер максимального элемента: {max_number_index}")
+print(f"Номер минимального элемента: {min_number_index}")
