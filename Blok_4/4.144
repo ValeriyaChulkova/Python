@@ -1,0 +1,34 @@
+import calendar
+from datetime import date, timedelta
+
+# заданный год, месяц и день
+y = 2020
+m = 2
+d = 29
+
+# проверяем, является ли год високосным
+if calendar.isleap(y):
+    days_in_month = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+else:
+    days_in_month = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+# определяем дату
+dt = date(y, m, d)
+
+# дата предыдущего дня
+prev_day = dt - timedelta(days=1)
+if prev_day.day == 0:
+    prev_month = prev_day.month
+    prev_day = days_in_month[prev_month]
+    prev_year = prev_day.year
+    prev_day = date(prev_year, prev_month, prev_day)
+
+# дата следующего дня
+next_day = dt + timedelta(days=1)
+if next_day.day == 1:
+    next_month = next_day.month
+    next_year = next_day.year
+    next_day = date(next_year, next_month, 1)
+
+print(prev_day)  # 2020-02-28
+print(next_day)  # 2020-03-01
