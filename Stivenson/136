@@ -1,0 +1,23 @@
+def reverseLookup(data, value):
+ keys = []
+ for key in data:
+ if data[key] == value:
+ keys.append(key)
+ return keys
+def main():
+ # Словарь соответствий французских слов английским
+ frEn = {"le" : "the", "la" : "the", "livre" : "book", \
+ "pomme" : "apple"}
+ print("Перевод английского слова 'the' на французский: ", \
+ reverseLookup(frEn, "the"))
+ print("Ожидаемый результат: ['le', 'la']")
+ print()
+ print("Перевод английского слова 'apple' на французский: ", \
+ reverseLookup(frEn, "apple"))
+ print("Ожидаемый результат: ['pomme']")
+ print()
+ print("Перевод английского слова 'asdf' на французский: ", \
+ reverseLookup(frEn, "asdf"))
+ print("Ожидаемый результат: []")
+if __name__ == "__main__":
+ main()
