@@ -1,0 +1,11 @@
+a = float(input("Введите a : "))
+b = float(input("Введите b : "))
+c = float(input("Введите c : "))
+if ( a< b and b < c):
+  print("a: Все ок")
+else:
+  print("a: НЕ ок")
+if ( b > a and a > c):
+  print("б: Все ок")
+else:
+  print("б: НЕ ок")
