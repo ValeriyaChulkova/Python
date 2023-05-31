@@ -1,0 +1,11 @@
+a1 = float(input("Введите длину чемодана: "))
+a2 = float(input("Введите ширину чемодана: "))
+a3 = float(input("Введите высоту чемодана: "))
+b1 = float(input("Введите длину коробки: "))
+b2 = float(input("Введите ширину коробки: "))
+b3 = float(input("Введите высоту коробки: "))
+
+if (a1 >= b1 and a2 >= b2 and a3 >= b3) or (a1 >= b1 and a2 >= b3 and a3 >= b2) or (a1 >= b2 and a2 >= b1 and a3 >= b3) or (a1 >= b2 and a2 >= b3 and a3 >= b1) or (a1 >= b3 and a2 >= b1 and a3 >= b2) or (a1 >= b3 and a2 >= b2 and a3 >= b1):
+    print("Коробку можно поместить в чемодан")
+else:
+    print("Коробку нельзя поместить в чемодан")
