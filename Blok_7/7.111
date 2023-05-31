@@ -1,0 +1,18 @@
+# Создаем список роста учеников класса
+heights = [156, 176, -162, 163, -165, 178, 174, -155, 168, 163]
+
+# Создаем список роста мальчиков
+boys_heights = [x for x in heights if x < 0]
+
+# Вычисляем средний рост мальчиков
+average_boys_height = sum(boys_heights) / len(boys_heights)
+
+# Создаем список роста девочек
+girls_heights = [x for x in heights if x >= 0]
+
+# Вычисляем средний рост девочек
+average_girls_height = sum(girls_heights) / len(girls_heights)
+
+# Вывод результатов на экран
+print("Средний рост мальчиков: ", abs(average_boys_height))
+print("Средний рост девочек: ", average_girls_height)
