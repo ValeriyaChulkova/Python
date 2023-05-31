@@ -1,0 +1,8 @@
+age = int(input("Введите возраст: "))
+
+if age % 10 == 1 and age != 11:
+    print("Мне {} год".format(age))
+elif age % 10 in [2, 3, 4] and not (age % 100 in range(12, 15)):
+    print("Мне {} года".format(age))
+else:
+    print("Мне {} лет".format(age))
