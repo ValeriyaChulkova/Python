@@ -1,0 +1,20 @@
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+c = int(input("Введите третье число: "))
+d = int(input("Введите четвертое число: "))
+e = int(input("Введите пятое число: "))
+f = int(input("Введите шестое число: "))
+pos_sum = 0
+if a > 0:
+    pos_sum += a
+if b > 0:
+    pos_sum += b
+if c > 0:
+    pos_sum += c
+if d > 0:
+    pos_sum += d
+if e > 0:
+    pos_sum += e
+if f > 0:
+    pos_sum += f
+print("Сумма положительных чисел:", pos_sum)
