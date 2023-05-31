@@ -1,0 +1,24 @@
+a = int(input("Введите длину стола: "))
+b = int(input("Введите ширину стола: "))
+c = int(input("Введите длину кости домино: "))
+d = int(input("Введите ширину кости домино: "))
+e = int(input("Введите высоту кости домино: "))
+
+max_count = 0
+max_i = 0
+max_j = 0
+
+for i in range(a // c + 1):
+    for j in range(b // d + 1):
+        count = i * j
+        if count > max_count and (i * c <= a and j * d <= b):
+            max_count = count
+            max_i = i
+            max_j = j
+
+print("Максимальное количество костей:", max_count)
+print("Размещение на столе:")
+for i in range(max_i):
+    for j in range(max_j):
+        print("({},{})".format(i * c, j * d), end=" ")
+    print()
