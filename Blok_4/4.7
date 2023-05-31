@@ -1,0 +1,14 @@
+import math
+
+x = float(input("Введите значение x: "))
+k = 0
+if math.sin(x) < 0:
+  k = x*x
+else:
+  k = abs(x)
+f = 0
+if k < x:
+  f = k*x
+else:
+  f = k+x
+print (f)
