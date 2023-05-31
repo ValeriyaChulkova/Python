@@ -1,0 +1,25 @@
+import random
+
+def coin_toss():
+return random.choice(['О', 'Р'])
+
+def simulate():
+count = 0
+ while True:
+  toss1 = coin_toss()
+  toss2 = coin_toss()
+  toss3 = coin_toss()
+count += 1
+print(toss1, toss2, toss3, end=' ')
+ if toss1 == toss2 == toss3:
+print(f'\nПотребовалось {count} попыток')
+return count
+
+total_count = 0
+ for i in range(10):
+  print(f'Симуляция {i+1}:')
+  count = simulate()
+  total_count += count
+
+average_count = total_count / 10
+print(f'Среднее количество подбрасываний монетки: {average_count}')
