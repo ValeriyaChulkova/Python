@@ -1,0 +1,8 @@
+import math
+# Запрос данных у пользователя
+radius = float(input("Введите радиус цилиндра: "))
+height = float(input("Введите высоту цилиндра: "))
+# Расчет общего объема цилиндра
+volume = round(math.pi * radius ** 2 * height, 1)
+# Вывод результата
+print("Объем цилиндра с радиусом %.2f и высотой %.2f равен %.1f" % (radius, height, volume))
