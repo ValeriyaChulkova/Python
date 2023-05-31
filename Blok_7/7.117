@@ -1,0 +1,28 @@
+# Известный рост каждого ученика класса
+height = {
+    'boy1': -150,
+    'boy2': -142,
+    'boy3': -155,
+    'girl1': 165,
+    'girl2': 152,
+    'girl3': 157,
+    }
+
+# Рассчитываем средний рост мальчиков и девочек
+boy_heights = []
+girl_heights = []
+
+for name, h in height.items():
+    if h < 0:
+        boy_heights.append(abs(h))
+    else:
+        girl_heights.append(h)
+
+boy_avg_height = sum(boy_heights) / len(boy_heights)
+girl_avg_height = sum(girl_heights) / len(girl_heights)
+
+# Проверяем условие
+if (boy_avg_height - girl_avg_height) > 10:
+    print("Средний рост мальчиков превышает средний рост девочек более чем на 10 см")
+else:
+    print("Средний рост мальчиков НЕ превышает средний рост девочек более чем на 10 см")
