@@ -1,0 +1,3 @@
+results = list(map(float, input("Введите результаты каждого участника (через пробел): ").split()))
+best_result_index = results.index(min(results)) #индекс первого лучшего результата в списке
+print(f"Первым стартовал лыжник с лучшим результатом #{best_result_index+1}")
