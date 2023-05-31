@@ -1,0 +1,12 @@
+def students_difference(students_count):
+    # находим самый большой и самый маленький классы
+    max_students = max(students_count)
+    min_students = min(students_count)
+    # вычисляем разницу между численностями
+    difference = max_students - min_students
+    return difference
+
+# пример использования функции
+students_count = [18, 23, 20, 19, 22, 17, 21, 27, 25, 19, 20, 26, 16, 24, 30, 18, 21, 19, 29, 22]
+diff = students_difference(students_count)
+print(diff)
