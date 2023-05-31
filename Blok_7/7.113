@@ -1,0 +1,22 @@
+# Задаем значения x и п
+x = 5
+p = 3
+
+# Создаем список целых чисел
+numbers = [2, 5, 1, 7, 4, 6, 8, 10, 3, 9, 11, 12]
+
+# Фильтруем числа больше п
+filtered_numbers = [num for num in numbers if num > p]
+
+# Проверяем, есть ли числа больше п в списке
+if len(filtered_numbers) == 0:
+  print("В списке нет чисел, больших ",p)
+else:
+  # Возведение каждого числа в x-ую степень
+  powered_numbers = [pow(num, x) for num in filtered_numbers]
+
+  # Вычисляем среднее арифметическое
+  average = sum(powered_numbers) / len(powered_numbers)
+
+  # Выводим результат
+  print("Среднее арифметическое тех чисел, которые больше ", p, " и возведены в степень ", x, ": ", average)
