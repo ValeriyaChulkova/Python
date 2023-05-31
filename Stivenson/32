@@ -1,0 +1,5 @@
+num = input("Введите целое четырехзначное число: ")
+sum = 0
+for digit in num:
+    sum += int(digit)
+print("Сумма цифр числа", num, "равна", sum)
