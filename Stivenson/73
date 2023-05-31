@@ -1,0 +1,9 @@
+message = input("Введите сообщение: ")
+shift = int(input("Введите сдвиг: "))
+new_message = ""
+for ch in message:
+ if ch >= "a" and ch <= "z":
+ pos = ord(ch) – ord("a")
+ pos = (pos + shift) % 26
+ new_char = chr(pos + ord("a"))
+ new_message = new_message + new_char
