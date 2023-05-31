@@ -1,0 +1,12 @@
+x = float(input("Введите x : "))
+y = float(input("Введите y : "))
+#a
+if (x > 2 and y > 2):
+  print("a: Да все ок")
+else:
+  print("a: Есть некоторые проблемки")
+#б
+if (x < -2 and y < -4):
+  print("б: Да все ок")
+else:
+  print("б: Есть некоторые проблемки")
