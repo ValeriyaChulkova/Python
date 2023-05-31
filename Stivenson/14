@@ -1,0 +1,9 @@
+def convert_height(feet, inches):
+    total_inches = feet * 12 + inches # переводим футы и дюймы в дюймы
+    centimeters = total_inches * 2.54 # переводим дюймы в сантиметры
+    return centimeters
+if __name__ == "__main__":
+    feet = float(input("Введите количество футов: "))
+    inches = float(input("Введите количество дюймов: "))
+    height = convert_height(feet, inches)
+    print(f"Ваш рост составляет {height:.2f} см.")
