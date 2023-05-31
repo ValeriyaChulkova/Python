@@ -1,0 +1,14 @@
+students = []
+num = float(input())
+while num:
+    students.append(num)
+    num = float(input())
+
+i = 1
+while i < len(students):
+    if students[i] > students[i-1]:
+        print("Список не перечислен в порядке убывания")
+        break
+    i += 1
+else:
+    print("Список перечислен в порядке убывания")
