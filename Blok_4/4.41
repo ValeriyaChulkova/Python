@@ -1,0 +1,5 @@
+num = int(input('Введите число: '))
+if (num >= 10) and (num <= 99) or (num <= -10) and (num > -100):
+    print('Число двузначное')
+else:
+    print('Число не двузначное')
